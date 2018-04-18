@@ -32,6 +32,8 @@ for PYTHONVER in 3 ; do
 done
 
 NB_DIR=/vagrant/notebooks
+export NB_DIR
+
 mkdir -p $NB_DIR
 chown $NB_USER:$NB_GID $NB_DIR
 
