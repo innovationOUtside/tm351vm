@@ -7,6 +7,12 @@
 #Set the base build directory to the one containing this script
 BUILDDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+#Python / pip installer
+# (should really precede this with python package installation?)
+#https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main    
+PIP="python3 -m pip"
+export PIP
+
 #Keep track of build datetime
 $BUILDDIR/version.sh
 
