@@ -20,25 +20,26 @@ then
 	#Download and install 64 bit distro
 	echo " - install package(s)"
 	apt-get install -y mongodb-org
-
-	echo -n "...done install"
 	
-  touch /opt/mongo_installed.done
+		
+	#----
+    echo " - set up mongo permissions"
+    usermod -a -G mongodb oustudent
+    #---
+    
+    echo " - update mongo conf files"
+    THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    cp $THISDIR/etc/mongodb.conf /etc/mongodb.conf
+    cp $THISDIR/services/mongodb.service /lib/systemd/system/mongodb.service
+
+
+    echo -n "...done install"
+    
+    touch /opt/mongo_installed.done
 else
 	echo "...already installed"
 fi 
 
-#----
-
-echo " - set up mongo permissions"
-usermod -a -G mongodb oustudent
-
-#---
-
-echo " - update mongo conf files"
-THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cp $THISDIR/etc/mongodb.conf /etc/mongodb.conf
-cp $THISDIR/services/mongodb.service /lib/systemd/system/mongodb.service
 
 systemctl enable mongodb
 systemctl daemon-reload
@@ -48,6 +49,7 @@ systemctl restart mongodb
 
 #chown mongodb ${THISDIR}/sharded/mongo_cluster.sh
 #chown :mongodb ${THISDIR}/sharded/mongo_cluster.sh
+
 
 #Additionally bring in command line tools to help with data grab
 apt-get install -y curl zip unzip bzip2 wget
