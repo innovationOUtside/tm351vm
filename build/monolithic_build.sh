@@ -79,6 +79,7 @@ source $BUILDDIR/jupyter-custom/jupyter_extensions.sh
 #OU custom packages and extensions
 source $BUILDDIR/jupyter-custom/jupyter_ou_custom.sh
 source $BUILDDIR/jupyter-custom/jupyter_ou_trust.sh
+source $BUILDDIR/jupyter-custom/jupyter_ou_tutor.sh
 
 source $BUILDDIR/pystack/build_tm351_stack.sh
 
