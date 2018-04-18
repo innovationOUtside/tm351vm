@@ -54,6 +54,10 @@ config.vm.provider :virtualbox do |virtualbox|
 	#mongodb
 	config.vm.network :forwarded_port, guest: 28017, host: 35102, auto_correct: true
 
+	#v simple webserver
+	config.vm.network :forwarded_port, guest: 8000, host: 35188, auto_correct: true
+
+
 	#Purely for testing - also requires simple_auth.sh at end
 	#webserver
 	config.vm.network :forwarded_port, guest: 80, host: 35180, auto_correct: true
@@ -278,7 +282,8 @@ config.vm.provider :aws do |aws, override|
   	source ./monolithic_build.sh
   	
   	#Simple webserver
-  	source /vagrant/build/simple_webserver.sh
+  	#source /vagrant/build/simple_webserver.sh
+  	source /vagrant/build/v_simple_webserver.sh
   	
   	#Testing
   	#source /vagrant/build/simple_auth.sh
