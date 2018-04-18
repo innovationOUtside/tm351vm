@@ -18,6 +18,9 @@ export TM351_USER TM351_UID TM351_GID
 
 echo "Adding service user: $TM351_USER"
 useradd -m -s /bin/bash -N -u $TM351_UID $TM351_USER
+#Add oustudent user to sudo group
+usermod -a -G sudo oustudent
+
 #Note: the user is used to run Jupyter notebook and OpenRefine services
 echo "..user added"
 
@@ -43,7 +46,6 @@ echo "NB_GID=$NB_GID" >> /etc/environment
 echo "OPENREFINE_USER=$OPENREFINE_USER" >> /etc/environment
 echo "OPENREFINE_GID=$OPENREFINE_GID" >> /etc/environment
 
-echo 'oustudent ALL=(ALL)' >> /etc/sudoers
 
 #END ENVT VARS
 
