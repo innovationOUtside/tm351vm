@@ -30,11 +30,14 @@ for PYTHONVER in 3 ; do
   $PIP install nbdime
   
 done
+#Bake test notebooks into the VM
+cp -r notebooks/ /opt/notebooks/
 
 NB_DIR=/vagrant/notebooks
 export NB_DIR
 
 mkdir -p $NB_DIR
+cp -r /opt/notebooks/ $NB_DIR/buildtest/
 chown $NB_USER:$NB_GID $NB_DIR
 
 
