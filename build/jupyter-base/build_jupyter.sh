@@ -2,36 +2,44 @@
 
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-for PYTHONVER in 3 ; do
-  PYTHON="python$PYTHONVER"
-  #PIP="pip$PYTHONVER"
-  PIP="pip"
-  $PIP install --upgrade pip
+if [ ! -f /opt/pybase.done ]; then
 
-  #The important thing in the following is to ensure the notebook style works
-  #  with the extensions.
-  #This means watching the notebook elements closely?
-  #Allowing Jupyter machinery to upgrade should be okay?
-  $PIP install ipython-genutils
-  $PIP install jupyter-core
-  $PIP install nbformat
-  
-  $PIP install ipython
-  $PIP install jupyter-client
-  $PIP install ipykernel
+    #for PYTHONVER in 3 ; do
+    #  PYTHON="python$PYTHONVER"
+      #PIP="pip$PYTHONVER"
+    #  PIP="pip"
+      #https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
+      #PIP="python3 -m pip"
 
-  $PIP install notebook
+      $PIP install --upgrade pip
+
+      #The important thing in the following is to ensure the notebook style works
+      #  with the extensions.
+      #This means watching the notebook elements closely?
+      #Allowing Jupyter machinery to upgrade should be okay?
+      $PIP install ipython-genutils
+      $PIP install jupyter-core
+      $PIP install nbformat
   
-  $PIP install nbconvert
+      $PIP install ipython
+      $PIP install jupyter-client
+      $PIP install ipykernel
+
+      $PIP install notebook
   
-  $PIP install jupyter-console
-  $PIP install jupyter
+      $PIP install nbconvert
   
-  $PIP install nbdime
+      $PIP install jupyter-console
+      $PIP install jupyter
   
-done
+      $PIP install nbdime
+  
+    #done
+    touch /opt/pybase.done
+fi
+
 #Bake test notebooks into the VM
-cp -r notebooks/ /opt/notebooks/
+cp -r $THISDIR/notebooks/ /opt/notebooks/
 
 NB_DIR=/vagrant/notebooks
 export NB_DIR
