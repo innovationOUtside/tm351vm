@@ -41,6 +41,33 @@ Set the environment variable from the command line:
 
 There is an example of this running in the current build... (see port *35188* for welcome page and ports *35180*/*35181* for authenticated access (user: __tm351__, (default) password: __tm351__).
 
+Handy: find where an environment variable may be set: `!grep -rs HOME /etc ~/.[!.]*`
+
+Handy: find home directory for specified user: `USERPATH="$(getent passwd $USERNAME | cut -d: -f6)"`
+
+Accessing environment vars in Jupyter notebooks run as a service: in service definition file, use `Environment=MYENVVAR=/my/value` as part of  `[Service]` definition.
+
+Shell testing python package install:
+```
+%%bash
+pycheck=0
+#clear pynoinstall file
+> pynoinstall.txt
+for P in folium  pasndas
+do
+if python3 -c "import $P" &> /dev/null; then
+    echo "import test pass: $P"
+else
+echo "import test fail: $P"
+echo $P >> pynoinstall.txt
+pycheck=1
+fi
+done
+if [ "$pycheck" = 0 ] ; then
+touch pypackages.done
+fi
+```
+
 ## Run with docker:
 `docker-compose up` (docker needs to be running!)
 
