@@ -50,17 +50,17 @@ ENV_VARS=/etc/profile.d/course_env.sh
 # they need to be defined in the Jupyter service definition file
 # Use: `Environment=MYENVVAR=/my/value` as part of `[Service]` definition.
 
-echo "" >> ENV_VARS
-echo "# Environemnt variables for OU course user" >> ENV_VARS
-echo "TM351_USER=$TM351_USER" >> ENV_VARS
-echo "TM351_UID=$TM351_UID" >> ENV_VARS
-echo "TM351_USER=$TM351_USER" >> ENV_VARS
-echo "TM351_GID=$TM351_GID" >> ENV_VARS
-echo "NB_USER=$NB_USER" >> ENV_VARS
-echo "NB_GID=$NB_GID" >> ENV_VARS
-echo "OPENREFINE_USER=$OPENREFINE_USER" >> ENV_VARS
-echo "OPENREFINE_GID=$OPENREFINE_GID" >> TM351_USER_ENV
-echo "" >> TM351_USER_ENV
+echo "" >> $ENV_VARS
+echo "# Environemnt variables for OU course user" >> $ENV_VARS
+echo "TM351_USER=$TM351_USER" >> $ENV_VARS
+echo "TM351_UID=$TM351_UID" >> $ENV_VARS
+echo "TM351_USER=$TM351_USER" >> $ENV_VARS
+echo "TM351_GID=$TM351_GID" >> $ENV_VARS
+echo "NB_USER=$NB_USER" >> $ENV_VARS
+echo "NB_GID=$NB_GID" >> $ENV_VARS
+echo "OPENREFINE_USER=$OPENREFINE_USER" >> $ENV_VARS
+echo "OPENREFINE_GID=$OPENREFINE_GID" >> $TM351_USER_ENV
+echo "" >> $TM351_USER_ENV
 
 
 #END ENVT VARS
