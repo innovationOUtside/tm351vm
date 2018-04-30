@@ -2,16 +2,28 @@
 
 if [ ! -f /opt/firstrun.done ]; then
 	touch /opt/firstrun.done
-    echo "Restart from first/build run..."
+    echo "Please restart after first/build run..."
     echo ""
     echo ""
-    echo "*********************************************************"
-    echo "*************  THE MACHINE HAS BEEN HALTED  *************"
-    echo "*************       RUN: vagrant reload     *************"
-    echo "*********************************************************"
+    echo "**************************************************************"
+    echo "************* TO CHECK O/S UPDATES ARE INSTALLED *************"
+    echo "*************       RUN: vagrant reload          *************"
+    echo "**************************************************************"
     echo ""
     echo ""
+    echo "**************************************************************"
+    echo "*************          TO PACKAGE THE BOX           **********"
+    echo "*************   RUN: vagrant package --output NAME  **********"
+    echo "**************************************************************"
     echo ""
+    echo ""
+    echo "**************************************************************"
+    echo "*************               UPLOAD TO:              **********"
+    echo "*************       https://app.vagrantup.com/      **********"
+    echo "**************************************************************"
+    echo ""
+    echo ""
+
     
-    shutdown -r now
+    #shutdown -r now
 fi
