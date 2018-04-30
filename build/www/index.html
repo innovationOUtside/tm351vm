@@ -5,13 +5,39 @@
 <ul>
 <script language="JavaScript">
 var hostname = window.location.hostname=='' ? "port " : window.location.hostname+":"
+
+document.write('<li>TM351 VM homepage: <a href="//' + hostname + '35100" >'+hostname+'35100</a>' );
+
+
 document.write('<li>Jupyter notebooks: <a href="//' + hostname + '35180" >'+hostname+'35180</a>' );
+
 document.write('<li>Jupyter notebook extensions: <a href="//' + hostname + '35180/tree#nbextensions_configurator" >'+hostname+'35180/tree#nbextensions_configurator</a>' );
+
 document.write('<li>Jupyter / VM terminal: <a href="//' + hostname + '35180/terminals/1" >'+hostname+'35180/terminals/1</a>' );
+
 document.write('<li>OpenRefine: <a href="//' + hostname + '35181" >'+hostname+'35181</a>' );
 
+document.write('<li>Jupyter <em>nbime</em> "notebook differ" (find differences between different versions of the same notebook): <a href="//' + hostname + '35182" >'+hostname+'35182</a>' );
+
 </script>
+
 </ul>
+
+<h2>Testing the VM setup</h2>
+<p>If you can see this page, that's already a good start! To check the other services are running, visit the links above.</p>
+
+<p>Additional tests can be run by clicking on the Jupyter notebook link shown above and running the notebooks in the <tt>installationTests</tt> directory. If you are new to Jupyter notebooks, you may find it useful to work through the <em>Using Jupyter Notebooks - READ ME FIRST.ipynb</em> notebook first.</p>
+
+<h2>TM351 Software Guide</h2>
+<p>The most recent copy of the course Software Guide can be found on the course website.</p> 
+<p>For convenience, a local copy of the software guide is accessible via the VM, although it may contain items that have since been updated: <a href="SoftwareGuide.html">Software Guide - VM copy</a></p>
+
+<h2>TM351 Jupyter Notebook Extensions</h2>
+<p>Several Jupyter notebook extensions are preinstalled and pre-enabled. These are not currently described in the <em>TM351 Software Guide</em>. See <a href='Notebook_extensions.html'>Notebook_extensions</a> for an overview of them.</p>
+
+<h2>TM351 Jupyter Notebook Diffs</h2>
+<p>This is not currently described in the <em>TM351 Software Guide</em>. See the <a href="https://github.com/jupyter/nbdime">official <tt>nbdime</tt> documentation</a> for more information.</p>
+
 
 
 </body></html>
