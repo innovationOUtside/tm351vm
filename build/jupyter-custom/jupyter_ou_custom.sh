@@ -6,7 +6,6 @@ if [ ! -f /opt/jupyter_ou_custom.done ]; then
     #Graphviz for db magic
     apt-get -y update && apt-get install -y  python-dev graphviz libgraphviz-dev pkg-config
     
-    
     #Install utilities for notebook testing and export 
     $PIP install git+https://github.com/innovationOUtside/tm351_utils.git
   

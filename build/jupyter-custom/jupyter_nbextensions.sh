@@ -11,6 +11,10 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
       #Go for the easy option and src all the jupyter_contrib_nbextensions 
       $PIP install jupyter_contrib_nbextensions
       $PIP install RISE
+      $PIP install jupyter-wysiwyg
+      
+      #Install nbgrader
+      #$PIP install nbgrader
   
     done
 
@@ -26,16 +30,27 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension enable collapsible_headings/main --sys-prefix
         jupyter nbextension enable codefolding/main --sys-prefix
         jupyter nbextension enable rubberband/main --sys-prefix
-        jupyter nbextension enable exercise/main --sys-prefix
+        jupyter nbextension enable exercise2/main --sys-prefix
         jupyter nbextension enable python-markdown/main --sys-prefix
+        jupyter nbextension enable export_embedded/main --sys-prefix
 
         jupyter nbextension enable skip-traceback/main --sys-prefix
         jupyter nbextension enable hide_input/main --sys-prefix
         jupyter nbextension enable init_cell/main --sys-prefix
-
+        
         #Slideshow
         jupyter nbextension install rise  --py --sys-prefix
         jupyter nbextension enable rise  --py --sys-prefix
+        
+        #WYSIWYG editor
+        jupyter nbextension install jupyter_wysiwyg  --py --sys-prefix
+        jupyter nbextension enable jupyter_wysiwyg --py --sys-prefix
+        
+        #nbgrader
+        #jupyter nbextension install --sys-prefix --py nbgrader --overwrite
+        #jupyter nbextension enable --sys-prefix --py nbgrader
+        #jupyter serverextension enable --sys-prefix --py nbgrader
+    
 #EOF
 
     touch /opt/jupyter_nbextensions.done
