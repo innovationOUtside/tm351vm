@@ -50,6 +50,8 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 
 	if [[ -z "${AUTHBUILD}" ]]; then
 		cp $THISDIR/services/jupyter.service /lib/systemd/system/jupyter.service
+        cp $THISDIR/services/nbdime.service /lib/systemd/system/nbdime.service
+
 	else
 		#Secure setup
 		cp $THISDIR/services/jupyter_auth.service /lib/systemd/system/jupyter.service
@@ -59,10 +61,12 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	
 	# Enable autostart
 	systemctl enable jupyter.service
-
+	systemctl enable nbdime.service
+	
 	# Refresh service config
 	systemctl daemon-reload
 
 	#(Re)start service
 	systemctl restart jupyter.service
+	systemctl restart nbdime.service
 fi

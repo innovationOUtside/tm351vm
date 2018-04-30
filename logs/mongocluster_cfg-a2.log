@@ -1,0 +1,915 @@
+2018-04-30T18:49:35.796+0000 I CONTROL  [initandlisten] MongoDB starting : pid=30836 port=57050 dbpath=/data/config/config-a 64-bit host=tm351base18Jtest
+2018-04-30T18:49:35.796+0000 I CONTROL  [initandlisten] db version v3.6.4
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] modules: none
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] build environment:
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-04-30T18:49:35.797+0000 I CONTROL  [initandlisten] options: { net: { port: 57050 }, processManagement: { fork: true, pidFilePath: "/vagrant/logs/mongocluster_cfg-a2.pid" }, replication: { replSet: "c1" }, sharding: { clusterRole: "configsvr" }, storage: { dbPath: "/data/config/config-a", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "/vagrant/logs/mongocluster_cfg-a2.log" } }
+2018-04-30T18:49:35.798+0000 I STORAGE  [initandlisten] 
+2018-04-30T18:49:35.798+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2018-04-30T18:49:35.798+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2018-04-30T18:49:35.798+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=488M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-04-30T18:49:36.370+0000 I STORAGE  [initandlisten] WiredTiger message [1525114176:370622][30836:0x7fdf0eafb9c0], txn-recover: Set global recovery timestamp: 0
+2018-04-30T18:49:36.385+0000 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2018-04-30T18:49:36.385+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2018-04-30T18:49:36.386+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2018-04-30T18:49:36.387+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:49:36.388+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with no UUID.
+2018-04-30T18:49:36.396+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/config/config-a/diagnostic.data'
+2018-04-30T18:49:36.396+0000 I SHARDING [initandlisten] first cluster operation detected, adding sharding hook to enable versioning and authentication to remote servers
+2018-04-30T18:49:36.400+0000 I SHARDING [thread1] creating distributed lock ping thread for process ConfigServer (sleeping for 30000ms)
+2018-04-30T18:49:36.403+0000 I STORAGE  [initandlisten] createCollection: local.me with no UUID.
+2018-04-30T18:49:36.410+0000 I SHARDING [shard registry reload] Periodic reload of shard registry failed  :: caused by :: ReadConcernMajorityNotAvailableYet: could not get updated shard list from config server due to Read concern majority reads are currently not possible.; will retry after 30s
+2018-04-30T18:49:36.414+0000 I STORAGE  [initandlisten] createCollection: local.replset.minvalid with no UUID.
+2018-04-30T18:49:36.419+0000 I REPL     [initandlisten] Did not find local voted for document at startup.
+2018-04-30T18:49:36.420+0000 I REPL     [initandlisten] Did not find local Rollback ID document at startup. Creating one.
+2018-04-30T18:49:36.420+0000 I STORAGE  [initandlisten] createCollection: local.system.rollback.id with no UUID.
+2018-04-30T18:49:36.426+0000 I REPL     [initandlisten] Initialized the rollback ID to 1
+2018-04-30T18:49:36.426+0000 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2018-04-30T18:49:36.426+0000 I NETWORK  [initandlisten] waiting for connections on port 57050
+2018-04-30T18:49:41.611+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42568 #1 (1 connection now open)
+2018-04-30T18:49:41.612+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:42568 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:49:41.618+0000 I REPL     [conn1] replSetInitiate admin command received from client
+2018-04-30T18:49:41.619+0000 I REPL     [conn1] replSetInitiate config object with 1 members parses ok
+2018-04-30T18:49:41.619+0000 I REPL     [conn1] ******
+2018-04-30T18:49:41.619+0000 I REPL     [conn1] creating replication oplog of size: 2846MB...
+2018-04-30T18:49:41.619+0000 I STORAGE  [conn1] createCollection: local.oplog.rs with no UUID.
+2018-04-30T18:49:41.623+0000 I STORAGE  [conn1] Starting WiredTigerRecordStoreThread local.oplog.rs
+2018-04-30T18:49:41.623+0000 I STORAGE  [conn1] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2018-04-30T18:49:41.623+0000 I STORAGE  [conn1] Scanning the oplog to determine where to place markers for truncation
+2018-04-30T18:49:41.640+0000 I REPL     [conn1] ******
+2018-04-30T18:49:41.640+0000 I STORAGE  [conn1] createCollection: local.system.replset with no UUID.
+2018-04-30T18:49:41.647+0000 I COMMAND  [conn1] Assigning UUID a11cb9c0-7bdc-489b-8309-c5d1c69a3a6b to collection local.system.rollback.id
+2018-04-30T18:49:41.648+0000 I COMMAND  [conn1] Assigning UUID 8c1e1e10-f888-47c2-befd-c5fa263a3828 to collection local.system.replset
+2018-04-30T18:49:41.648+0000 I COMMAND  [conn1] Assigning UUID 92fd517f-5048-437a-8bd4-8310ea663011 to collection local.me
+2018-04-30T18:49:41.648+0000 I COMMAND  [conn1] Assigning UUID 64c8cd97-e226-4e71-842d-ceba477d9cd6 to collection local.startup_log
+2018-04-30T18:49:41.648+0000 I COMMAND  [conn1] Assigning UUID 9620a6cf-f3a1-40cc-bcba-816dfd616944 to collection local.replset.minvalid
+2018-04-30T18:49:41.648+0000 I COMMAND  [conn1] Assigning UUID 21778bae-31fb-4124-832e-164aa482b9b7 to collection local.oplog.rs
+2018-04-30T18:49:41.648+0000 I STORAGE  [conn1] createCollection: admin.system.version with provided UUID: 1bd86466-568c-467e-aca0-03d789dcd926
+2018-04-30T18:49:41.655+0000 I COMMAND  [conn1] setting featureCompatibilityVersion to 3.6
+2018-04-30T18:49:41.655+0000 I NETWORK  [conn1] Skip closing connection for connection # 1
+2018-04-30T18:49:41.655+0000 I REPL     [conn1] New replica set config in use: { _id: "c1", version: 1, configsvr: true, protocolVersion: 1, members: [ { _id: 0, host: "localhost:57050", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5ae7654519b282777c7a6b65') } }
+2018-04-30T18:49:41.655+0000 I REPL     [conn1] This node is localhost:57050 in the config
+2018-04-30T18:49:41.655+0000 I REPL     [conn1] transition to STARTUP2 from STARTUP
+2018-04-30T18:49:41.655+0000 I REPL     [conn1] Starting replication storage threads
+2018-04-30T18:49:41.656+0000 I REPL     [conn1] transition to RECOVERING from STARTUP2
+2018-04-30T18:49:41.656+0000 I REPL     [conn1] Starting replication fetcher thread
+2018-04-30T18:49:41.656+0000 I REPL     [conn1] Starting replication applier thread
+2018-04-30T18:49:41.656+0000 I REPL     [conn1] Starting replication reporter thread
+2018-04-30T18:49:41.659+0000 I REPL     [rsSync] transition to SECONDARY from RECOVERING
+2018-04-30T18:49:41.659+0000 I REPL     [rsSync] conducting a dry run election to see if we could be elected. current term: 0
+2018-04-30T18:49:41.660+0000 I REPL     [replexec-0] dry election run succeeded, running for election in term 1
+2018-04-30T18:49:41.660+0000 I STORAGE  [replexec-0] createCollection: local.replset.election with generated UUID: 73353587-e0de-46c2-92c0-4c4b6356da27
+2018-04-30T18:49:41.661+0000 I NETWORK  [conn1] end connection 127.0.0.1:42568 (0 connections now open)
+2018-04-30T18:49:41.670+0000 I REPL     [replexec-2] election succeeded, assuming primary role in term 1
+2018-04-30T18:49:41.670+0000 I REPL     [replexec-2] transition to PRIMARY from SECONDARY
+2018-04-30T18:49:41.670+0000 I REPL     [replexec-2] Entering primary catch-up mode.
+2018-04-30T18:49:41.670+0000 I REPL     [replexec-2] Exited primary catch-up mode.
+2018-04-30T18:49:43.661+0000 I STORAGE  [rsSync] createCollection: config.chunks with generated UUID: 78ed6a32-9c43-4319-be48-999b90275e97
+2018-04-30T18:49:43.673+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.chunks" }
+2018-04-30T18:49:43.673+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.674+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.678+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, shard: 1, min: 1 }, name: "ns_1_shard_1_min_1", ns: "config.chunks" }
+2018-04-30T18:49:43.679+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.679+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.683+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, lastmod: 1 }, name: "ns_1_lastmod_1", ns: "config.chunks" }
+2018-04-30T18:49:43.683+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.684+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.684+0000 I STORAGE  [rsSync] createCollection: config.migrations with generated UUID: 56810301-d8aa-4bc8-b298-ff25c0948eb4
+2018-04-30T18:49:43.693+0000 I INDEX    [rsSync] build index on: config.migrations properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.migrations" }
+2018-04-30T18:49:43.693+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.694+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.694+0000 I STORAGE  [rsSync] createCollection: config.shards with generated UUID: 6105cbac-831b-456d-b5b3-0fb9e6dd6326
+2018-04-30T18:49:43.704+0000 I INDEX    [rsSync] build index on: config.shards properties: { v: 2, unique: true, key: { host: 1 }, name: "host_1", ns: "config.shards" }
+2018-04-30T18:49:43.704+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.705+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.705+0000 I STORAGE  [rsSync] createCollection: config.locks with generated UUID: 6a02feb9-7347-4cd3-8fdd-ff8e7a5522c5
+2018-04-30T18:49:43.714+0000 I INDEX    [rsSync] build index on: config.locks properties: { v: 2, key: { ts: 1 }, name: "ts_1", ns: "config.locks" }
+2018-04-30T18:49:43.714+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.715+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.717+0000 I INDEX    [rsSync] build index on: config.locks properties: { v: 2, key: { state: 1, process: 1 }, name: "state_1_process_1", ns: "config.locks" }
+2018-04-30T18:49:43.718+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.718+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.719+0000 I STORAGE  [rsSync] createCollection: config.lockpings with generated UUID: 76e44319-2799-4efa-b6d9-30833e1b9e7e
+2018-04-30T18:49:43.728+0000 I INDEX    [rsSync] build index on: config.lockpings properties: { v: 2, key: { ping: 1 }, name: "ping_1", ns: "config.lockpings" }
+2018-04-30T18:49:43.728+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.728+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.729+0000 I STORAGE  [rsSync] createCollection: config.tags with generated UUID: 7e1dd941-f24f-4830-ade9-bdf71d830577
+2018-04-30T18:49:43.737+0000 I INDEX    [rsSync] build index on: config.tags properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.tags" }
+2018-04-30T18:49:43.737+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.738+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.741+0000 I INDEX    [rsSync] build index on: config.tags properties: { v: 2, key: { ns: 1, tag: 1 }, name: "ns_1_tag_1", ns: "config.tags" }
+2018-04-30T18:49:43.741+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:49:43.742+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:49:43.743+0000 I STORAGE  [rsSync] createCollection: config.version with generated UUID: b2689666-a485-4204-86d8-ce675ecc2838
+2018-04-30T18:49:43.750+0000 I STORAGE  [rsSync] createCollection: config.transactions with generated UUID: d33d8019-01ec-4bb4-9f6a-834ceceabf2b
+2018-04-30T18:49:43.750+0000 I SHARDING [Balancer] CSRS balancer is starting
+2018-04-30T18:49:43.756+0000 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2018-04-30T18:49:43.757+0000 I STORAGE  [monitoring keys for HMAC] createCollection: admin.system.keys with generated UUID: 6c14f58a-abe8-460b-a7fe-5f677dac2124
+2018-04-30T18:49:43.758+0000 I SHARDING [Balancer] CSRS balancer thread is recovering
+2018-04-30T18:49:43.758+0000 I SHARDING [Balancer] CSRS balancer thread is recovered
+2018-04-30T18:49:46.817+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42570 #2 (1 connection now open)
+2018-04-30T18:49:46.818+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:42570 conn2: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:49:46.820+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42576 #3 (2 connections now open)
+2018-04-30T18:49:46.820+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42578 #4 (3 connections now open)
+2018-04-30T18:49:46.820+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:42576 conn3: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:49:46.821+0000 I NETWORK  [conn4] received client metadata from 127.0.0.1:42578 conn4: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:49:46.821+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42582 #5 (4 connections now open)
+2018-04-30T18:49:46.824+0000 I NETWORK  [conn5] received client metadata from 127.0.0.1:42582 conn5: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:49:48.828+0000 I STORAGE  [conn5] createCollection: config.mongos with generated UUID: 5d4e17a0-7553-4b4b-ba4e-fe5a2fc73862
+2018-04-30T18:50:06.404+0000 W SHARDING [replSetDistLockPinger] pinging failed for distributed lock pinger :: caused by :: LockStateChangeFailed: findAndModify query predicate didn't match any lock document
+2018-04-30T18:50:21.054+0000 I NETWORK  [conn5] Starting new replica set monitor for s0/localhost:37017
+2018-04-30T18:50:21.055+0000 I NETWORK  [conn5] Successfully connected to localhost:37017 (1 connections now open to localhost:37017 with a 5 second timeout)
+2018-04-30T18:50:21.055+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:37017
+2018-04-30T18:50:21.057+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:37017, took 2ms (1 connections now open to localhost:37017)
+2018-04-30T18:50:21.061+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42598 #6 (5 connections now open)
+2018-04-30T18:50:21.062+0000 I NETWORK  [conn6] received client metadata from 127.0.0.1:42598 conn6: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.065+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42602 #7 (6 connections now open)
+2018-04-30T18:50:21.065+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42606 #8 (7 connections now open)
+2018-04-30T18:50:21.065+0000 I NETWORK  [conn7] received client metadata from 127.0.0.1:42602 conn7: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.065+0000 I NETWORK  [conn8] received client metadata from 127.0.0.1:42606 conn8: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.066+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42610 #9 (8 connections now open)
+2018-04-30T18:50:21.067+0000 I NETWORK  [conn9] received client metadata from 127.0.0.1:42610 conn9: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.071+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s0", host: "s0/localhost:37017", state: 1 }
+2018-04-30T18:50:21.072+0000 I STORAGE  [conn5] createCollection: config.changelog with generated UUID: fdb0da1e-0216-452e-8196-d8e7a8799c75
+2018-04-30T18:50:21.080+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.080+0000-5ae7656d19b282777c7a6bd0", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221080), what: "addShard", ns: "", details: { name: "s0", host: "s0/localhost:37017" } }
+2018-04-30T18:50:21.084+0000 I NETWORK  [conn5] Starting new replica set monitor for s1/localhost:47017
+2018-04-30T18:50:21.086+0000 I NETWORK  [conn5] Successfully connected to localhost:47017 (1 connections now open to localhost:47017 with a 5 second timeout)
+2018-04-30T18:50:21.086+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:47017
+2018-04-30T18:50:21.087+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:47017, took 1ms (1 connections now open to localhost:47017)
+2018-04-30T18:50:21.090+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42620 #10 (9 connections now open)
+2018-04-30T18:50:21.091+0000 I NETWORK  [conn10] received client metadata from 127.0.0.1:42620 conn10: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.093+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42624 #11 (10 connections now open)
+2018-04-30T18:50:21.094+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42628 #12 (11 connections now open)
+2018-04-30T18:50:21.094+0000 I NETWORK  [conn12] received client metadata from 127.0.0.1:42628 conn12: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.094+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42632 #13 (12 connections now open)
+2018-04-30T18:50:21.095+0000 I NETWORK  [conn13] received client metadata from 127.0.0.1:42632 conn13: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.095+0000 I NETWORK  [conn11] received client metadata from 127.0.0.1:42624 conn11: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.099+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s1", host: "s1/localhost:47017", state: 1 }
+2018-04-30T18:50:21.100+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.099+0000-5ae7656d19b282777c7a6be1", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221099), what: "addShard", ns: "", details: { name: "s1", host: "s1/localhost:47017" } }
+2018-04-30T18:50:21.103+0000 I NETWORK  [conn5] Starting new replica set monitor for s2/localhost:57017
+2018-04-30T18:50:21.104+0000 I NETWORK  [conn5] Successfully connected to localhost:57017 (1 connections now open to localhost:57017 with a 5 second timeout)
+2018-04-30T18:50:21.104+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:57017
+2018-04-30T18:50:21.105+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:57017, took 1ms (1 connections now open to localhost:57017)
+2018-04-30T18:50:21.108+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42644 #14 (13 connections now open)
+2018-04-30T18:50:21.109+0000 I NETWORK  [conn14] received client metadata from 127.0.0.1:42644 conn14: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.111+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42648 #15 (14 connections now open)
+2018-04-30T18:50:21.111+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42652 #16 (15 connections now open)
+2018-04-30T18:50:21.111+0000 I NETWORK  [conn15] received client metadata from 127.0.0.1:42648 conn15: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.111+0000 I NETWORK  [conn16] received client metadata from 127.0.0.1:42652 conn16: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.112+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42656 #17 (16 connections now open)
+2018-04-30T18:50:21.114+0000 I NETWORK  [conn17] received client metadata from 127.0.0.1:42656 conn17: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:21.117+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s2", host: "s2/localhost:57017", state: 1 }
+2018-04-30T18:50:21.118+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.118+0000-5ae7656d19b282777c7a6bf2", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221118), what: "addShard", ns: "", details: { name: "s2", host: "s2/localhost:57017" } }
+2018-04-30T18:50:21.140+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'enableSharding', ts : 5ae7656d19b282777c7a6bfd
+2018-04-30T18:50:21.140+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'enableSharding', ts : 5ae7656d19b282777c7a6bff
+2018-04-30T18:50:21.141+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:37017
+2018-04-30T18:50:21.141+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:37017, took 0ms (1 connections now open to localhost:37017)
+2018-04-30T18:50:21.142+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:47017
+2018-04-30T18:50:21.143+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:47017, took 1ms (1 connections now open to localhost:47017)
+2018-04-30T18:50:21.143+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:57017
+2018-04-30T18:50:21.144+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:57017, took 1ms (1 connections now open to localhost:57017)
+2018-04-30T18:50:21.144+0000 I SHARDING [conn5] Placing [accidents] on: s0
+2018-04-30T18:50:21.144+0000 I STORAGE  [conn5] createCollection: config.databases with generated UUID: 5e17e861-1489-4f0f-b17b-42dd31e59867
+2018-04-30T18:50:21.153+0000 I SHARDING [conn5] Enabling sharding for database [accidents] in config db
+2018-04-30T18:50:21.154+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6bff' unlocked.
+2018-04-30T18:50:21.154+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6bfd' unlocked.
+2018-04-30T18:50:21.157+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c07
+2018-04-30T18:50:21.158+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c09
+2018-04-30T18:50:21.158+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c0b
+2018-04-30T18:50:21.158+0000 I NETWORK  [conn5] Successfully connected to s0/localhost:37017 (1 connections now open to s0/localhost:37017 with a 0 second timeout)
+2018-04-30T18:50:21.171+0000 I SHARDING [conn5] CMD: shardcollection: { _configsvrShardCollection: "accidents.accidents", key: { Accident_Index: 1.0 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525114221, 23), signature: { hash: BinData(0, ECB45FE39DCBDB2730AB762768018099092E4AEE), keyId: 6550315538650759187 } }, $client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" }, mongos: { host: "tm351base18Jtest:27017", client: "127.0.0.1:51554", version: "3.6.4" } }, $configServerState: { opTime: { ts: Timestamp(1525114221, 23), t: 1 } }, $db: "admin" }
+2018-04-30T18:50:21.171+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.171+0000-5ae7656d19b282777c7a6c10", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221171), what: "shardCollection.start", ns: "accidents.accidents", details: { shardKey: { Accident_Index: 1.0 }, collection: "accidents.accidents", uuid: UUID("6308ddbe-2c5f-48b5-bf74-74414447d244"), primary: "s0:s0/localhost:37017", numChunks: 1 } }
+2018-04-30T18:50:21.173+0000 I SHARDING [conn5] going to create 1 chunk(s) for: accidents.accidents using new epoch 5ae7656d19b282777c7a6c16
+2018-04-30T18:50:21.174+0000 I STORAGE  [conn5] createCollection: config.collections with generated UUID: f341dfaf-7f1a-43ef-932b-80cd0a243feb
+2018-04-30T18:50:21.250+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.250+0000-5ae7656d19b282777c7a6c1e", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221250), what: "shardCollection.end", ns: "accidents.accidents", details: { version: "1|0||5ae7656d19b282777c7a6c16" } }
+2018-04-30T18:50:21.252+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c0b' unlocked.
+2018-04-30T18:50:21.252+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c09' unlocked.
+2018-04-30T18:50:21.253+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c07' unlocked.
+2018-04-30T18:50:21.256+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c24
+2018-04-30T18:50:21.257+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c26
+2018-04-30T18:50:21.257+0000 I SHARDING [conn5] distributed lock 'accidents.roads' acquired for 'shardCollection', ts : 5ae7656d19b282777c7a6c28
+2018-04-30T18:50:21.270+0000 I SHARDING [conn5] CMD: shardcollection: { _configsvrShardCollection: "accidents.roads", key: { CP: 1.0 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525114221, 44), signature: { hash: BinData(0, ECB45FE39DCBDB2730AB762768018099092E4AEE), keyId: 6550315538650759187 } }, $client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" }, mongos: { host: "tm351base18Jtest:27017", client: "127.0.0.1:51554", version: "3.6.4" } }, $configServerState: { opTime: { ts: Timestamp(1525114221, 44), t: 1 } }, $db: "admin" }
+2018-04-30T18:50:21.271+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.271+0000-5ae7656d19b282777c7a6c2d", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221271), what: "shardCollection.start", ns: "accidents.roads", details: { shardKey: { CP: 1.0 }, collection: "accidents.roads", uuid: UUID("594b9206-c177-4d28-be38-46bf3f5acaa4"), primary: "s0:s0/localhost:37017", numChunks: 1 } }
+2018-04-30T18:50:21.272+0000 I SHARDING [conn5] going to create 1 chunk(s) for: accidents.roads using new epoch 5ae7656d19b282777c7a6c33
+2018-04-30T18:50:21.288+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:50:21.288+0000-5ae7656d19b282777c7a6c38", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42582", time: new Date(1525114221288), what: "shardCollection.end", ns: "accidents.roads", details: { version: "1|0||5ae7656d19b282777c7a6c33" } }
+2018-04-30T18:50:21.289+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c28' unlocked.
+2018-04-30T18:50:21.289+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c26' unlocked.
+2018-04-30T18:50:21.290+0000 I SHARDING [conn5] distributed lock with ts: 5ae7656d19b282777c7a6c24' unlocked.
+2018-04-30T18:50:23.768+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 0|0||000000000000000000000000
+2018-04-30T18:50:23.771+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 3 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:23.772+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 0|0||000000000000000000000000
+2018-04-30T18:50:23.774+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 2 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:23.779+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:23.781+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 1 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:23.784+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:23.785+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:33.790+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:33.791+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:33.792+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:33.792+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:33.795+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:33.795+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:33.796+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:33.797+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:43.805+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:43.813+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 7 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:43.814+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:43.815+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:43.819+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:43.823+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 4 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:43.823+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:43.824+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:46.825+0000 I NETWORK  [conn4] end connection 127.0.0.1:42578 (15 connections now open)
+2018-04-30T18:50:46.825+0000 I NETWORK  [conn3] end connection 127.0.0.1:42576 (14 connections now open)
+2018-04-30T18:50:46.827+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42686 #18 (15 connections now open)
+2018-04-30T18:50:46.830+0000 I NETWORK  [conn18] received client metadata from 127.0.0.1:42686 conn18: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:50:53.842+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:53.847+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 4 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:53.850+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:53.856+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 6 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:53.862+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:53.866+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 4 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:50:53.867+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:50:53.868+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:03.874+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:03.874+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:03.878+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:03.878+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:03.882+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:03.884+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 1 ms and found version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:03.885+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:03.887+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:11.028+0000 I SHARDING [conn8] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:11.028+0000-5ae7659f19b282777c7a6cf2", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42606", time: new Date(1525114271028), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 1, of: 3, chunk: { min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(1, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:11.028+0000 I SHARDING [conn8] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:11.028+0000-5ae7659f19b282777c7a6cf4", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42606", time: new Date(1525114271028), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 2, of: 3, chunk: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H021402" }, lastmod: Timestamp(1, 2), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:11.029+0000 I SHARDING [conn8] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:11.029+0000-5ae7659f19b282777c7a6cf6", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42606", time: new Date(1525114271029), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 3, of: 3, chunk: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 3), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:11.047+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:11.049+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 2 ms and found version 1|3||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:11.062+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:11.705+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:11.705+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 1|3||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:11.706+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 2|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:11.707+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_MinKey", ns: "accidents.accidents", min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, shard: "s0", lastmod: Timestamp(1, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525114271, 917), signature: { hash: BinData(0, EF29F670C5D0114EB69C288239F747817FEC7CDA), keyId: 6550315538650759187 } }, $configServerState: { opTime: { ts: Timestamp(1525114271, 838), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 668ms
+2018-04-30T18:51:12.769+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:12.769+0000-5ae765a019b282777c7a6d39", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114272769), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H021402" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 1, of: 3, chunk: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200901RY10450" }, lastmod: Timestamp(2, 2), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:12.770+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:12.770+0000-5ae765a019b282777c7a6d3b", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114272770), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H021402" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 2, of: 3, chunk: { min: { Accident_Index: "200901RY10450" }, max: { Accident_Index: "200905AA31980" }, lastmod: Timestamp(2, 3), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:12.770+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:12.770+0000-5ae765a019b282777c7a6d3d", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114272770), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H021402" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 3, of: 3, chunk: { min: { Accident_Index: "200905AA31980" }, max: { Accident_Index: "200920H021402" }, lastmod: Timestamp(2, 4), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:12.794+0000 W SHARDING [conn7] chunk operation commit failed and metadata will be revalidated :: caused by :: BadValue: preCondition failed
+2018-04-30T18:51:13.892+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:13.892+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:13.892+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 2|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:13.892+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 2|4||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:13.895+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:13.895+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:13.895+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 2|4||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:13.896+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 2|4||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:14.042+0000 I COMMAND  [Balancer] command config.migrations command: insert { insert: "migrations", bypassDocumentValidation: false, ordered: true, documents: [ { _id: "accidents.accidents-Accident_Index_"200901BS70002"", ns: "accidents.accidents", min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200901RY10450" }, fromShard: "s0", toShard: "s1", chunkVersion: [ Timestamp(2, 2), ObjectId('5ae7656d19b282777c7a6c16') ], waitForDelete: false } ], writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } ninserted:1 keysInserted:2 numYields:0 reslen:294 locks:{ Global: { acquireCount: { r: 212, w: 2 } }, Database: { acquireCount: { r: 105, w: 2 } }, Collection: { acquireCount: { r: 105, w: 1 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 146ms
+2018-04-30T18:51:14.049+0000 I SHARDING [Balancer] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:25.873+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:25.875+0000 I STORAGE  [Balancer] createCollection: config.actionlog with generated UUID: f57a1060-362b-4d0f-bd1c-2df78894cba3
+2018-04-30T18:51:25.884+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:51:25.884+0000-5ae765ad19b282777c7a6e25", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114285884), what: "balancer.round", ns: "", details: { executionTimeMillis: 11986, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } }
+2018-04-30T18:51:26.098+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.098+0000-5ae765ae19b282777c7a6e39", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286098), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 1, of: 6, chunk: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: "200932C327009" }, lastmod: Timestamp(3, 2), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.099+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.099+0000-5ae765ae19b282777c7a6e3b", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286099), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 2, of: 6, chunk: { min: { Accident_Index: "200932C327009" }, max: { Accident_Index: "200943N156029" }, lastmod: Timestamp(3, 3), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.100+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.100+0000-5ae765ae19b282777c7a6e3d", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286100), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 3, of: 6, chunk: { min: { Accident_Index: "200943N156029" }, max: { Accident_Index: "201001RG40668" }, lastmod: Timestamp(3, 4), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.101+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.101+0000-5ae765ae19b282777c7a6e3f", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286101), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 4, of: 6, chunk: { min: { Accident_Index: "201001RG40668" }, max: { Accident_Index: "201004FJ10017" }, lastmod: Timestamp(3, 5), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.103+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.103+0000-5ae765ae19b282777c7a6e41", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286103), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 5, of: 6, chunk: { min: { Accident_Index: "201004FJ10017" }, max: { Accident_Index: "201042I107504" }, lastmod: Timestamp(3, 6), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.104+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:26.104+0000-5ae765ae19b282777c7a6e43", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42602", time: new Date(1525114286104), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H021402" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 6, of: 6, chunk: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 7), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:26.115+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 2|4||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.115+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 3|7||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.117+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:26.372+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:26.373+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 3|7||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.373+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.374+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_"201042I107504"", ns: "accidents.accidents", min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, shard: "s0", lastmod: Timestamp(3, 7), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525114286, 113), signature: { hash: BinData(0, 2428A1AC629968EA32AE7B5AA382570507619E2F), keyId: 6550315538650759187 } }, $configServerState: { opTime: { ts: Timestamp(1525114286, 113), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 261ms
+2018-04-30T18:51:26.891+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.892+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.892+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:26.893+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:26.896+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.896+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:26.897+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:26.898+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:26.901+0000 I SHARDING [Balancer] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:39.399+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:39.401+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:51:39.400+0000-5ae765bb19b282777c7a6f4e", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114299400), what: "balancer.round", ns: "", details: { executionTimeMillis: 12512, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } }
+2018-04-30T18:51:39.786+0000 I SHARDING [conn15] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:39.786+0000-5ae765bb19b282777c7a6f5b", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42648", time: new Date(1525114299786), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 1, of: 4, chunk: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: "201050EC2J066" }, lastmod: Timestamp(5, 2), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:39.786+0000 I SHARDING [conn15] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:39.786+0000-5ae765bb19b282777c7a6f5d", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42648", time: new Date(1525114299786), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 2, of: 4, chunk: { min: { Accident_Index: "201050EC2J066" }, max: { Accident_Index: "201101BS70399" }, lastmod: Timestamp(5, 3), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:39.787+0000 I SHARDING [conn15] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:39.787+0000-5ae765bb19b282777c7a6f5f", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42648", time: new Date(1525114299787), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 3, of: 4, chunk: { min: { Accident_Index: "201101BS70399" }, max: { Accident_Index: "201114A040911" }, lastmod: Timestamp(5, 4), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:39.787+0000 I SHARDING [conn15] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:39.787+0000-5ae765bb19b282777c7a6f61", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42648", time: new Date(1525114299787), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201042I107504" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 4, of: 4, chunk: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 5), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:39.801+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:39.802+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 5|5||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:39.805+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:40.092+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:40.095+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 5|5||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.098+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 3 ms and found version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.102+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_"201114A040911"", ns: "accidents.accidents", min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, shard: "s2", lastmod: Timestamp(5, 5), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525114299, 13298), signature: { hash: BinData(0, 61027A3003B55EC15D8AA3F856B0797943516474), keyId: 6550315538650759187 } }, $configServerState: { opTime: { ts: Timestamp(1525114299, 13298), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 303ms
+2018-04-30T18:51:40.407+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:40.408+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:40.408+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.408+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.411+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:40.412+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:40.413+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.413+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:40.421+0000 I SHARDING [Balancer] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:51.101+0000 I NETWORK  [conn12] end connection 127.0.0.1:42628 (14 connections now open)
+2018-04-30T18:51:51.120+0000 I NETWORK  [conn17] end connection 127.0.0.1:42656 (13 connections now open)
+2018-04-30T18:51:57.066+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae7654019b282777c7a6b5a' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:51:57.068+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.068+0000-5ae765cd19b282777c7a7115", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114317068), what: "balancer.round", ns: "", details: { executionTimeMillis: 16666, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } }
+2018-04-30T18:51:57.094+0000 I SHARDING [conn11] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.094+0000-5ae765cd19b282777c7a711c", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42624", time: new Date(1525114317094), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 1, of: 5, chunk: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: "201122E104900" }, lastmod: Timestamp(7, 2), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:57.095+0000 I SHARDING [conn11] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.095+0000-5ae765cd19b282777c7a711e", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42624", time: new Date(1525114317095), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 2, of: 5, chunk: { min: { Accident_Index: "201122E104900" }, max: { Accident_Index: "20114100G0638" }, lastmod: Timestamp(7, 3), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:57.096+0000 I SHARDING [conn11] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.096+0000-5ae765cd19b282777c7a7120", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42624", time: new Date(1525114317096), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 3, of: 5, chunk: { min: { Accident_Index: "20114100G0638" }, max: { Accident_Index: "201145WA62477" }, lastmod: Timestamp(7, 4), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:57.097+0000 I SHARDING [conn11] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.097+0000-5ae765cd19b282777c7a7122", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42624", time: new Date(1525114317097), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 4, of: 5, chunk: { min: { Accident_Index: "201145WA62477" }, max: { Accident_Index: "201204DA12002" }, lastmod: Timestamp(7, 5), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:57.097+0000 I SHARDING [conn11] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:51:57.097+0000-5ae765cd19b282777c7a7124", server: "tm351base18Jtest", clientAddr: "127.0.0.1:42624", time: new Date(1525114317097), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201114A040911" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 1), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') }, number: 5, of: 5, chunk: { min: { Accident_Index: "201204DA12002" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(7, 6), lastmodEpoch: ObjectId('5ae7656d19b282777c7a6c16') } } }
+2018-04-30T18:51:57.121+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 6|1||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:57.122+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 1 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:57.126+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae7654019b282777c7a6b5a
+2018-04-30T18:51:58.101+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:47017
+2018-04-30T18:51:58.138+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:47017, took 38ms (2 connections now open to localhost:47017)
+2018-04-30T18:51:58.151+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:58.186+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 34 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:58.187+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:58.189+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:58.192+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:58.193+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:51:58.194+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:58.195+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:51:58.209+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:51:58.210+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:51:58.209+0000-5ae765ce19b282777c7a7162", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114318209), what: "balancer.round", ns: "", details: { executionTimeMillis: 129, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:08.253+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:08.266+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 12 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:08.267+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:08.268+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:08.271+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:08.271+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:08.271+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:08.271+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:08.294+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:08.296+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:08.296+0000-5ae765d819b282777c7a724a", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114328296), what: "balancer.round", ns: "", details: { executionTimeMillis: 83, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:11.036+0000 I NETWORK  [conn8] end connection 127.0.0.1:42606 (12 connections now open)
+2018-04-30T18:52:18.325+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:18.333+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 8 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:18.334+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:18.334+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:18.336+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:18.337+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:18.337+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:18.338+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:18.350+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:18.351+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:18.350+0000-5ae765e219b282777c7a72b0", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114338350), what: "balancer.round", ns: "", details: { executionTimeMillis: 51, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:26.125+0000 I NETWORK  [conn9] end connection 127.0.0.1:42610 (11 connections now open)
+2018-04-30T18:52:28.365+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:28.365+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:28.366+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:28.366+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:28.368+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:28.369+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:28.369+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:28.369+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:28.373+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:28.373+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:28.373+0000-5ae765ec19b282777c7a72d8", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114348373), what: "balancer.round", ns: "", details: { executionTimeMillis: 19, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:38.378+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:38.379+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:38.379+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:38.379+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:38.382+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:38.382+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:38.383+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:38.383+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:38.385+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:38.385+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:38.385+0000-5ae765f619b282777c7a72f7", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114358385), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:48.391+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:48.391+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:48.392+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:48.392+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:48.395+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:48.395+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:48.395+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:48.396+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:48.398+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:48.398+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:48.398+0000-5ae7660019b282777c7a7317", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114368398), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:52:56.244+0000 I NETWORK  [conn13] end connection 127.0.0.1:42632 (10 connections now open)
+2018-04-30T18:52:58.403+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:58.403+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:58.403+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:58.404+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:58.406+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:58.407+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:52:58.407+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:58.407+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:52:58.412+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:52:58.412+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:52:58.412+0000-5ae7660a19b282777c7a733e", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114378412), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:08.418+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:08.418+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:08.419+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:08.419+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:08.422+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:08.422+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:08.422+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:08.423+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:08.426+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:08.426+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:08.426+0000-5ae7661419b282777c7a735d", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114388426), what: "balancer.round", ns: "", details: { executionTimeMillis: 12, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:18.431+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:18.432+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:18.432+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:18.432+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:18.435+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:18.435+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:18.435+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:18.436+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:18.439+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:18.439+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:18.439+0000-5ae7661e19b282777c7a737d", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114398439), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:21.129+0000 I NETWORK  [conn16] end connection 127.0.0.1:42652 (9 connections now open)
+2018-04-30T18:53:28.444+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:28.445+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:28.445+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:28.446+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:28.449+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:28.449+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:28.450+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:28.450+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:28.454+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:28.454+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:28.454+0000-5ae7662819b282777c7a73a4", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114408454), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:38.459+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:38.460+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:38.460+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:38.460+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:38.463+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:38.463+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:38.464+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:38.464+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:38.466+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:38.467+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:38.467+0000-5ae7663219b282777c7a73c3", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114418467), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:48.472+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:48.472+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:48.473+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:48.473+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:48.476+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:48.476+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:48.476+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:48.477+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:48.479+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:48.480+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:48.480+0000-5ae7663c19b282777c7a73e3", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114428480), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:53:58.486+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:58.486+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:58.487+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:58.488+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:58.491+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:58.491+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:53:58.491+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:58.492+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:53:58.494+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:53:58.495+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:53:58.495+0000-5ae7664619b282777c7a740a", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114438495), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:08.501+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:08.501+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:08.501+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:08.502+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:08.504+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:08.504+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:08.505+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:08.505+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:08.509+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:08.509+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:08.509+0000-5ae7665019b282777c7a7429", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114448509), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:18.514+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:18.515+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:18.515+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:18.515+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:18.518+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:18.518+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:18.519+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:18.519+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:18.522+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:18.522+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:18.522+0000-5ae7665a19b282777c7a7449", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114458522), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:28.527+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:28.528+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:28.528+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:28.528+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:28.531+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:28.531+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:28.532+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:28.532+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:28.537+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:28.537+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:28.537+0000-5ae7666419b282777c7a7470", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114468537), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:36.434+0000 I SHARDING [thread20] distributed lock 'config-movePrimary' acquired for 'shardCollection', ts : 5ae7666c19b282777c7a7478
+2018-04-30T18:54:36.435+0000 I SHARDING [thread20] distributed lock 'config' acquired for 'shardCollection', ts : 5ae7666c19b282777c7a747a
+2018-04-30T18:54:36.435+0000 I SHARDING [thread20] distributed lock 'config.system.sessions' acquired for 'shardCollection', ts : 5ae7666c19b282777c7a747c
+2018-04-30T18:54:36.436+0000 I NETWORK  [thread20] Starting new replica set monitor for c1/localhost:57050
+2018-04-30T18:54:36.437+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42878 #19 (10 connections now open)
+2018-04-30T18:54:36.438+0000 I NETWORK  [conn19] received client metadata from 127.0.0.1:42878 conn19: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:54:36.438+0000 I NETWORK  [thread20] Successfully connected to localhost:57050 (1 connections now open to localhost:57050 with a 5 second timeout)
+2018-04-30T18:54:36.439+0000 I NETWORK  [thread20] Successfully connected to c1/localhost:57050 (1 connections now open to c1/localhost:57050 with a 0 second timeout)
+2018-04-30T18:54:36.439+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:42880 #20 (11 connections now open)
+2018-04-30T18:54:36.439+0000 I NETWORK  [conn20] received client metadata from 127.0.0.1:42880 conn20: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:54:36.453+0000 I SHARDING [thread20] CMD: shardcollection: { _configsvrShardCollection: "config.system.sessions", key: { _id: 1 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $db: "admin" }
+2018-04-30T18:54:36.454+0000 I SHARDING [thread20] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:54:36.454+0000-5ae7666c19b282777c7a7486", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114476454), what: "shardCollection.start", ns: "config.system.sessions", details: { shardKey: { _id: 1 }, collection: "config.system.sessions", uuid: UUID("a6769d07-5b3b-45b5-ba17-7d364ac08c89"), primary: "s0:s0/localhost:37017", numChunks: 1 } }
+2018-04-30T18:54:36.455+0000 I SHARDING [thread20] going to create 1 chunk(s) for: config.system.sessions using new epoch 5ae7666c19b282777c7a748c
+2018-04-30T18:54:36.566+0000 I SHARDING [thread20] about to log metadata event into changelog: { _id: "tm351base18Jtest-2018-04-30T18:54:36.566+0000-5ae7666c19b282777c7a7493", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114476566), what: "shardCollection.end", ns: "config.system.sessions", details: { version: "1|0||5ae7666c19b282777c7a748c" } }
+2018-04-30T18:54:36.567+0000 I SHARDING [thread20] distributed lock with ts: 5ae7666c19b282777c7a747c' unlocked.
+2018-04-30T18:54:36.568+0000 I SHARDING [thread20] distributed lock with ts: 5ae7666c19b282777c7a747a' unlocked.
+2018-04-30T18:54:36.569+0000 I SHARDING [thread20] distributed lock with ts: 5ae7666c19b282777c7a7478' unlocked.
+2018-04-30T18:54:36.569+0000 I COMMAND  [thread20] command admin.$cmd command: _configsvrShardCollection { _configsvrShardCollection: "config.system.sessions", key: { _id: 1 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $db: "admin" } numYields:0 reslen:310 locks:{ Global: { acquireCount: { r: 34, w: 20 } }, Database: { acquireCount: { r: 7, w: 20 } }, Collection: { acquireCount: { r: 7, w: 10 } }, Metadata: { acquireCount: { W: 2 } }, Mutex: { acquireCount: { W: 1 } }, oplog: { acquireCount: { w: 10 } } } protocol:op_msg 135ms
+2018-04-30T18:54:36.569+0000 I SHARDING [thread20] Refreshing chunks for collection config.system.sessions based on version 0|0||000000000000000000000000
+2018-04-30T18:54:36.570+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:36.571+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Connecting to localhost:37017
+2018-04-30T18:54:36.571+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Connecting to localhost:47017
+2018-04-30T18:54:36.571+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Connecting to localhost:57017
+2018-04-30T18:54:36.576+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Successfully connected to localhost:47017, took 6ms (1 connections now open to localhost:47017)
+2018-04-30T18:54:36.576+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Successfully connected to localhost:37017, took 6ms (1 connections now open to localhost:37017)
+2018-04-30T18:54:36.577+0000 I ASIO     [NetworkInterfaceASIO-TaskExecutorPool-0-0] Successfully connected to localhost:57017, took 7ms (1 connections now open to localhost:57017)
+2018-04-30T18:54:38.544+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:38.545+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:38.545+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:38.545+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:38.546+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:38.546+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:38.549+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:38.549+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:38.550+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:38.550+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:38.550+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:38.551+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:38.553+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:38.553+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:38.553+0000-5ae7666e19b282777c7a74b7", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114478553), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:48.560+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:48.560+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:48.561+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:48.562+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:48.562+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:48.562+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:48.565+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:48.566+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:48.566+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:48.566+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:48.567+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:48.567+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:48.571+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:48.571+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:48.571+0000-5ae7667819b282777c7a74dd", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114488571), what: "balancer.round", ns: "", details: { executionTimeMillis: 16, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:54:58.580+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:58.580+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:58.580+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:58.581+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:58.581+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:58.582+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:58.584+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:58.584+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:54:58.585+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:58.585+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:54:58.585+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:58.585+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:54:58.588+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:54:58.588+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:54:58.588+0000-5ae7668219b282777c7a750e", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114498588), what: "balancer.round", ns: "", details: { executionTimeMillis: 15, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:08.593+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:08.594+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:08.594+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:08.594+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:08.595+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:08.595+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:08.598+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:08.598+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:08.598+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:08.599+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:08.599+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:08.599+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:08.603+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:08.604+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:08.603+0000-5ae7668c19b282777c7a7534", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114508603), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:18.609+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:18.610+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:18.610+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:18.611+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:18.611+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:18.611+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:18.614+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:18.615+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:18.615+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:18.615+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:18.616+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:18.616+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:18.618+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:18.619+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:18.619+0000-5ae7669619b282777c7a755a", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114518619), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:28.624+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:28.624+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:28.624+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:28.625+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:28.625+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:28.625+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:28.628+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:28.628+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:28.628+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:28.629+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:28.629+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:28.629+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:28.632+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:28.633+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:28.633+0000-5ae766a019b282777c7a758f", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114528633), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:38.638+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:38.638+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:38.639+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:38.639+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:38.639+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:38.640+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:38.642+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:38.643+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:38.643+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:38.643+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:38.643+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:38.644+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:38.646+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:38.646+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:38.646+0000-5ae766aa19b282777c7a75b5", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114538646), what: "balancer.round", ns: "", details: { executionTimeMillis: 12, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:48.652+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:48.653+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:48.653+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:48.654+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:48.654+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:48.654+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:48.657+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:48.657+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:48.658+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:48.658+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:48.658+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:48.659+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:48.661+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:48.662+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:48.662+0000-5ae766b419b282777c7a75db", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114548662), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:55:58.667+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:58.667+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:58.668+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:58.668+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:58.668+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:58.669+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:58.672+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:58.672+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:55:58.673+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:58.673+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:55:58.673+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:58.674+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:55:58.677+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:55:58.678+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:55:58.678+0000-5ae766be19b282777c7a7608", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114558678), what: "balancer.round", ns: "", details: { executionTimeMillis: 15, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:08.683+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:08.683+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:08.683+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:08.684+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:08.684+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:08.684+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:08.687+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:08.687+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:08.687+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:08.688+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:08.688+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:08.688+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:08.691+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:08.691+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:08.691+0000-5ae766c819b282777c7a762e", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114568691), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:18.697+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:18.697+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:18.698+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:18.698+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:18.699+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:18.699+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:18.702+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:18.703+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:18.703+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:18.703+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:18.704+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:18.704+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:18.706+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:18.706+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:18.706+0000-5ae766d219b282777c7a7654", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114578706), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:28.712+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:28.713+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:28.713+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:28.713+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:28.714+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:28.714+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:28.717+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:28.718+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:28.718+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:28.718+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:28.718+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:28.719+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:28.721+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:28.721+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:28.721+0000-5ae766dc19b282777c7a7681", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114588721), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:38.726+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:38.727+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:38.727+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:38.728+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:38.728+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:38.729+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:38.732+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:38.732+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:38.733+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:38.733+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:38.733+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:38.734+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:38.736+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:38.736+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:38.736+0000-5ae766e619b282777c7a76a7", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114598736), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:48.742+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:48.742+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:48.743+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:48.743+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:48.743+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:48.744+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:48.746+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:48.747+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:48.747+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:48.747+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:48.748+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:48.748+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:48.751+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:48.751+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:48.751+0000-5ae766f019b282777c7a76cd", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114608751), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:56:58.757+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:58.757+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:58.758+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:58.758+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:58.758+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:58.759+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:58.762+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:58.762+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:56:58.762+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:58.763+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:56:58.763+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:58.763+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:56:58.766+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:56:58.766+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:56:58.766+0000-5ae766fa19b282777c7a76fa", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114618766), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:08.773+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:08.773+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:08.774+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:08.774+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:08.774+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:08.775+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:08.777+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:08.778+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:08.778+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:08.778+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:08.779+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:08.779+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:08.783+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:08.783+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:08.783+0000-5ae7670419b282777c7a7720", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114628783), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:18.789+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:18.790+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:18.790+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:18.791+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:18.791+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:18.791+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:18.794+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:18.795+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:18.795+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:18.795+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:18.796+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:18.796+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:18.798+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:18.798+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:18.798+0000-5ae7670e19b282777c7a7746", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114638798), what: "balancer.round", ns: "", details: { executionTimeMillis: 13, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:28.807+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:28.808+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:28.808+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:28.808+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:28.809+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:28.809+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:28.811+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:28.812+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:28.812+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:28.813+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:28.813+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:28.813+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:28.815+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:28.816+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:28.816+0000-5ae7671819b282777c7a7774", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114648816), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:38.821+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:38.821+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:38.821+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:38.822+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:38.822+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:38.823+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:38.825+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:38.826+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:38.826+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:38.826+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:38.827+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:38.827+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:38.829+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:38.829+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:38.829+0000-5ae7672219b282777c7a779a", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114658829), what: "balancer.round", ns: "", details: { executionTimeMillis: 12, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:48.834+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:48.834+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:48.834+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:48.835+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:48.835+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:48.835+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:48.838+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:48.838+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:48.838+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:48.839+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:48.839+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:48.839+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:48.841+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:48.842+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:48.842+0000-5ae7672c19b282777c7a77c1", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114668842), what: "balancer.round", ns: "", details: { executionTimeMillis: 11, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:57:58.848+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:58.849+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:58.849+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:58.850+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:58.850+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:58.850+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:58.853+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:58.854+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:57:58.854+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:58.855+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:57:58.855+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:58.856+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:57:58.859+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:57:58.859+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:57:58.859+0000-5ae7673619b282777c7a77ed", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114678859), what: "balancer.round", ns: "", details: { executionTimeMillis: 15, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:08.866+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:08.867+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:08.868+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:08.868+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:08.868+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:08.869+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:08.872+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:08.872+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:08.873+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:08.873+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:08.873+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:08.874+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:08.876+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:08.877+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:08.877+0000-5ae7674019b282777c7a7813", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114688877), what: "balancer.round", ns: "", details: { executionTimeMillis: 15, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:18.882+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:18.883+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:18.883+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:18.884+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:18.884+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:18.884+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:18.887+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:18.887+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:18.888+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:18.888+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:18.888+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:18.888+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:18.893+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:18.893+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:18.893+0000-5ae7674a19b282777c7a783a", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114698893), what: "balancer.round", ns: "", details: { executionTimeMillis: 15, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:28.899+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:28.899+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:28.899+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:28.900+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:28.900+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:28.900+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:28.903+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:28.903+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:28.904+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:28.904+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:28.904+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:28.904+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:28.909+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:28.909+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:28.909+0000-5ae7675419b282777c7a7866", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114708909), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:38.914+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:38.915+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:38.915+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:38.916+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:38.916+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:38.916+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:38.918+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:38.919+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:38.919+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:38.919+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:38.920+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:38.920+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:38.922+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:38.922+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:38.922+0000-5ae7675e19b282777c7a788c", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114718922), what: "balancer.round", ns: "", details: { executionTimeMillis: 12, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:48.927+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:48.928+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:48.928+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:48.929+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:48.929+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:48.930+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:48.932+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:48.932+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:48.933+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:48.933+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:48.933+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:48.934+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:48.937+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:48.937+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:48.937+0000-5ae7676819b282777c7a78b3", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114728937), what: "balancer.round", ns: "", details: { executionTimeMillis: 14, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:58:58.943+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:58.943+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:58.944+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:58.944+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:58.944+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:58.945+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:58.947+0000 I SHARDING [Balancer] Refreshing chunks for collection config.system.sessions based on version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:58.948+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection config.system.sessions took 0 ms and found version 1|0||5ae7666c19b282777c7a748c
+2018-04-30T18:58:58.948+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:58.948+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 7|6||5ae7656d19b282777c7a6c16
+2018-04-30T18:58:58.949+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:58.949+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7656d19b282777c7a6c33
+2018-04-30T18:58:58.952+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901BS70002" }, { Accident_Index: "200901RY10450" }), from s1, to s2 failed :: caused by :: ConflictingOperationInProgress: Unable to start new migration because this shard is currently donating chunk [{ Accident_Index: "201204DA12002" }, { Accident_Index: MaxKey }) for namespace accidents.accidents to s2
+2018-04-30T18:58:58.952+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351base18Jtest-2018-04-30T18:58:58.952+0000-5ae7677219b282777c7a78df", server: "tm351base18Jtest", clientAddr: "", time: new Date(1525114738952), what: "balancer.round", ns: "", details: { executionTimeMillis: 12, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }

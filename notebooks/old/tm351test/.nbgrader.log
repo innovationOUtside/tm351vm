@@ -1,0 +1,37 @@
+[QuickStartApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[QuickStartApp | INFO] Creating directory '/vagrant/notebooks/installationTests/tm351test'...
+[QuickStartApp | INFO] Copying example from the user guide...
+[QuickStartApp | INFO] Generating example config file...
+[QuickStartApp | INFO] Done! The course files are located in '/vagrant/notebooks/installationTests/tm351test'.
+    
+    To get started, you can edit the source notebooks located in:
+    
+        /vagrant/notebooks/installationTests/tm351test/source/ps1
+    
+    Once you have edited them to your satisfaction, you can create
+    the student version by running `nbgrader assign ps1` from the
+    '/vagrant/notebooks/installationTests/tm351test' directory.
+    
+    For further details, please see the full nbgrader documentation at:
+    
+        https://nbgrader.readthedocs.io/
+    
+[ListApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[ListApp | ERROR] nbgrader list failed
+[ListApp | INFO] Released assignments:
+[DbAssignmentAddApp | ERROR] No assignment id provided.
+[DbAssignmentAddApp | INFO] Creating/updating assignment with ID 'c1': {'duedate': None}

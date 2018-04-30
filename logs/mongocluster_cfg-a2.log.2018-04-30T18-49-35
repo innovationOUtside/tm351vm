@@ -1,0 +1,968 @@
+2018-04-30T18:35:12.835+0000 I CONTROL  [initandlisten] MongoDB starting : pid=4927 port=57050 dbpath=/data/config/config-a 64-bit host=tm351-18J-test-student
+2018-04-30T18:35:12.835+0000 I CONTROL  [initandlisten] db version v3.6.4
+2018-04-30T18:35:12.835+0000 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten] modules: none
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten] build environment:
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-04-30T18:35:12.836+0000 I CONTROL  [initandlisten] options: { net: { port: 57050 }, processManagement: { fork: true, pidFilePath: "/vagrant/logs/mongocluster_cfg-a2.pid" }, replication: { replSet: "c1" }, sharding: { clusterRole: "configsvr" }, storage: { dbPath: "/data/config/config-a", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "/vagrant/logs/mongocluster_cfg-a2.log" } }
+2018-04-30T18:35:12.836+0000 I STORAGE  [initandlisten] 
+2018-04-30T18:35:12.837+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2018-04-30T18:35:12.837+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2018-04-30T18:35:12.837+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=256M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-04-30T18:35:13.394+0000 I STORAGE  [initandlisten] WiredTiger message [1525113313:394519][4927:0x7ff43eb6d9c0], txn-recover: Set global recovery timestamp: 0
+2018-04-30T18:35:13.411+0000 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2018-04-30T18:35:13.411+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.411+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-04-30T18:35:13.411+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-04-30T18:35:13.411+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2018-04-30T18:35:13.411+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2018-04-30T18:35:13.412+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2018-04-30T18:35:13.413+0000 I CONTROL  [initandlisten] 
+2018-04-30T18:35:13.414+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with no UUID.
+2018-04-30T18:35:13.421+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/config/config-a/diagnostic.data'
+2018-04-30T18:35:13.421+0000 I SHARDING [initandlisten] first cluster operation detected, adding sharding hook to enable versioning and authentication to remote servers
+2018-04-30T18:35:13.426+0000 I SHARDING [thread1] creating distributed lock ping thread for process ConfigServer (sleeping for 30000ms)
+2018-04-30T18:35:13.427+0000 I STORAGE  [initandlisten] createCollection: local.me with no UUID.
+2018-04-30T18:35:13.436+0000 I SHARDING [shard registry reload] Periodic reload of shard registry failed  :: caused by :: ReadConcernMajorityNotAvailableYet: could not get updated shard list from config server due to Read concern majority reads are currently not possible.; will retry after 30s
+2018-04-30T18:35:13.440+0000 I STORAGE  [initandlisten] createCollection: local.replset.minvalid with no UUID.
+2018-04-30T18:35:13.446+0000 I REPL     [initandlisten] Did not find local voted for document at startup.
+2018-04-30T18:35:13.446+0000 I REPL     [initandlisten] Did not find local Rollback ID document at startup. Creating one.
+2018-04-30T18:35:13.446+0000 I STORAGE  [initandlisten] createCollection: local.system.rollback.id with no UUID.
+2018-04-30T18:35:13.451+0000 I REPL     [initandlisten] Initialized the rollback ID to 1
+2018-04-30T18:35:13.452+0000 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2018-04-30T18:35:13.452+0000 I NETWORK  [initandlisten] waiting for connections on port 57050
+2018-04-30T18:35:18.643+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54712 #1 (1 connection now open)
+2018-04-30T18:35:18.643+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:54712 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:18.652+0000 I REPL     [conn1] replSetInitiate admin command received from client
+2018-04-30T18:35:18.653+0000 I REPL     [conn1] replSetInitiate config object with 1 members parses ok
+2018-04-30T18:35:18.653+0000 I REPL     [conn1] ******
+2018-04-30T18:35:18.654+0000 I REPL     [conn1] creating replication oplog of size: 2764MB...
+2018-04-30T18:35:18.654+0000 I STORAGE  [conn1] createCollection: local.oplog.rs with no UUID.
+2018-04-30T18:35:18.658+0000 I STORAGE  [conn1] Starting WiredTigerRecordStoreThread local.oplog.rs
+2018-04-30T18:35:18.658+0000 I STORAGE  [conn1] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2018-04-30T18:35:18.658+0000 I STORAGE  [conn1] Scanning the oplog to determine where to place markers for truncation
+2018-04-30T18:35:18.674+0000 I REPL     [conn1] ******
+2018-04-30T18:35:18.674+0000 I STORAGE  [conn1] createCollection: local.system.replset with no UUID.
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID cc025d49-f7b1-40e7-858f-08727affca84 to collection local.system.rollback.id
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID 05545127-e786-4ae7-9e17-e7e1ba71fbe0 to collection local.system.replset
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID 40ac6adb-4975-40e4-bd89-ca2753063f60 to collection local.me
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID db8547e8-5096-409e-b2ae-9c52fae38511 to collection local.startup_log
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID ac7f4cb1-a8b6-4737-877b-045ffc916754 to collection local.replset.minvalid
+2018-04-30T18:35:18.682+0000 I COMMAND  [conn1] Assigning UUID ebb31f1b-9dbf-4a7f-9fd7-ed887994fa3b to collection local.oplog.rs
+2018-04-30T18:35:18.683+0000 I STORAGE  [conn1] createCollection: admin.system.version with provided UUID: e494b83e-f08c-4a78-a7d8-af945f70cb2d
+2018-04-30T18:35:18.691+0000 I COMMAND  [conn1] setting featureCompatibilityVersion to 3.6
+2018-04-30T18:35:18.691+0000 I NETWORK  [conn1] Skip closing connection for connection # 1
+2018-04-30T18:35:18.691+0000 I REPL     [conn1] New replica set config in use: { _id: "c1", version: 1, configsvr: true, protocolVersion: 1, members: [ { _id: 0, host: "localhost:57050", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5ae761e61b1b0bfabb4ae644') } }
+2018-04-30T18:35:18.691+0000 I REPL     [conn1] This node is localhost:57050 in the config
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] transition to STARTUP2 from STARTUP
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] Starting replication storage threads
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] transition to RECOVERING from STARTUP2
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] Starting replication fetcher thread
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] Starting replication applier thread
+2018-04-30T18:35:18.692+0000 I REPL     [conn1] Starting replication reporter thread
+2018-04-30T18:35:18.693+0000 I REPL     [rsSync] transition to SECONDARY from RECOVERING
+2018-04-30T18:35:18.693+0000 I REPL     [rsSync] conducting a dry run election to see if we could be elected. current term: 0
+2018-04-30T18:35:18.693+0000 I REPL     [replexec-0] dry election run succeeded, running for election in term 1
+2018-04-30T18:35:18.693+0000 I STORAGE  [replexec-0] createCollection: local.replset.election with generated UUID: 8bf7b7e2-6d34-4605-bde6-8224a2a401d5
+2018-04-30T18:35:18.703+0000 I REPL     [replexec-0] election succeeded, assuming primary role in term 1
+2018-04-30T18:35:18.704+0000 I REPL     [replexec-0] transition to PRIMARY from SECONDARY
+2018-04-30T18:35:18.704+0000 I REPL     [replexec-0] Entering primary catch-up mode.
+2018-04-30T18:35:18.704+0000 I REPL     [replexec-0] Exited primary catch-up mode.
+2018-04-30T18:35:18.704+0000 I NETWORK  [conn1] end connection 127.0.0.1:54712 (0 connections now open)
+2018-04-30T18:35:20.694+0000 I STORAGE  [rsSync] createCollection: config.chunks with generated UUID: ce2ae94b-8882-4e5d-9209-181087b19435
+2018-04-30T18:35:20.707+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.chunks" }
+2018-04-30T18:35:20.708+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.708+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.712+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, shard: 1, min: 1 }, name: "ns_1_shard_1_min_1", ns: "config.chunks" }
+2018-04-30T18:35:20.712+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.713+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.717+0000 I INDEX    [rsSync] build index on: config.chunks properties: { v: 2, unique: true, key: { ns: 1, lastmod: 1 }, name: "ns_1_lastmod_1", ns: "config.chunks" }
+2018-04-30T18:35:20.717+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.717+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.718+0000 I STORAGE  [rsSync] createCollection: config.migrations with generated UUID: acb21741-2f56-44a2-a615-fea4fd7cfb98
+2018-04-30T18:35:20.727+0000 I INDEX    [rsSync] build index on: config.migrations properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.migrations" }
+2018-04-30T18:35:20.727+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.728+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.729+0000 I STORAGE  [rsSync] createCollection: config.shards with generated UUID: 77e5eb6e-42fd-4477-80aa-67d5e8401fb0
+2018-04-30T18:35:20.737+0000 I INDEX    [rsSync] build index on: config.shards properties: { v: 2, unique: true, key: { host: 1 }, name: "host_1", ns: "config.shards" }
+2018-04-30T18:35:20.737+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.738+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.738+0000 I STORAGE  [rsSync] createCollection: config.locks with generated UUID: 2eac242b-bf9d-4058-93a1-bcc54bd4fad9
+2018-04-30T18:35:20.748+0000 I INDEX    [rsSync] build index on: config.locks properties: { v: 2, key: { ts: 1 }, name: "ts_1", ns: "config.locks" }
+2018-04-30T18:35:20.748+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.749+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.752+0000 I INDEX    [rsSync] build index on: config.locks properties: { v: 2, key: { state: 1, process: 1 }, name: "state_1_process_1", ns: "config.locks" }
+2018-04-30T18:35:20.752+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.753+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.753+0000 I STORAGE  [rsSync] createCollection: config.lockpings with generated UUID: e46df895-0b6f-43cb-bda3-8cbfbf7aa3d4
+2018-04-30T18:35:20.762+0000 I INDEX    [rsSync] build index on: config.lockpings properties: { v: 2, key: { ping: 1 }, name: "ping_1", ns: "config.lockpings" }
+2018-04-30T18:35:20.762+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.763+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.763+0000 I STORAGE  [rsSync] createCollection: config.tags with generated UUID: db56f59a-4493-4984-a81d-2bdd8fa2a149
+2018-04-30T18:35:20.772+0000 I INDEX    [rsSync] build index on: config.tags properties: { v: 2, unique: true, key: { ns: 1, min: 1 }, name: "ns_1_min_1", ns: "config.tags" }
+2018-04-30T18:35:20.772+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.772+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.777+0000 I INDEX    [rsSync] build index on: config.tags properties: { v: 2, key: { ns: 1, tag: 1 }, name: "ns_1_tag_1", ns: "config.tags" }
+2018-04-30T18:35:20.777+0000 I INDEX    [rsSync] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-04-30T18:35:20.778+0000 I INDEX    [rsSync] build index done.  scanned 0 total records. 0 secs
+2018-04-30T18:35:20.779+0000 I STORAGE  [rsSync] createCollection: config.version with generated UUID: 969b6b80-fabb-41fc-98c9-7d74ecae2024
+2018-04-30T18:35:20.785+0000 I STORAGE  [rsSync] createCollection: config.transactions with generated UUID: 360cba48-9684-4436-a929-1d1f8a3be9cf
+2018-04-30T18:35:20.785+0000 I SHARDING [Balancer] CSRS balancer is starting
+2018-04-30T18:35:20.791+0000 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2018-04-30T18:35:20.792+0000 I STORAGE  [monitoring keys for HMAC] createCollection: admin.system.keys with generated UUID: d145c570-748f-4ac2-996b-173a6e9e01a4
+2018-04-30T18:35:20.792+0000 I SHARDING [Balancer] CSRS balancer thread is recovering
+2018-04-30T18:35:20.792+0000 I SHARDING [Balancer] CSRS balancer thread is recovered
+2018-04-30T18:35:23.861+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54722 #2 (1 connection now open)
+2018-04-30T18:35:23.861+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:54722 conn2: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:23.863+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54728 #3 (2 connections now open)
+2018-04-30T18:35:23.863+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54730 #4 (3 connections now open)
+2018-04-30T18:35:23.863+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:54728 conn3: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:23.864+0000 I NETWORK  [conn4] received client metadata from 127.0.0.1:54730 conn4: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:23.864+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54734 #5 (4 connections now open)
+2018-04-30T18:35:23.866+0000 I NETWORK  [conn5] received client metadata from 127.0.0.1:54734 conn5: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:25.870+0000 I STORAGE  [conn5] createCollection: config.mongos with generated UUID: a861f576-60f8-4e22-8e68-8d6705af11ec
+2018-04-30T18:35:43.430+0000 W SHARDING [replSetDistLockPinger] pinging failed for distributed lock pinger :: caused by :: LockStateChangeFailed: findAndModify query predicate didn't match any lock document
+2018-04-30T18:35:58.115+0000 I NETWORK  [conn5] Starting new replica set monitor for s0/localhost:37017
+2018-04-30T18:35:58.117+0000 I NETWORK  [conn5] Successfully connected to localhost:37017 (1 connections now open to localhost:37017 with a 5 second timeout)
+2018-04-30T18:35:58.118+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:37017
+2018-04-30T18:35:58.119+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:37017, took 1ms (1 connections now open to localhost:37017)
+2018-04-30T18:35:58.123+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54754 #6 (5 connections now open)
+2018-04-30T18:35:58.124+0000 I NETWORK  [conn6] received client metadata from 127.0.0.1:54754 conn6: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.126+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54758 #7 (6 connections now open)
+2018-04-30T18:35:58.126+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54762 #8 (7 connections now open)
+2018-04-30T18:35:58.126+0000 I NETWORK  [conn7] received client metadata from 127.0.0.1:54758 conn7: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.127+0000 I NETWORK  [conn8] received client metadata from 127.0.0.1:54762 conn8: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.127+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54766 #9 (8 connections now open)
+2018-04-30T18:35:58.128+0000 I NETWORK  [conn9] received client metadata from 127.0.0.1:54766 conn9: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.133+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s0", host: "s0/localhost:37017", state: 1 }
+2018-04-30T18:35:58.134+0000 I STORAGE  [conn5] createCollection: config.changelog with generated UUID: 0e9e5bff-5e2b-4149-b537-96c1cfb5cf24
+2018-04-30T18:35:58.142+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.142+0000-5ae7620e1b1b0bfabb4ae6af", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358142), what: "addShard", ns: "", details: { name: "s0", host: "s0/localhost:37017" } }
+2018-04-30T18:35:58.146+0000 I NETWORK  [conn5] Starting new replica set monitor for s1/localhost:47017
+2018-04-30T18:35:58.148+0000 I NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Successfully connected to localhost:47017 (1 connections now open to localhost:47017 with a 5 second timeout)
+2018-04-30T18:35:58.148+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:47017
+2018-04-30T18:35:58.149+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:47017, took 1ms (1 connections now open to localhost:47017)
+2018-04-30T18:35:58.153+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54776 #10 (9 connections now open)
+2018-04-30T18:35:58.153+0000 I NETWORK  [conn10] received client metadata from 127.0.0.1:54776 conn10: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.156+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54780 #11 (10 connections now open)
+2018-04-30T18:35:58.156+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54784 #12 (11 connections now open)
+2018-04-30T18:35:58.156+0000 I NETWORK  [conn11] received client metadata from 127.0.0.1:54780 conn11: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.157+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54788 #13 (12 connections now open)
+2018-04-30T18:35:58.156+0000 I NETWORK  [conn12] received client metadata from 127.0.0.1:54784 conn12: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.158+0000 I NETWORK  [conn13] received client metadata from 127.0.0.1:54788 conn13: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.162+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s1", host: "s1/localhost:47017", state: 1 }
+2018-04-30T18:35:58.163+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.163+0000-5ae7620e1b1b0bfabb4ae6c0", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358163), what: "addShard", ns: "", details: { name: "s1", host: "s1/localhost:47017" } }
+2018-04-30T18:35:58.166+0000 I NETWORK  [conn5] Starting new replica set monitor for s2/localhost:57017
+2018-04-30T18:35:58.167+0000 I NETWORK  [conn5] Successfully connected to localhost:57017 (1 connections now open to localhost:57017 with a 5 second timeout)
+2018-04-30T18:35:58.168+0000 I ASIO     [AddShard-TaskExecutor-0] Connecting to localhost:57017
+2018-04-30T18:35:58.168+0000 I ASIO     [AddShard-TaskExecutor-0] Successfully connected to localhost:57017, took 0ms (1 connections now open to localhost:57017)
+2018-04-30T18:35:58.171+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54800 #14 (13 connections now open)
+2018-04-30T18:35:58.172+0000 I NETWORK  [conn14] received client metadata from 127.0.0.1:54800 conn14: { driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.174+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54804 #15 (14 connections now open)
+2018-04-30T18:35:58.174+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54808 #16 (15 connections now open)
+2018-04-30T18:35:58.174+0000 I NETWORK  [conn15] received client metadata from 127.0.0.1:54804 conn15: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.174+0000 I NETWORK  [conn16] received client metadata from 127.0.0.1:54808 conn16: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.175+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54812 #17 (16 connections now open)
+2018-04-30T18:35:58.176+0000 I NETWORK  [conn17] received client metadata from 127.0.0.1:54812 conn17: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:35:58.180+0000 I SHARDING [conn5] going to insert new entry for shard into config.shards: { _id: "s2", host: "s2/localhost:57017", state: 1 }
+2018-04-30T18:35:58.181+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.181+0000-5ae7620e1b1b0bfabb4ae6d1", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358181), what: "addShard", ns: "", details: { name: "s2", host: "s2/localhost:57017" } }
+2018-04-30T18:35:58.202+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'enableSharding', ts : 5ae7620e1b1b0bfabb4ae6dc
+2018-04-30T18:35:58.202+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'enableSharding', ts : 5ae7620e1b1b0bfabb4ae6de
+2018-04-30T18:35:58.204+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:37017
+2018-04-30T18:35:58.204+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:37017, took 0ms (1 connections now open to localhost:37017)
+2018-04-30T18:35:58.205+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:47017
+2018-04-30T18:35:58.206+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:47017, took 1ms (1 connections now open to localhost:47017)
+2018-04-30T18:35:58.206+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Connecting to localhost:57017
+2018-04-30T18:35:58.207+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to localhost:57017, took 1ms (1 connections now open to localhost:57017)
+2018-04-30T18:35:58.207+0000 I SHARDING [conn5] Placing [accidents] on: s0
+2018-04-30T18:35:58.208+0000 I STORAGE  [conn5] createCollection: config.databases with generated UUID: bd45dcfe-fcfd-4808-a64d-71199f0e8e76
+2018-04-30T18:35:58.216+0000 I SHARDING [conn5] Enabling sharding for database [accidents] in config db
+2018-04-30T18:35:58.217+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae6de' unlocked.
+2018-04-30T18:35:58.217+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae6dc' unlocked.
+2018-04-30T18:35:58.220+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae6e6
+2018-04-30T18:35:58.220+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae6e8
+2018-04-30T18:35:58.221+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae6ea
+2018-04-30T18:35:58.221+0000 I NETWORK  [conn5] Successfully connected to s0/localhost:37017 (1 connections now open to s0/localhost:37017 with a 0 second timeout)
+2018-04-30T18:35:58.235+0000 I SHARDING [conn5] CMD: shardcollection: { _configsvrShardCollection: "accidents.accidents", key: { Accident_Index: 1.0 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113358, 23), signature: { hash: BinData(0, 48A5186574666F5E267CA0D51643D6B1A42B19AF), keyId: 6550311832093982739 } }, $client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" }, mongos: { host: "tm351-18J-test-student:27017", client: "127.0.0.1:33776", version: "3.6.4" } }, $configServerState: { opTime: { ts: Timestamp(1525113358, 23), t: 1 } }, $db: "admin" }
+2018-04-30T18:35:58.236+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.236+0000-5ae7620e1b1b0bfabb4ae6ef", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358236), what: "shardCollection.start", ns: "accidents.accidents", details: { shardKey: { Accident_Index: 1.0 }, collection: "accidents.accidents", uuid: UUID("152b57c2-bad9-46dd-aa0a-3a8e8cf740aa"), primary: "s0:s0/localhost:37017", numChunks: 1 } }
+2018-04-30T18:35:58.238+0000 I SHARDING [conn5] going to create 1 chunk(s) for: accidents.accidents using new epoch 5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:35:58.239+0000 I STORAGE  [conn5] createCollection: config.collections with generated UUID: 424d1be8-d564-4694-8747-59baabc78a0a
+2018-04-30T18:35:58.355+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.355+0000-5ae7620e1b1b0bfabb4ae6fd", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358355), what: "shardCollection.end", ns: "accidents.accidents", details: { version: "1|0||5ae7620e1b1b0bfabb4ae6f5" } }
+2018-04-30T18:35:58.357+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae6ea' unlocked.
+2018-04-30T18:35:58.357+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae6e8' unlocked.
+2018-04-30T18:35:58.358+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae6e6' unlocked.
+2018-04-30T18:35:58.358+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrShardCollection { _configsvrShardCollection: "accidents.accidents", key: { Accident_Index: 1.0 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113358, 23), signature: { hash: BinData(0, 48A5186574666F5E267CA0D51643D6B1A42B19AF), keyId: 6550311832093982739 } }, $client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" }, mongos: { host: "tm351-18J-test-student:27017", client: "127.0.0.1:33776", version: "3.6.4" } }, $configServerState: { opTime: { ts: Timestamp(1525113358, 23), t: 1 } }, $db: "admin" } numYields:0 reslen:513 locks:{ Global: { acquireCount: { r: 37, w: 23 } }, Database: { acquireCount: { r: 7, w: 22, W: 1 } }, Collection: { acquireCount: { r: 7, w: 11 } }, Metadata: { acquireCount: { W: 2 } }, Mutex: { acquireCount: { W: 1 } }, oplog: { acquireCount: { w: 11 } } } protocol:op_msg 139ms
+2018-04-30T18:35:58.362+0000 I SHARDING [conn5] distributed lock 'accidents-movePrimary' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae703
+2018-04-30T18:35:58.363+0000 I SHARDING [conn5] distributed lock 'accidents' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae705
+2018-04-30T18:35:58.363+0000 I SHARDING [conn5] distributed lock 'accidents.roads' acquired for 'shardCollection', ts : 5ae7620e1b1b0bfabb4ae707
+2018-04-30T18:35:58.378+0000 I SHARDING [conn5] CMD: shardcollection: { _configsvrShardCollection: "accidents.roads", key: { CP: 1.0 }, unique: false, numInitialChunks: 0, writeConcern: { w: "majority", wtimeout: 60000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113358, 44), signature: { hash: BinData(0, 48A5186574666F5E267CA0D51643D6B1A42B19AF), keyId: 6550311832093982739 } }, $client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" }, mongos: { host: "tm351-18J-test-student:27017", client: "127.0.0.1:33776", version: "3.6.4" } }, $configServerState: { opTime: { ts: Timestamp(1525113358, 44), t: 1 } }, $db: "admin" }
+2018-04-30T18:35:58.378+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.378+0000-5ae7620e1b1b0bfabb4ae70c", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358378), what: "shardCollection.start", ns: "accidents.roads", details: { shardKey: { CP: 1.0 }, collection: "accidents.roads", uuid: UUID("5095d56d-851e-4dbb-bdb5-3aac23f337dc"), primary: "s0:s0/localhost:37017", numChunks: 1 } }
+2018-04-30T18:35:58.379+0000 I SHARDING [conn5] going to create 1 chunk(s) for: accidents.roads using new epoch 5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:35:58.395+0000 I SHARDING [conn5] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:35:58.395+0000-5ae7620e1b1b0bfabb4ae717", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54734", time: new Date(1525113358395), what: "shardCollection.end", ns: "accidents.roads", details: { version: "1|0||5ae7620e1b1b0bfabb4ae712" } }
+2018-04-30T18:35:58.397+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae707' unlocked.
+2018-04-30T18:35:58.397+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae705' unlocked.
+2018-04-30T18:35:58.398+0000 I SHARDING [conn5] distributed lock with ts: 5ae7620e1b1b0bfabb4ae703' unlocked.
+2018-04-30T18:36:00.804+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 0|0||000000000000000000000000
+2018-04-30T18:36:00.808+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 4 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:00.811+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 0|0||000000000000000000000000
+2018-04-30T18:36:00.812+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:00.822+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:00.830+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 7 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:00.840+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:00.841+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:10.847+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:10.854+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 6 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:10.855+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:10.864+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 8 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:10.868+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:10.874+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 6 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:10.876+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:10.884+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 7 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:20.893+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:20.894+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:20.895+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:20.896+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:20.902+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:20.904+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:20.906+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:20.908+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 2 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:23.870+0000 I NETWORK  [conn4] end connection 127.0.0.1:54730 (15 connections now open)
+2018-04-30T18:36:23.870+0000 I NETWORK  [conn3] end connection 127.0.0.1:54728 (14 connections now open)
+2018-04-30T18:36:23.872+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54842 #18 (15 connections now open)
+2018-04-30T18:36:23.874+0000 I NETWORK  [conn18] received client metadata from 127.0.0.1:54842 conn18: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:36:30.919+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:30.920+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:30.923+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:30.924+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:30.928+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:30.929+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:30.932+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:30.933+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:40.938+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:40.941+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 2 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:40.942+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:40.943+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 1 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:40.946+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:40.951+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 4 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:40.952+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:40.955+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 3 ms and found version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:46.892+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:46.891+0000-5ae7623e1b1b0bfabb4ae7d1", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113406891), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(1, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:46.895+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:46.895+0000-5ae7623e1b1b0bfabb4ae7d3", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113406895), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H031501" }, lastmod: Timestamp(1, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:46.895+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:46.895+0000-5ae7623e1b1b0bfabb4ae7d5", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113406895), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 0), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(1, 3), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:46.916+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 1|0||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:46.919+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 3 ms and found version 1|3||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:46.934+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:36:47.517+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:36:47.524+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 1|3||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:47.531+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 7 ms and found version 2|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:47.535+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_MinKey", ns: "accidents.accidents", min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, shard: "s0", lastmod: Timestamp(1, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113406, 23129), signature: { hash: BinData(0, 95AB914AFA1E7372EFCCF53175DA01E13F5F3FB8), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113406, 22514), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 622ms
+2018-04-30T18:36:49.502+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:49.502+0000-5ae762411b1b0bfabb4ae81b", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113409502), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H031501" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200901RY10442" }, lastmod: Timestamp(2, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:49.503+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:49.503+0000-5ae762411b1b0bfabb4ae81d", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113409503), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H031501" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "200901RY10442" }, max: { Accident_Index: "200905AA31857" }, lastmod: Timestamp(2, 3), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:49.503+0000 I SHARDING [conn7] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:36:49.503+0000-5ae762411b1b0bfabb4ae81f", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54758", time: new Date(1525113409503), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200901BS70002" }, max: { Accident_Index: "200920H031501" }, lastmod: Timestamp(2, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "200905AA31857" }, max: { Accident_Index: "200920H031501" }, lastmod: Timestamp(2, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:36:49.550+0000 W SHARDING [conn7] chunk operation commit failed and metadata will be revalidated :: caused by :: BadValue: preCondition failed
+2018-04-30T18:36:50.969+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:50.970+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 1 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:50.971+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 2|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:50.972+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 2|4||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:50.975+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:50.976+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:36:50.977+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 2|4||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:50.978+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 2|4||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:36:50.987+0000 I SHARDING [Balancer] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:37:04.194+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:37:04.207+0000 I STORAGE  [Balancer] createCollection: config.actionlog with generated UUID: 422eb8c3-d2bf-4ca6-a43d-c23cfda2e9da
+2018-04-30T18:37:04.232+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.232+0000-5ae762501b1b0bfabb4ae957", server: "tm351-18J-test-student", clientAddr: "", time: new Date(1525113424232), what: "balancer.round", ns: "", details: { executionTimeMillis: 13240, errorOccured: false, candidateChunks: 1, chunksMoved: 1 } }
+2018-04-30T18:37:04.375+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.375+0000-5ae762501b1b0bfabb4ae964", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424375), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 8, chunk: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: "200932C369209" }, lastmod: Timestamp(3, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.376+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.376+0000-5ae762501b1b0bfabb4ae966", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424376), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 8, chunk: { min: { Accident_Index: "200932C369209" }, max: { Accident_Index: "200943N170049" }, lastmod: Timestamp(3, 3), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.377+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.377+0000-5ae762501b1b0bfabb4ae968", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424377), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 8, chunk: { min: { Accident_Index: "200943N170049" }, max: { Accident_Index: "200954DE23209" }, lastmod: Timestamp(3, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.378+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.378+0000-5ae762501b1b0bfabb4ae96a", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424378), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 4, of: 8, chunk: { min: { Accident_Index: "200954DE23209" }, max: { Accident_Index: "201001RG40372" }, lastmod: Timestamp(3, 5), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.379+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.379+0000-5ae762501b1b0bfabb4ae96c", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424379), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 5, of: 8, chunk: { min: { Accident_Index: "201001RG40372" }, max: { Accident_Index: "201004FB10006" }, lastmod: Timestamp(3, 6), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.380+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.380+0000-5ae762501b1b0bfabb4ae96e", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424380), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 6, of: 8, chunk: { min: { Accident_Index: "201004FB10006" }, max: { Accident_Index: "201014K298910" }, lastmod: Timestamp(3, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.381+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.381+0000-5ae762501b1b0bfabb4ae970", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424381), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 7, of: 8, chunk: { min: { Accident_Index: "201014K298910" }, max: { Accident_Index: "201043W288100" }, lastmod: Timestamp(3, 8), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.382+0000 I SHARDING [conn9] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:04.382+0000-5ae762501b1b0bfabb4ae974", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54766", time: new Date(1525113424382), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "200920H031501" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 8, of: 8, chunk: { min: { Accident_Index: "201043W288100" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(3, 9), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:04.398+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 2|4||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:04.399+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 3|9||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:04.405+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:37:05.025+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:37:05.025+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 3|9||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.026+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.029+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_"201043W288100"", ns: "accidents.accidents", min: { Accident_Index: "201043W288100" }, max: { Accident_Index: MaxKey }, shard: "s0", lastmod: Timestamp(3, 9), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113424, 976), signature: { hash: BinData(0, D9B88E53A0D3F01E4B8A7A3D8B5ED8D915F711F7), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113424, 976), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 636ms
+2018-04-30T18:37:05.243+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.243+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.244+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:37:05.245+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:37:05.247+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.248+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.accidents took 0 ms and found version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:05.249+0000 I SHARDING [Balancer] Refreshing chunks for collection accidents.roads based on version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:37:05.249+0000 I SHARDING [ConfigServerCatalogCacheLoader-0] Refresh for collection accidents.roads took 0 ms and found version 1|0||5ae7620e1b1b0bfabb4ae712
+2018-04-30T18:37:05.256+0000 I SHARDING [Balancer] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:37:07.404+0000 I COMMAND  [conn9] command config.locks command: findAndModify { findAndModify: "locks", query: { _id: "accidents.accidents", state: 0 }, update: { $set: { ts: ObjectId('5ae76253fbc4b16e77d63835'), state: 2, who: "tm351-18J-test-student:37017:1525113358:4986800913133636674:conn24", process: "tm351-18J-test-student:37017:1525113358:4986800913133636674", when: new Date(1525113427208), why: "splitting chunk [{ Accident_Index: "201014K298910" }, { Accident_Index: "201043W288100" }) in accidents.accidents" } }, upsert: true, new: true, writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113427, 1566), signature: { hash: BinData(0, 7D7181F08D341A2B8FFF3A7088D3F417D4414F47), keyId: 6550311832093982739 } }, $client: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }, $configServerState: { opTime: { ts: Timestamp(1525113426, 1), t: 1 } }, $db: "config" } planSummary: IXSCAN { _id: 1 } exception: E11000 duplicate key error collection: config.locks index: _id_ dup key: { : "accidents.accidents" } code:DuplicateKey numYields:0 reslen:583 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 129ms
+2018-04-30T18:37:08.862+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54976 #19 (16 connections now open)
+2018-04-30T18:37:08.938+0000 I NETWORK  [conn19] received client metadata from 127.0.0.1:54976 conn19: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:37:13.910+0000 I COMMAND  [shard registry reload] command config.shards command: find { find: "shards", $readPreference: { mode: "nearest", tags: [] }, $db: "config" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 cursorExhausted:1 numYields:0 nreturned:3 reslen:451 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 195ms
+2018-04-30T18:37:14.249+0000 I COMMAND  [replSetDistLockPinger] command config.lockpings command: findAndModify { findAndModify: "lockpings", query: { _id: "ConfigServer" }, update: { $set: { ping: new Date(1525113433451) } }, upsert: true, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 reslen:322 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 1 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 520ms
+2018-04-30T18:37:16.834+0000 I WRITE    [conn5] update config.mongos appName: "MongoDB Shell" command: { q: { _id: "tm351-18J-test-student:27017" }, u: { $set: { _id: "tm351-18J-test-student:27017", ping: new Date(1525113436037), up: 110, waiting: true, mongoVersion: "3.6.4" } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 numYields:1 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } 384ms
+2018-04-30T18:37:17.050+0000 I COMMAND  [conn5] command config.$cmd appName: "MongoDB Shell" command: update { update: "mongos", bypassDocumentValidation: false, ordered: true, updates: [ { q: { _id: "tm351-18J-test-student:27017" }, u: { $set: { _id: "tm351-18J-test-student:27017", ping: new Date(1525113436037), up: 110, waiting: true, mongoVersion: "3.6.4" } }, multi: false, upsert: true } ], writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113435, 553), signature: { hash: BinData(0, 9A3E6C4EAE9475D9645B70B41B71E6E37AE86C52), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113426, 1), t: 1 } }, $db: "config" } numYields:0 reslen:515 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 611ms
+2018-04-30T18:37:17.690+0000 I COMMAND  [conn5] command config.settings appName: "MongoDB Shell" command: find { find: "settings", filter: { _id: "balancer" }, readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, limit: 1, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113436, 1), signature: { hash: BinData(0, 0180D7B20C5AABE7DEBE4D3B67A39D0E27F51613), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:499 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 104ms
+2018-04-30T18:37:19.255+0000 I COMMAND  [conn5] command config.settings appName: "MongoDB Shell" command: find { find: "settings", filter: { _id: "chunksize" }, readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, limit: 1, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113437, 124), signature: { hash: BinData(0, C4C1FC3CE50786EC2EF7F1C0D392AF2759F23B43), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:499 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 319ms
+2018-04-30T18:37:20.331+0000 I COMMAND  [conn5] command config.settings appName: "MongoDB Shell" command: find { find: "settings", filter: { _id: "autosplit" }, readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, limit: 1, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113437, 124), signature: { hash: BinData(0, C4C1FC3CE50786EC2EF7F1C0D392AF2759F23B43), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:499 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 250ms
+2018-04-30T18:37:25.000+0000 I COMMAND  [conn19] command config.shards command: find { find: "shards", readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113443, 552), signature: { hash: BinData(0, 39798F5C155F25F8C98224079D2DD497505DEE0C), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 cursorExhausted:1 numYields:4 nreturned:3 reslen:657 locks:{ Global: { acquireCount: { r: 10 } }, Database: { acquireCount: { r: 5 } }, Collection: { acquireCount: { r: 5 } } } protocol:op_msg 573ms
+2018-04-30T18:37:25.006+0000 I COMMAND  [conn5] command config.lockpings appName: "MongoDB Shell" command: findAndModify { findAndModify: "lockpings", query: { _id: "tm351-18J-test-student:27017:1525113323:-3961489942162703859" }, update: { $set: { ping: new Date(1525113443901) } }, upsert: true, writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113443, 552), signature: { hash: BinData(0, 39798F5C155F25F8C98224079D2DD497505DEE0C), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 reslen:576 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 582ms
+2018-04-30T18:37:28.438+0000 I NETWORK  [conn8] end connection 127.0.0.1:54762 (14 connections now open)
+2018-04-30T18:37:28.445+0000 I NETWORK  [conn17] end connection 127.0.0.1:54812 (15 connections now open)
+2018-04-30T18:37:28.663+0000 I NETWORK  [conn13] end connection 127.0.0.1:54788 (13 connections now open)
+2018-04-30T18:37:28.794+0000 I NETWORK  [conn15] end connection 127.0.0.1:54804 (12 connections now open)
+2018-04-30T18:37:30.005+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54988 #20 (13 connections now open)
+2018-04-30T18:37:30.030+0000 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: 1, internalClient: { minWireVersion: 6, maxWireVersion: 6 }, $db: "admin", $clusterTime: { clusterTime: Timestamp(1525113447, 65), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } } } numYields:0 reslen:742 locks:{} protocol:op_msg 558ms
+2018-04-30T18:37:30.030+0000 I COMMAND  [conn10] command admin.$cmd command: isMaster { ismaster: 1, internalClient: { minWireVersion: 6, maxWireVersion: 6 }, $db: "admin", $clusterTime: { clusterTime: Timestamp(1525113447, 151), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } } } numYields:0 reslen:742 locks:{} protocol:op_msg 713ms
+2018-04-30T18:37:30.030+0000 I COMMAND  [conn14] command admin.$cmd command: isMaster { ismaster: 1, internalClient: { minWireVersion: 6, maxWireVersion: 6 }, $db: "admin", $clusterTime: { clusterTime: Timestamp(1525113447, 896), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } } } numYields:0 reslen:742 locks:{} protocol:op_msg 577ms
+2018-04-30T18:37:31.462+0000 I NETWORK  [conn20] received client metadata from 127.0.0.1:54988 conn20: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:37:31.463+0000 I NETWORK  [conn6] end connection 127.0.0.1:54754 (12 connections now open)
+2018-04-30T18:37:31.475+0000 I NETWORK  [NetworkInterfaceASIO-ShardRegistry-0] Marking host localhost:37017 as failed :: caused by :: HostUnreachable: End of file
+2018-04-30T18:37:31.482+0000 I COMMAND  [conn11] command config.shards command: find { find: "shards", readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113447, 151), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 cursorExhausted:1 numYields:3 nreturned:3 reslen:677 locks:{ Global: { acquireCount: { r: 8 } }, Database: { acquireCount: { r: 4 } }, Collection: { acquireCount: { r: 4 } } } protocol:op_msg 2160ms
+2018-04-30T18:37:31.485+0000 I COMMAND  [conn9] command config.shards command: find { find: "shards", readConcern: { level: "majority", afterOpTime: { ts: Timestamp(1525113436, 1), t: 1 } }, maxTimeMS: 30000, $readPreference: { mode: "nearest" }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113447, 65), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 cursorExhausted:1 numYields:2 nreturned:3 reslen:677 locks:{ Global: { acquireCount: { r: 6 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { r: 3 } } } protocol:op_msg 2164ms
+2018-04-30T18:37:31.495+0000 I NETWORK  [conn9] end connection 127.0.0.1:54766 (11 connections now open)
+2018-04-30T18:37:31.500+0000 I COMMAND  [conn12] command config.lockpings command: findAndModify { findAndModify: "lockpings", query: { _id: "tm351-18J-test-student:47017:1525113358:5111203876141935344" }, update: { $set: { ping: new Date(1525113448311) } }, upsert: true, writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113447, 151), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 reslen:575 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 2283ms
+2018-04-30T18:37:31.500+0000 I COMMAND  [conn7] command config.lockpings command: findAndModify { findAndModify: "lockpings", query: { _id: "tm351-18J-test-student:37017:1525113358:4986800913133636674" }, update: { $set: { ping: new Date(1525113448312) } }, upsert: true, writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113447, 65), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113436, 1), t: 1 } }, $db: "config" } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 reslen:575 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 2263ms
+2018-04-30T18:37:31.500+0000 I COMMAND  [conn16] command config.lockpings command: findAndModify { findAndModify: "lockpings", query: { _id: "tm351-18J-test-student:57017:1525113358:-8921458552314249336" }, update: { $set: { ping: new Date(1525113448460) } }, upsert: true, writeConcern: { w: "majority", wtimeout: 15000 }, maxTimeMS: 30000, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113447, 896), signature: { hash: BinData(0, BD408DCD473FDA54E8481C0811A7294C0E2646E4), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113444, 1), t: 1 } }, $db: "config" } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 reslen:576 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { w: 2 } }, oplog: { acquireCount: { w: 1 } } } protocol:op_msg 2283ms
+2018-04-30T18:37:31.501+0000 I NETWORK  [conn7] end connection 127.0.0.1:54758 (10 connections now open)
+2018-04-30T18:37:31.546+0000 I NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Detected bad connection created at 1525113358116792 microSec, clearing pool for localhost:37017 of 0 connections
+2018-04-30T18:37:31.546+0000 I NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Dropping all pooled connections to localhost:37017(with timeout of 5 seconds)
+2018-04-30T18:37:31.549+0000 I NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Ending connection to host localhost:37017(with timeout of 5 seconds) due to bad connection status; 0 connections to that host remain open
+2018-04-30T18:37:31.550+0000 W NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Unable to reach primary for set s0
+2018-04-30T18:37:31.550+0000 I NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 1 checks in a row.
+2018-04-30T18:37:31.550+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:37:31.553+0000 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Ending connection to host localhost:37017 due to bad connection status; 0 connections to that host remain open
+2018-04-30T18:37:31.559+0000 I SHARDING [Balancer] Balancer move accidents.accidents: [{ Accident_Index: "200901RY10442" }, { Accident_Index: "200905AA31857" }), from s0, to s1 failed :: caused by :: OperationFailed: moveChunk command failed on source shard. :: caused by :: HostUnreachable: End of file
+2018-04-30T18:37:31.560+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351-18J-test-student-2018-04-30T18:37:31.560+0000-5ae7626b1b1b0bfabb4aea04", server: "tm351-18J-test-student", clientAddr: "", time: new Date(1525113451560), what: "balancer.round", ns: "", details: { executionTimeMillis: 26321, errorOccured: false, candidateChunks: 1, chunksMoved: 0 } }
+2018-04-30T18:37:31.737+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:31.737+0000-5ae7626b1b1b0bfabb4aea11", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113451737), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: MinKey }, max: { Accident_Index: 2009030000008 }, lastmod: Timestamp(4, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:31.739+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:31.739+0000-5ae7626b1b1b0bfabb4aea13", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113451739), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2009030000008 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 3), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:31.740+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:31.740+0000-5ae7626b1b1b0bfabb4aea15", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113451740), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: MinKey }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2010471001362 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:31.757+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:31.757+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:31.757+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 2 checks in a row.
+2018-04-30T18:37:31.802+0000 W SHARDING [conn20] chunk operation commit failed and metadata will be revalidated :: caused by :: BadValue: preCondition failed
+2018-04-30T18:37:32.258+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:32.258+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:32.258+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 3 checks in a row.
+2018-04-30T18:37:32.759+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:32.760+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:32.760+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 4 checks in a row.
+2018-04-30T18:37:33.261+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:33.261+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:33.262+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 5 checks in a row.
+2018-04-30T18:37:33.763+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:33.763+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:33.763+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 6 checks in a row.
+2018-04-30T18:37:34.171+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:34.171+0000-5ae7626e1b1b0bfabb4aea31", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113454171), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009030000008 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2009030000008 }, max: { Accident_Index: 2009130523409 }, lastmod: Timestamp(4, 5), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:34.173+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:34.173+0000-5ae7626e1b1b0bfabb4aea33", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113454173), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009030000008 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2009130523409 }, max: { Accident_Index: 2009360051782 }, lastmod: Timestamp(4, 6), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:34.175+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:34.175+0000-5ae7626e1b1b0bfabb4aea35", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113454175), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009030000008 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2009360051782 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:34.263+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:34.265+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:34.266+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 7 checks in a row.
+2018-04-30T18:37:34.767+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:34.767+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:34.768+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 8 checks in a row.
+2018-04-30T18:37:35.269+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:35.270+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:35.270+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 9 checks in a row.
+2018-04-30T18:37:35.771+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:35.771+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:35.772+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 10 checks in a row.
+2018-04-30T18:37:36.272+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:36.273+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:36.273+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 11 checks in a row.
+2018-04-30T18:37:36.312+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:36.312+0000-5ae762701b1b0bfabb4aea4c", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113456312), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201043W288100" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201043W288100" }, max: { Accident_Index: "201063DP02810" }, lastmod: Timestamp(4, 8), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:36.313+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:36.313+0000-5ae762701b1b0bfabb4aea4e", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113456313), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201043W288100" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201063DP02810" }, max: { Accident_Index: "201106A046880" }, lastmod: Timestamp(4, 9), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:36.313+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:36.313+0000-5ae762701b1b0bfabb4aea50", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113456313), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201043W288100" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201106A046880" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:36.774+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:36.774+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:37.275+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:37.275+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:37.779+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:37.780+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:38.281+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:38.282+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:38.282+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.282+0000-5ae762721b1b0bfabb4aea67", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458282), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201063DP02810" }, max: { Accident_Index: "201106A046880" }, lastmod: Timestamp(4, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201063DP02810" }, max: { Accident_Index: "201101LX50475" }, lastmod: Timestamp(4, 11), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.284+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.284+0000-5ae762721b1b0bfabb4aea69", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458284), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201063DP02810" }, max: { Accident_Index: "201106A046880" }, lastmod: Timestamp(4, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201101LX50475" }, max: { Accident_Index: "201105FF04299" }, lastmod: Timestamp(4, 12), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.285+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.285+0000-5ae762721b1b0bfabb4aea6b", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458285), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201063DP02810" }, max: { Accident_Index: "201106A046880" }, lastmod: Timestamp(4, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201105FF04299" }, max: { Accident_Index: "201106A046880" }, lastmod: Timestamp(4, 13), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.711+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.711+0000-5ae762721b1b0bfabb4aea79", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458711), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2010471001362 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 13), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2010471001362 }, max: { Accident_Index: 2010941000418 }, lastmod: Timestamp(4, 14), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.712+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.712+0000-5ae762721b1b0bfabb4aea7b", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458712), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2010471001362 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 13), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2010941000418 }, max: { Accident_Index: 2011130097914 }, lastmod: Timestamp(4, 15), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.713+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:38.713+0000-5ae762721b1b0bfabb4aea7d", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113458713), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2010471001362 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 13), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2011130097914 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 16), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:38.782+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:38.783+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:39.284+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:39.285+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:39.786+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:39.786+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:40.286+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:40.286+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:40.787+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:40.788+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:41.288+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:41.289+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:41.289+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 21 checks in a row.
+2018-04-30T18:37:41.564+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:41.565+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:41.790+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:41.790+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:42.066+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:42.069+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:42.291+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:42.293+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:42.570+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:42.570+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:42.795+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:42.795+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:43.071+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:43.077+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:43.295+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:43.296+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:43.582+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:43.582+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:43.695+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:43.695+0000-5ae762771b1b0bfabb4aeab4", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113463695), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201106A046880" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 16), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201106A046880" }, max: { Accident_Index: "201120H007761" }, lastmod: Timestamp(4, 17), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:43.695+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:43.695+0000-5ae762771b1b0bfabb4aeab6", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113463695), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201106A046880" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 16), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201120H007761" }, max: { Accident_Index: "201201EO40786" }, lastmod: Timestamp(4, 18), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:43.696+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:43.696+0000-5ae762771b1b0bfabb4aeab8", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113463696), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201106A046880" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 16), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201201EO40786" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 19), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:43.801+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:43.802+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:43.804+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 31 checks in a row.
+2018-04-30T18:37:44.083+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:44.084+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:44.307+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:44.312+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:44.586+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:44.586+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:44.656+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:44.656+0000-5ae762781b1b0bfabb4aeacb", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113464656), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011130097914 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 19), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2011130097914 }, max: { Accident_Index: 2011360059795 }, lastmod: Timestamp(4, 20), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:44.657+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:44.657+0000-5ae762781b1b0bfabb4aeacd", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113464657), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011130097914 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 19), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2011360059795 }, max: { Accident_Index: 2011471101698 }, lastmod: Timestamp(4, 21), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:44.658+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:44.658+0000-5ae762781b1b0bfabb4aeacf", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113464658), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011130097914 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 19), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2011471101698 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 22), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:44.813+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:44.813+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:45.088+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:45.089+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:45.313+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:45.314+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:45.546+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:45.546+0000-5ae762791b1b0bfabb4aeae5", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113465546), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201120H007761" }, max: { Accident_Index: "201201EO40786" }, lastmod: Timestamp(4, 22), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201120H007761" }, max: { Accident_Index: "201132C061011" }, lastmod: Timestamp(4, 23), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:45.548+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:45.548+0000-5ae762791b1b0bfabb4aeae8", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113465548), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201120H007761" }, max: { Accident_Index: "201201EO40786" }, lastmod: Timestamp(4, 22), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201132C061011" }, max: { Accident_Index: "201143P294031" }, lastmod: Timestamp(4, 24), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:45.549+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:45.549+0000-5ae762791b1b0bfabb4aeaeb", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113465549), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201120H007761" }, max: { Accident_Index: "201201EO40786" }, lastmod: Timestamp(4, 22), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201143P294031" }, max: { Accident_Index: "201201EO40786" }, lastmod: Timestamp(4, 25), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:45.590+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:45.591+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:45.817+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:45.818+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:46.092+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:46.092+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:46.320+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:46.320+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:46.320+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 41 checks in a row.
+2018-04-30T18:37:46.593+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:46.595+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:46.821+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:46.821+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:47.095+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:47.095+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:47.322+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:47.323+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:47.598+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:47.599+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:47.824+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:47.874+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:48.099+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:48.102+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:48.375+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:48.375+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:48.606+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:48.606+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:48.702+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:48.702+0000-5ae7627c1b1b0bfabb4aeb0e", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113468702), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201201EO40786" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 25), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201201EO40786" }, max: { Accident_Index: "201201TX20390" }, lastmod: Timestamp(4, 26), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:48.703+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:48.703+0000-5ae7627c1b1b0bfabb4aeb10", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113468703), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201201EO40786" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 25), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201201TX20390" }, max: { Accident_Index: "201206F059845" }, lastmod: Timestamp(4, 27), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:48.704+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:48.704+0000-5ae7627c1b1b0bfabb4aeb12", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113468704), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201201EO40786" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 25), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201206F059845" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(4, 28), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:48.719+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:48.720+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:48.722+0000 I NETWORK  [conn5] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 51 checks in a row.
+2018-04-30T18:37:48.726+0000 W SHARDING [conn20] chunk operation commit failed and metadata will be revalidated :: caused by :: BadValue: preCondition failed
+2018-04-30T18:37:48.877+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:48.882+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:49.107+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.107+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:49.223+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.223+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:49.383+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.384+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:49.609+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.610+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:49.729+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.729+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:49.884+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:49.885+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:50.115+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.116+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:50.230+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.231+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:50.357+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:50.357+0000-5ae7627e1b1b0bfabb4aeb35", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113470357), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009360051782 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 28), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2009360051782 }, max: { Accident_Index: 2009470906531 }, lastmod: Timestamp(4, 29), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:50.358+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:50.358+0000-5ae7627e1b1b0bfabb4aeb37", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113470358), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009360051782 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 28), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2009470906531 }, max: { Accident_Index: 2009930001203 }, lastmod: Timestamp(4, 30), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:50.362+0000 I SHARDING [conn20] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:50.362+0000-5ae7627e1b1b0bfabb4aeb39", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54988", time: new Date(1525113470362), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009360051782 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 28), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2009930001203 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(4, 31), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:50.386+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.386+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:50.386+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 61 checks in a row.
+2018-04-30T18:37:50.617+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.617+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:50.732+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.732+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:50.887+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:50.887+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:51.118+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.119+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:51.234+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.235+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:51.388+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.389+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:51.619+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.620+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:51.736+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.736+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:51.805+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:51.805+0000-5ae7627f1b1b0bfabb4aeb4e", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113471805), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011471101698 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 31), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2011471101698 }, max: { Accident_Index: 2011941100922 }, lastmod: Timestamp(4, 32), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:51.806+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:51.806+0000-5ae7627f1b1b0bfabb4aeb50", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113471806), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011471101698 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 31), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2011941100922 }, max: { Accident_Index: 2012130150220 }, lastmod: Timestamp(4, 33), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:51.807+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:37:51.807+0000-5ae7627f1b1b0bfabb4aeb52", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113471807), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2011471101698 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 31), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2012130150220 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(4, 34), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:37:51.889+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:51.890+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:37:51.890+0000 I SHARDING [conn19] Unable to obtain shard version for s0 :: caused by :: FailedToSatisfyReadPreference: Could not find host matching read preference { mode: "primary" } for set s0
+2018-04-30T18:37:51.897+0000 I SHARDING [conn19] Refreshing chunks for collection accidents.accidents based on version 4|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:51.907+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 9 ms and found version 4|34||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:51.912+0000 I SHARDING [conn19] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:37:52.121+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:52.121+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:52.121+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 71 checks in a row.
+2018-04-30T18:37:52.237+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:52.237+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:52.622+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:52.622+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:52.738+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:52.739+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:53.123+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:53.123+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:53.240+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:53.241+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:53.624+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:53.625+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:53.741+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:53.742+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:54.127+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:54.127+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:54.243+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:54.243+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:54.628+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:54.629+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:54.629+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 81 checks in a row.
+2018-04-30T18:37:54.744+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:54.745+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:55.129+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:55.130+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:55.246+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:55.247+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:55.631+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:55.631+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:55.748+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:55.749+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:56.132+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:56.132+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:56.250+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:56.250+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:56.633+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:56.633+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:56.751+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:56.752+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:57.134+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:57.134+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:57.134+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 91 checks in a row.
+2018-04-30T18:37:57.252+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:57.252+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:57.635+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:57.637+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:57.753+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:57.754+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:58.151+0000 I ASIO     [AddShard-TaskExecutor-0] Failed asio heartbeat to localhost:37017 - HostUnreachable: End of file
+2018-04-30T18:37:58.152+0000 I ASIO     [AddShard-TaskExecutor-0] Dropping all pooled connections to localhost:37017 due to failed operation on a connection
+2018-04-30T18:37:58.154+0000 I ASIO     [AddShard-TaskExecutor-0] Failed to close stream: Transport endpoint is not connected
+2018-04-30T18:37:58.183+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:58.184+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:58.255+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:58.255+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:58.685+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:58.685+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:58.756+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:58.756+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:59.186+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:59.186+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:59.257+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:59.258+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:59.687+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:59.688+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:37:59.694+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 101 checks in a row.
+2018-04-30T18:37:59.759+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:37:59.759+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:37:59.798+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:37:59.800+0000 I SHARDING [conn19] Refreshing chunks for collection accidents.accidents based on version 4|34||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:59.801+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 1 ms and found version 5|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:37:59.805+0000 I COMMAND  [conn19] command admin.$cmd command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_MinKey", ns: "accidents.accidents", min: { Accident_Index: MinKey }, max: { Accident_Index: 2009030000008 }, shard: "s2", lastmod: Timestamp(4, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113451, 1534), signature: { hash: BinData(0, 7E66D3AC053E70E3EF5C43E3B29D500446E916CA), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113451, 1534), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 28052ms
+2018-04-30T18:38:00.190+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.190+0000-5ae762881b1b0bfabb4aeba7", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480190), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2012130150220 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2012130150220 }, max: { Accident_Index: 2012360066520 }, lastmod: Timestamp(5, 2), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.191+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.191+0000-5ae762881b1b0bfabb4aeba9", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480191), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2012130150220 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2012360066520 }, max: { Accident_Index: 2012471202347 }, lastmod: Timestamp(5, 3), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.191+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.191+0000-5ae762881b1b0bfabb4aebab", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480191), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2012130150220 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(5, 1), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2012471202347 }, max: { Accident_Index: "200901BS70002" }, lastmod: Timestamp(5, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.196+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:00.197+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:00.260+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:00.262+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:00.547+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.547+0000-5ae762881b1b0bfabb4aebb9", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480547), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009930001203 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(5, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: 2009930001203 }, max: { Accident_Index: 2010120164192 }, lastmod: Timestamp(5, 5), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.548+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.548+0000-5ae762881b1b0bfabb4aebbb", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480548), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009930001203 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(5, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: 2010120164192 }, max: { Accident_Index: 2010350375310 }, lastmod: Timestamp(5, 6), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.548+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:00.548+0000-5ae762881b1b0bfabb4aebbd", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113480548), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: 2009930001203 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(5, 4), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: 2010350375310 }, max: { Accident_Index: 2010471001362 }, lastmod: Timestamp(5, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:00.700+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:00.701+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:00.763+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:00.764+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:01.201+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.201+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:01.266+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.266+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:01.551+0000 W NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.553+0000 W NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Unable to reach primary for set s0
+2018-04-30T18:38:01.597+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:55290 #21 (11 connections now open)
+2018-04-30T18:38:01.608+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:01.607+0000-5ae762891b1b0bfabb4aebde", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113481607), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201206F059845" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 1, of: 3, chunk: { min: { Accident_Index: "201206F059845" }, max: { Accident_Index: "201220S005562" }, lastmod: Timestamp(5, 8), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:01.609+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:01.609+0000-5ae762891b1b0bfabb4aebe1", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113481609), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201206F059845" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 2, of: 3, chunk: { min: { Accident_Index: "201220S005562" }, max: { Accident_Index: "201242I193506" }, lastmod: Timestamp(5, 9), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:01.610+0000 I SHARDING [conn16] about to log metadata event into changelog: { _id: "tm351-18J-test-student-2018-04-30T18:38:01.610+0000-5ae762891b1b0bfabb4aebe3", server: "tm351-18J-test-student", clientAddr: "127.0.0.1:54808", time: new Date(1525113481610), what: "multi-split", ns: "accidents.accidents", details: { before: { min: { Accident_Index: "201206F059845" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 7), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') }, number: 3, of: 3, chunk: { min: { Accident_Index: "201242I193506" }, max: { Accident_Index: MaxKey }, lastmod: Timestamp(5, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5') } } }
+2018-04-30T18:38:01.613+0000 I NETWORK  [conn21] received client metadata from 127.0.0.1:55290 conn21: { driver: { name: "NetworkInterfaceASIO-ShardRegistry", version: "3.6.4" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2018-04-30T18:38:01.624+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.625+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:01.702+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.702+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:01.703+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 111 checks in a row.
+2018-04-30T18:38:01.705+0000 I SHARDING [Balancer] caught exception while doing balance: Could not find host matching read preference { mode: "primary" } for set s0
+2018-04-30T18:38:01.706+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351-18J-test-student-2018-04-30T18:38:01.706+0000-5ae762891b1b0bfabb4aebec", server: "tm351-18J-test-student", clientAddr: "", time: new Date(1525113481706), what: "balancer.round", ns: "", details: { executionTimeMillis: 20141, errorOccured: true, errmsg: "Could not find host matching read preference { mode: "primary" } for set s0" } }
+2018-04-30T18:38:01.767+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:01.767+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:02.132+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:02.132+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:02.268+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:02.268+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:02.633+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:02.634+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:02.770+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:02.771+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:03.141+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:03.141+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:03.272+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:03.273+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:03.642+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:03.650+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:03.776+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:03.777+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:04.152+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:04.153+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:04.153+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 121 checks in a row.
+2018-04-30T18:38:04.278+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:04.279+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:04.654+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:04.654+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:04.779+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:04.779+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:05.154+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:05.154+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:05.280+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:05.281+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:05.655+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:05.655+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:05.782+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:05.782+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:06.156+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:06.156+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:06.284+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:06.284+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:06.657+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:06.657+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:06.657+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 131 checks in a row.
+2018-04-30T18:38:06.785+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:06.785+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:07.158+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:07.159+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:07.286+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:07.286+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:07.660+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:07.661+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:07.787+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:07.787+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:08.162+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:08.162+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:08.288+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:08.289+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:08.664+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:08.664+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:08.791+0000 W NETWORK  [conn5] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:08.791+0000 W NETWORK  [conn5] Unable to reach primary for set s0
+2018-04-30T18:38:08.791+0000 I SHARDING [conn5] Unable to obtain shard version for s0 :: caused by :: FailedToSatisfyReadPreference: Could not find host matching read preference { mode: "primary" } for set s0
+2018-04-30T18:38:08.796+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 5|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:08.797+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 0 ms and found version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:08.806+0000 I SHARDING [conn5] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:38:08.816+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:38:08.816+0000 I SHARDING [conn5] Refreshing chunks for collection accidents.accidents based on version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:08.817+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 0 ms and found version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:08.818+0000 I COMMAND  [conn5] command admin.$cmd appName: "MongoDB Shell" command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_"201206F059845"", ns: "accidents.accidents", min: { Accident_Index: "201206F059845" }, max: { Accident_Index: MaxKey }, shard: "s2", lastmod: Timestamp(4, 28), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113468, 10913), signature: { hash: BinData(0, 95C45FE4A6E7545A58E13C793DF397AB5788F071), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113468, 10913), t: 1 } }, $db: "admin" } exception: Unable to move chunk with arguments 'ns: accidents.accidents, [{ Accident_Index: "201206F059845" }, { Accident_Index: MaxKey }), fromShard: s2, toShard: s1' due to error Unable to find chunk with the exact bounds [{ Accident_Index: "201206F059845" }, { Accident_Index: MaxKey }) at collection version 5|10||5ae7620e1b1b0bfabb4ae6f5 code:StaleShardVersion numYields:0 reslen:819 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 20099ms
+2018-04-30T18:38:09.165+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:09.166+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:09.166+0000 I NETWORK  [conn19] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 141 checks in a row.
+2018-04-30T18:38:09.667+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:09.667+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:10.168+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:10.168+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:10.670+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:10.670+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:11.172+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:11.172+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:11.674+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:11.675+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:11.708+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:11.708+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:12.177+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:12.177+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:12.209+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:12.209+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:12.678+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:12.678+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:12.710+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:12.710+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:12.710+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 151 checks in a row.
+2018-04-30T18:38:13.179+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:13.180+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:13.211+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:13.212+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:13.599+0000 I NETWORK  [PeriodicTaskRunner] Socket closed remotely, no longer connected (idle 60 secs, remote host 127.0.0.1:37017)
+2018-04-30T18:38:13.680+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:13.681+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:13.712+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:13.713+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:14.181+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:14.182+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:14.213+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:14.214+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:14.683+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:14.683+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:14.715+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:14.716+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:15.184+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:15.184+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:15.216+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:15.217+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:15.217+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 161 checks in a row.
+2018-04-30T18:38:15.686+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:15.687+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:15.718+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:15.718+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:16.188+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:16.188+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:16.219+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:16.220+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:16.690+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:16.690+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:16.720+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:16.720+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:17.191+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:17.191+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:17.222+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:17.222+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:17.692+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:17.693+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:17.723+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:17.723+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:17.723+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 171 checks in a row.
+2018-04-30T18:38:18.194+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:18.194+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:18.224+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:18.224+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:18.695+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:18.695+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:18.725+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:18.726+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:19.196+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:19.197+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:19.226+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:19.227+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:19.698+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:19.698+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:19.728+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:19.728+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:20.199+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:20.199+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:20.229+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:20.230+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:20.230+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 181 checks in a row.
+2018-04-30T18:38:20.700+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:20.701+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:20.731+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:20.731+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:21.201+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:21.202+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:21.232+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:21.232+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:21.702+0000 W NETWORK  [conn19] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:21.703+0000 W NETWORK  [conn19] Unable to reach primary for set s0
+2018-04-30T18:38:21.703+0000 I SHARDING [conn19] Unable to obtain shard version for s0 :: caused by :: FailedToSatisfyReadPreference: Could not find host matching read preference { mode: "primary" } for set s0
+2018-04-30T18:38:21.704+0000 I SHARDING [conn19] Refreshing chunks for collection accidents.accidents based on version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:21.705+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 0 ms and found version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:21.709+0000 I SHARDING [conn19] distributed lock 'accidents.accidents' acquired for 'Migrating chunk(s) in collection accidents.accidents', ts : 5ae761e11b1b0bfabb4ae639
+2018-04-30T18:38:21.732+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:21.733+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:22.233+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:22.234+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:22.734+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:22.734+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:23.235+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:23.235+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:23.736+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:23.736+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:23.737+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 191 checks in a row.
+2018-04-30T18:38:24.237+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:24.238+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:24.739+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:24.739+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:25.239+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:25.240+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:25.741+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:25.741+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:26.242+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:26.242+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:26.743+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:26.743+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:27.243+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:27.244+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:27.745+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:27.746+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:28.246+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:28.247+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:28.748+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:28.748+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:28.749+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 201 checks in a row.
+2018-04-30T18:38:29.249+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:29.250+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:29.548+0000 I SHARDING [NetworkInterfaceASIO-ShardRegistry-0] distributed lock with ts: '5ae761e11b1b0bfabb4ae639' and _id: 'accidents.accidents' unlocked.
+2018-04-30T18:38:29.549+0000 I SHARDING [conn19] Refreshing chunks for collection accidents.accidents based on version 5|10||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:29.550+0000 I SHARDING [ConfigServerCatalogCacheLoader-1] Refresh for collection accidents.accidents took 1 ms and found version 6|1||5ae7620e1b1b0bfabb4ae6f5
+2018-04-30T18:38:29.552+0000 I COMMAND  [conn19] command admin.$cmd command: _configsvrMoveChunk { _configsvrMoveChunk: 1, _id: "accidents.accidents-Accident_Index_"201242I193506"", ns: "accidents.accidents", min: { Accident_Index: "201242I193506" }, max: { Accident_Index: MaxKey }, shard: "s2", lastmod: Timestamp(5, 10), lastmodEpoch: ObjectId('5ae7620e1b1b0bfabb4ae6f5'), writeConcern: { w: "majority", wtimeout: 15000 }, $replData: 1, $clusterTime: { clusterTime: Timestamp(1525113481, 7817), signature: { hash: BinData(0, E3F08F52DC429AE438AC72D03F81C4D48FA9C8F8), keyId: 6550311832093982739 } }, $configServerState: { opTime: { ts: Timestamp(1525113481, 7817), t: 1 } }, $db: "admin" } numYields:0 reslen:433 locks:{ Global: { acquireCount: { r: 16, w: 6 } }, Database: { acquireCount: { r: 5, w: 6 } }, Collection: { acquireCount: { r: 5, w: 3 } }, oplog: { acquireCount: { w: 3 } } } protocol:op_msg 27928ms
+2018-04-30T18:38:29.751+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:29.752+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:30.254+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:30.254+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:30.755+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:30.756+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:31.257+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:31.258+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:31.554+0000 W NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:31.554+0000 W NETWORK  [ReplicaSetMonitor-TaskExecutor-0] Unable to reach primary for set s0
+2018-04-30T18:38:31.758+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:31.759+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:31.764+0000 I SHARDING [Balancer] caught exception while doing balance: Could not find host matching read preference { mode: "primary" } for set s0
+2018-04-30T18:38:31.764+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351-18J-test-student-2018-04-30T18:38:31.764+0000-5ae762a71b1b0bfabb4aec4b", server: "tm351-18J-test-student", clientAddr: "", time: new Date(1525113511764), what: "balancer.round", ns: "", details: { executionTimeMillis: 20056, errorOccured: true, errmsg: "Could not find host matching read preference { mode: "primary" } for set s0" } }
+2018-04-30T18:38:41.768+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:41.768+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:42.270+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:42.271+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:42.771+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:42.772+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:42.772+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 211 checks in a row.
+2018-04-30T18:38:43.274+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:43.276+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:43.776+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:43.777+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:44.277+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:44.277+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:44.779+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:44.779+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:45.280+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:45.281+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:45.782+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:45.783+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:46.284+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:46.284+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:46.785+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:46.785+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:47.286+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:47.286+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:47.787+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:47.787+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:47.788+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 221 checks in a row.
+2018-04-30T18:38:48.289+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:48.289+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:48.790+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:48.790+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:49.291+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:49.292+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:49.792+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:49.793+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:50.293+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:50.294+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:50.795+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:50.796+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:51.298+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:51.298+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:51.799+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:51.799+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:52.300+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:52.300+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:52.801+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:52.802+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:52.802+0000 I NETWORK  [Balancer] Cannot reach any nodes for set s0. Please check network connectivity and the status of the set. This has happened for 231 checks in a row.
+2018-04-30T18:38:53.305+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:53.306+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:53.807+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:53.808+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:54.309+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:54.309+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:54.817+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:54.820+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:55.329+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:55.333+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:55.839+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:55.844+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:56.358+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:56.368+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:56.881+0000 W NETWORK  [Balancer] Failed to connect to 127.0.0.1:37017, in(checking socket for error after poll), reason: Connection refused
+2018-04-30T18:38:56.899+0000 W NETWORK  [Balancer] Unable to reach primary for set s0
+2018-04-30T18:38:57.064+0000 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2018-04-30T18:38:57.120+0000 I NETWORK  [conn18] end connection 127.0.0.1:54842 (9 connections now open)
+2018-04-30T18:38:57.120+0000 I NETWORK  [conn5] end connection 127.0.0.1:54734 (8 connections now open)
+2018-04-30T18:38:57.120+0000 I NETWORK  [conn19] end connection 127.0.0.1:54976 (7 connections now open)
+2018-04-30T18:38:57.120+0000 I NETWORK  [conn2] end connection 127.0.0.1:54722 (10 connections now open)
+2018-04-30T18:38:57.403+0000 I SHARDING [Balancer] caught exception while doing balance: operation was interrupted
+2018-04-30T18:38:57.405+0000 I SHARDING [Balancer] about to log metadata event into actionlog: { _id: "tm351-18J-test-student-2018-04-30T18:38:57.404+0000-5ae762c11b1b0bfabb4aec5c", server: "tm351-18J-test-student", clientAddr: "", time: new Date(1525113537404), what: "balancer.round", ns: "", details: { executionTimeMillis: 15636, errorOccured: true, errmsg: "operation was interrupted" } }
+2018-04-30T18:38:57.415+0000 W SHARDING [Balancer] Error encountered while logging config change with ID [tm351-18J-test-student-2018-04-30T18:38:57.404+0000-5ae762c11b1b0bfabb4aec5c] into collection actionlog: InterruptedDueToReplStateChange: operation was interrupted
+2018-04-30T18:38:57.416+0000 I SHARDING [Balancer] CSRS balancer is now stopped
+2018-04-30T18:38:57.421+0000 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-04-30T18:38:57.421+0000 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-57050.sock
+2018-04-30T18:38:57.422+0000 I REPL     [signalProcessingThread] shutting down replication subsystems
+2018-04-30T18:38:57.422+0000 I REPL     [signalProcessingThread] Stopping replication reporter thread
+2018-04-30T18:38:57.427+0000 I REPL     [signalProcessingThread] Stopping replication fetcher thread
+2018-04-30T18:38:57.427+0000 I REPL     [signalProcessingThread] Stopping replication applier thread
+2018-04-30T18:38:57.506+0000 I NETWORK  [conn21] end connection 127.0.0.1:55290 (6 connections now open)
+2018-04-30T18:38:57.506+0000 I NETWORK  [conn16] end connection 127.0.0.1:54808 (5 connections now open)
+2018-04-30T18:38:57.506+0000 I NETWORK  [conn14] end connection 127.0.0.1:54800 (4 connections now open)
+2018-04-30T18:38:57.507+0000 I NETWORK  [conn20] end connection 127.0.0.1:54988 (3 connections now open)
+2018-04-30T18:38:57.927+0000 I REPL     [signalProcessingThread] Stopping replication storage threads
+2018-04-30T18:38:57.933+0000 W SHARDING [signalProcessingThread] cant reload ShardRegistry  :: caused by :: CallbackCanceled: Callback canceled
+2018-04-30T18:38:57.933+0000 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-04-30T18:38:57.939+0000 I STORAGE  [WTOplogJournalThread] oplog journal thread loop shutting down
+2018-04-30T18:38:57.939+0000 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-04-30T18:38:57.964+0000 I NETWORK  [conn12] end connection 127.0.0.1:54784 (2 connections now open)
+2018-04-30T18:38:57.964+0000 I NETWORK  [conn11] end connection 127.0.0.1:54780 (1 connection now open)
+2018-04-30T18:38:57.964+0000 I NETWORK  [conn10] end connection 127.0.0.1:54776 (0 connections now open)
+2018-04-30T18:38:58.116+0000 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-04-30T18:38:58.117+0000 I CONTROL  [signalProcessingThread] now exiting
+2018-04-30T18:38:58.117+0000 I CONTROL  [signalProcessingThread] shutting down with code:0
