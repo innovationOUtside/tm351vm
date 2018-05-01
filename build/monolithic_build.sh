@@ -78,6 +78,14 @@ chmod g+w /etc/passwd /etc/group
 source $BUILDDIR/base/basepackages.sh
 source $BUILDDIR/base/basepy.sh
 
+
+#mongo causing lots of problems - so let's try to build it first
+source $BUILDDIR/mongo/mongo.sh
+source $BUILDDIR/mongo/simple/mongo_simple.sh
+#May need to run this for shards: fix-permissions /data
+source $BUILDDIR/mongo/sharded/mongo_cluster.sh
+
+
 #Jupyter space
 source $BUILDDIR/jupyter-base/build_jupyter.sh
 source $BUILDDIR/jupyter-custom/jupyter_nbextensions.sh
@@ -88,8 +96,9 @@ source $BUILDDIR/jupyter-custom/jupyter_extensions.sh
 
 #OU custom packages and extensions
 source $BUILDDIR/jupyter-custom/jupyter_ou_custom.sh
-source $BUILDDIR/jupyter-custom/jupyter_ou_trust.sh
 #source $BUILDDIR/jupyter-custom/jupyter_ou_tutor.sh
+source $BUILDDIR/jupyter-custom/jupyter_ou_test_nb.sh
+source $BUILDDIR/jupyter-custom/jupyter_ou_trust.sh
 
 source $BUILDDIR/pystack/build_tm351_stack.sh
 
@@ -97,13 +106,9 @@ source $BUILDDIR/openrefine/openrefine.sh
 
 source $BUILDDIR/postgres/postgresql.sh
 
-source $BUILDDIR/mongo/mongo.sh
-source $BUILDDIR/mongo/simple/mongo_simple.sh
-#May need to run this fo shards: fix-permissions /data
-source $BUILDDIR/mongo/sharded/mongo_cluster.sh
 
 #tidy up
-apt-get autoremove -y && apt-get clean && updatedb
+apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*  && updatedb 
 
 
 
