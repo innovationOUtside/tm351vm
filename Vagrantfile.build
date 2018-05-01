@@ -57,6 +57,9 @@ config.vm.provider :virtualbox do |virtualbox|
 	#v simple webserver
 	config.vm.network :forwarded_port, guest: 8000, host: 35188, auto_correct: true
 
+	#nbdime
+	config.vm.network :forwarded_port, guest: 8899, host: 35103, auto_correct: true
+
 
 	#Purely for testing - also requires simple_auth.sh at end
 	#webserver
@@ -277,16 +280,19 @@ config.vm.provider :aws do |aws, override|
 
   #The TMP_PASS var is set during provisioning, and sets the simple auth password
   config.vm.provision :shell, :env => {"TMP_PASS" => ENV["TMP_PASS"]}, :inline => <<-SH
+  
   	#Add build scripts here
   	cd /vagrant/build
   	source ./monolithic_build.sh
   	
   	#Simple webserver
-  	#source /vagrant/build/simple_webserver.sh
   	source /vagrant/build/v_simple_webserver.sh
   	
   	#Testing
   	#source /vagrant/build/simple_auth.sh
+  	
+  	#Should do a vagrant restart with vagrant reload...
+  	source /vagrant/build/end_first_run.sh
   SH
   
   
