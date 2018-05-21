@@ -12,9 +12,6 @@ import numpy as np
 #Issue https://github.com/undercertainty/tm351/issues/99
 %load_ext sql
 
-#https://github.com/innovationOUtside/ipython_magic_eralchemy
-%load_ext eralchemy_magic
-
 
 from pandas import set_option
 
