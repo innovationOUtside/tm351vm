@@ -14,7 +14,7 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
       $PIP install jupyter-wysiwyg
       
       #Install nbgrader
-      #$PIP install nbgrader
+      $PIP install nbgrader
   
     done
 
@@ -46,7 +46,7 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension install jupyter_wysiwyg  --py --sys-prefix
         jupyter nbextension enable jupyter_wysiwyg --py --sys-prefix
         
-        #nbgrader
+        #nbgrader - do not enable by default
         #jupyter nbextension install --sys-prefix --py nbgrader --overwrite
         #jupyter nbextension enable --sys-prefix --py nbgrader
         #jupyter serverextension enable --sys-prefix --py nbgrader
