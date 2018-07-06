@@ -97,6 +97,8 @@ source $BUILDDIR/jupyter-custom/jupyter_extensions.sh
 #OU custom packages and extensions
 source $BUILDDIR/jupyter-custom/jupyter_ou_custom.sh
 #source $BUILDDIR/jupyter-custom/jupyter_ou_tutor.sh
+source $BUILDDIR/jupyter-custom/jupyter_lab.sh
+
 source $BUILDDIR/jupyter-custom/jupyter_ou_test_nb.sh
 source $BUILDDIR/jupyter-custom/jupyter_ou_trust.sh
 
