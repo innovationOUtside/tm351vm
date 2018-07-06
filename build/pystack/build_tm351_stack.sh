@@ -60,6 +60,7 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       #$PIP install git+https://github.com/mccahill/ipython-sql.git
       #$PIP install ipython-sql
       $PIP install git+https://github.com/catherinedevlin/ipython-sql.git #https://github.com/undercertainty/tm351/issues/87
+      $PIP install pgspecial
   
       $PIP install patsy
       $PIP install fiona
@@ -83,6 +84,11 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       $PIP install sparqlwrapper
   
       $PIP install ipythonblocks
+      
+      $PIP install tqdm
+      
+      $PIP install lunr
+      $PIP install pypdf2
   
     done
 
