@@ -9,8 +9,10 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 apt-get -y update && apt-get install -y wget ant unzip openjdk-8-jre-headless &&	apt-get clean -y
 
-OPENREFINEGZ="openrefine-linux-2.8.tar.gz"
-OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz"
+#OPENREFINEGZ="openrefine-linux-2.8.tar.gz"
+#OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz"
+OPENREFINEGZ="openrefine-linux-3.0-beta.tar.gz"
+OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.0-beta/openrefine-linux-3.0-beta.tar.gz"
 
 OPENREFINE_DIR=/vagrant/openrefine_projects
 mkdir -p $OPENREFINE_DIR
