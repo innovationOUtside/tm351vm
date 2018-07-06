@@ -25,6 +25,8 @@ if [ ! -f /opt/jupyter_extensions.done ]; then
       $PIP install git+https://github.com/innovationOUtside/nb_extension_odszip.git
       jupyter bundlerextension enable --py odszip.download --sys-prefix
       #echo "...odszip done"
+      
+      $PIP install git+https://github.com/innovationOUtside/nb_workflow_tools.git
 
     done
     touch /opt/jupyter_extensions.done
