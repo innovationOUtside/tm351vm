@@ -17,7 +17,7 @@ PIDFile=/run/jupyter.pid
 
 ExecStartPre=mkdir -p /vagrant/notebooks
 
-ExecStart=/usr/local/bin/jupyter notebook --port=8888 --ip=0.0.0.0 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks --allow-root --NotebookApp.token=
+ExecStart=/usr/local/bin/jupyter notebook --port=8888 --ip=0.0.0.0 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks --allow-root --NotebookApp.token= 
 
 Restart=always
 RestartSec=10
