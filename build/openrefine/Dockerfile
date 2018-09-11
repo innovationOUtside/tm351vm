@@ -1,7 +1,9 @@
 #docker build --rm -t psychemedia/ou-tm351-openrefine-test .
+#docker build --rm --build-arg BASE=etc -t psychemedia/ou-tm351-openrefine-test .
 
+ARG BASE=psychemedia/ou-tm351-minimal-test
 # Base machine
-FROM psychemedia/ou-tm351-minimal-test
+FROM ${BASE}
 
 MAINTAINER tony.hirst@gmail.com
 
@@ -18,8 +20,8 @@ RUN rm -rf /tmp/openrefine
 EXPOSE 3334
 
 RUN mkdir -p /openrefine_projects
+RUN chown oustudent:100 /openrefine_projects
 
 VOLUME /openrefine_projects
 
-CMD /opt/openrefine-2.7/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects 
-
+CMD su - oustudent -c "/opt/openrefine-3.0-beta/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects"
