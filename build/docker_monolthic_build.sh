@@ -39,3 +39,9 @@ docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t ${IMAGESTUB
 #Add in pystack
 ## Add in a complete python environment relevant to a course
 docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-test ./pystack
+
+#Add in postgres
+## Add in a postgres database, populated with customisations for the course
+#This could be split into two: postgres base and postgres custom?
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test ./postgres
+#docker build --rm --build-arg BASE=psychemedia/testpieces -t psychemedia/testpieces ./pystack
