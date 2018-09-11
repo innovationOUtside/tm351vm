@@ -30,11 +30,6 @@ ENV TM351_GID $MODULE_GID
 ENV NB_USER $TM351_USER
 ENV NB_GID $TM351_GID
 
-
-#Fix brokenness?
-RUN apt-get -o Acquire::GzipIndexes=false update
-RUN apt-get update && apt-get install -y apt-show-versions
-
 # Base machine
 ADD basepackages.sh  /tmp/basepackages.sh
 ADD basepy.sh  /tmp/basepy.sh

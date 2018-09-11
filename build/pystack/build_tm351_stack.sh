@@ -6,10 +6,11 @@ export C_INCLUDE_PATH=/usr/include/gdal
 
 if [ ! -f /opt/tm351_py_stack.done  ]; then
 
-    apt-get -y update && \
+    apt-get update && \
     apt-get install -y libpq-dev libgeos-dev libgdal-dev && \
     apt-get install -y libxml2-dev libxslt-dev && \
-    apt-get install -y fonts-liberation
+    apt-get install -y fonts-liberation && \
+    apt-get clean
 
 
     for PYTHONVER in 3 ; do
@@ -20,16 +21,16 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
 
 
       $PIP install --upgrade pip
-  
+
       # The TM351 python stack
-  
+
       #http://initd.org/psycopg/articles/2018/02/08/psycopg-274-released/
       $PIP install psycopg2-binary
-   
+
       $PIP install SQLAlchemy
 
       $PIP install pymongo
-  
+
       $PIP install lxml
 
       $PIP install cython
@@ -54,14 +55,14 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       $PIP install nltk
       $PIP install scipy
       $PIP install scikit-learn
-  
+
       $PIP install pandasql
-  
+
       #$PIP install git+https://github.com/mccahill/ipython-sql.git
       #$PIP install ipython-sql
       $PIP install git+https://github.com/catherinedevlin/ipython-sql.git #https://github.com/undercertainty/tm351/issues/87
       $PIP install pgspecial
-  
+
       $PIP install patsy
       $PIP install fiona
       $PIP install geopy
@@ -78,27 +79,27 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       #$PIP install git+https://github.com/mwaskom/seaborn.git
       $PIP install seaborn
       $PIP install ggplot
-  
+
       $PIP install rdflib
       $PIP install networkx
       $PIP install sparqlwrapper
-  
+
       $PIP install ipythonblocks
-      
+
       $PIP install tqdm
-      
+
       $PIP install lunr
       $PIP install pypdf2
-  
+
     done
 
     python3 -m nltk.downloader stopwords
-    
+
     # Reduce the image size
     apt-get autoremove -y
     apt-get clean -y
 
-    touch /opt/tm351_py_stack.done 
+    touch /opt/tm351_py_stack.done
 fi
 
 

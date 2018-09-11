@@ -24,6 +24,8 @@ then
 	echo " - install package(s)"
 	apt-get install -y mongodb-org
 
+	#Tidy up
+	apt-get clean
 
 	#----
     echo " - set up mongo permissions"

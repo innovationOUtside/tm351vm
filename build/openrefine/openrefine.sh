@@ -7,7 +7,9 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # OpenRefine installer script
 
-apt-get -y update && apt-get install -y wget ant unzip openjdk-8-jre-headless &&	apt-get clean -y
+apt-get update &&
+apt-get install -y wget ant unzip openjdk-8-jre-headless &&
+apt-get clean -y
 
 #OPENREFINEGZ="openrefine-linux-2.8.tar.gz"
 #OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz"
@@ -32,7 +34,7 @@ if [ ! -f /opt/openrefine.done ]; then
 		cp $THISDIR/root/$OPENREFINEGZ /root/$OPENREFINEGZ
 	fi
 	echo "...downloaded OpenRefine"
-	
+
 	echo "Unpacking OpenRefine..."
 	tar -xzf /root/$OPENREFINEGZ -C /opt  && rm /root/$OPENREFINEGZ
 	#Unpacks to: /opt/openrefine-2.7
@@ -52,7 +54,7 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	else
 		cp $THISDIR/services/refine_auth.service /lib/systemd/system/refine.service
 	fi
-	
+
 	# Enable autostart
 	systemctl enable refine.service
 

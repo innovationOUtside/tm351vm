@@ -4,8 +4,9 @@ echo "Installing bundler extensions..."
 
 if [ ! -f /opt/jupyter_extensions.done ]; then
 
-    apt-get install -y pandoc && apt-get clean
-    
+    apt-get update && apt-get install -y pandoc && \
+    apt-get clean
+
     for PYTHONVER in 3 ; do
 
       PYTHON="python$PYTHONVER"
@@ -19,13 +20,13 @@ if [ ! -f /opt/jupyter_extensions.done ]; then
 
       jupyter bundlerextension enable --py wordexport.wordexport --sys-prefix
       echo "...wordexport done"
-  
+
       echo "...odszip install..."
       #Install the ODSzip extension package
       $PIP install git+https://github.com/innovationOUtside/nb_extension_odszip.git
       jupyter bundlerextension enable --py odszip.download --sys-prefix
       #echo "...odszip done"
-      
+
       $PIP install git+https://github.com/innovationOUtside/nb_workflow_tools.git
 
     done

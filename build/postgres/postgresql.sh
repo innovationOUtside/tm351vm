@@ -7,10 +7,11 @@ if [ ! -f /opt/postgresql.done ]; then
 
 
     #Install postgres packages
-    apt-get -y update && apt-get install -y  postgresql postgresql-client
-
+    apt-get update && \
+    apt-get install -y postgresql postgresql-client && \
     #Additionally bring in command line tools to help with data grab
-    apt-get install -y curl zip unzip bzip2 wget
+    apt-get install -y curl zip unzip bzip2 wget && \
+    apt-get clean
 
     #If not the Docker build, set up the initial database
     #Handle it in the dockerfile instead

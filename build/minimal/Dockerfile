@@ -6,3 +6,9 @@ MAINTAINER tony.hirst@gmail.com
 
 ENV DOCKERBUILD 1
 
+RUN apt-get autoremove && \
+    apt-get -o Acquire::GzipIndexes=false update
+RUN apt-get update && \
+    apt-get upgrade -y \
+    apt-get install -y apt-show-versions && \
+    apt-get clean
