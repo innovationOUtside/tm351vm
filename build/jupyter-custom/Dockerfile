@@ -1,8 +1,10 @@
 #docker build --rm -t psychemedia/ou-tm351-jupyter-custom-test .
 
-FROM psychemedia/ou-tm351-jupyter-base-test
+ARG BASE=psychemedia/ou-tm351-base-test
+FROM ${BASE}
 
 MAINTAINER tony.hirst@gmail.com
+
 
 ENV DOCKERBUILD 1
 

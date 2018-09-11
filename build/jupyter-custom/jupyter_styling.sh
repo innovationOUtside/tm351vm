@@ -56,17 +56,18 @@ chown $NB_USER:$NB_GID $CUSTOMISATIONS
 STARTUP=$IPYTHONDIR/profile_default/startup
 echo "Ensuring jupyter startup files available: STARTUP: $STARTUP"
 mkdir -p $STARTUP
-chown $NB_USER:$NB_GID $STARTUP
 cp -p $TM351CUSTOMFILEPATH/tm351_start.ipy $STARTUP/tm351_start.ipy
+chown $NB_USER:$NB_GID $STARTUP
 
 #Styling and branding extensions
 echo "Ensuring jupyter customisation files available"
 cp -p $TM351CUSTOMFILEPATH/* $JUPYTERCONFIGDIR/custom/
-
+chown -R $NB_USER:$NB_GID $JUPYTERCONFIGDIR/custom/
 
 #nbconvert templating extensions
 echo "Ensuring jupyter template extension files available"
 cp -p -r $TM351TPLTEMPLATESFILEPATH/* $TPLTEMPLATES/
+chown -R $NB_USER:$NB_GID $TPLTEMPLATES
 
 echo "...done with custom styling"
 

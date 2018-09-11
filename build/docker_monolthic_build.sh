@@ -29,3 +29,9 @@ docker build --rm --build-arg BASE=${IMAGESTUB}-minimal-test -t ${IMAGESTUB}-bas
 # Jupyter base
 ## A minimal Jupyter environment
 docker build --rm --build-arg BASE=${IMAGESTUB}-base-test -t ${IMAGESTUB}-jupyter-base-test ./jupyter-base
+
+#Add in jupyter custom
+## Add in Jupyter customisations
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t ${IMAGESTUB}-jupyter-base-custom-test ./jupyter-custom
+#docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t psychemedia/testpieces ./jupyter-custom
+
