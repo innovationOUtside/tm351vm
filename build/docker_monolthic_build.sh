@@ -45,3 +45,23 @@ docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-test -t ${IM
 #This could be split into two: postgres base and postgres custom?
 docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test ./postgres
 #docker build --rm --build-arg BASE=psychemedia/testpieces -t psychemedia/testpieces ./pystack
+
+#Add in mongo-simple
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t ${IMAGESTUB}-jupyter-base-mongo-test ./mongo
+
+
+#mongo sharded??
+
+#Add in openrefine
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test -t psychemedia/testpieces ./openrefine
+
+#uses testpieces
+#Add in supervisord
+docker build --rm -t p/t .
+
+#We can check running processes under supervisord with: supervisorctl
+docker run -p 8899:8888 p/t
+
+#Error of the form:
+#supervisord Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+#Check that supervisord is being run as root
