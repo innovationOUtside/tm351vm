@@ -21,7 +21,9 @@ ADD config/config_tm351.sql /tmp/postgres/config/config_tm351.sql
 USER postgres
 #We need to make sure the postgres service is running
 # before we try to use it...
-RUN service postgresql restart  && psql -f /tmp/postgres/config/config_tm351.sql
+RUN service postgresql restart  && \
+      psql -f /tmp/postgres/config/config_tm351.sql && \
+      service postgresql stop 
 
 #Reset to root user for other build steps
 USER root
