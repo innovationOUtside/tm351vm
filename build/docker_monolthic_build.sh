@@ -25,3 +25,7 @@ docker build --rm -t ${IMAGESTUB}-minimal-test ./minimal
 ## The intention is to define a common build environment
 ## populated with packages likely to be common to many courses
 docker build --rm --build-arg BASE=${IMAGESTUB}-minimal-test -t ${IMAGESTUB}-base-test ./base
+
+# Jupyter base
+## A minimal Jupyter environment
+docker build --rm --build-arg BASE=${IMAGESTUB}-base-test -t ${IMAGESTUB}-jupyter-base-test ./jupyter-base
