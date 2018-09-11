@@ -1,6 +1,10 @@
 #docker build --rm -t psychemedia/ou-tm351-jupyter-custom-pystack-test .
+#docker run -it --entrypoint=/bin/bash ${IMAGESTUB}-jupyter-custom-pystack-test -i
 
-FROM psychemedia/ou-tm351-jupyter-custom-test
+
+# call by adding --build-arg <varname>=<value>
+ARG BASE=psychemedia/ou-tm351-jupyter-custom-pystack-test
+FROM ${BASE}
 
 MAINTAINER tony.hirst@gmail.com
 
