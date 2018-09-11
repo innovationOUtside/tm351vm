@@ -35,3 +35,7 @@ docker build --rm --build-arg BASE=${IMAGESTUB}-base-test -t ${IMAGESTUB}-jupyte
 docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t ${IMAGESTUB}-jupyter-base-custom-test ./jupyter-custom
 #docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-test -t psychemedia/testpieces ./jupyter-custom
 
+
+#Add in pystack
+## Add in a complete python environment relevant to a course
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-test ./pystack
