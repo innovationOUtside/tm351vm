@@ -27,7 +27,9 @@ RUN tar xvjf /root/small_accidents.tar.bz2 -C /tmpdatafiles
 
 #Seed the database
 USER mongodb
-RUN /usr/bin/mongod --dbpath=/var/lib/mongodb --port=27351 --fork --syslog && sleep 5 && mongorestore --drop --db accidents --port=27351 /tmpdatafiles/small_accidents
+RUN /usr/bin/mongod --dbpath=/var/lib/mongodb --port=27351 --fork --syslog && \
+     mongorestore --drop --db accidents --port=27351 /tmpdatafiles/small_accidents && \
+     mongod --dbpath /var/lib/mongodb --port=27351 --shutdown
 
 
 USER root
