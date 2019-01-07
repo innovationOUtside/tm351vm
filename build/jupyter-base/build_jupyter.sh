@@ -17,22 +17,22 @@ if [ ! -f /opt/pybase.done ]; then
       #  with the extensions.
       #This means watching the notebook elements closely?
       #Allowing Jupyter machinery to upgrade should be okay?
-      $PIP install ipython-genutils
-      $PIP install jupyter-core
-      $PIP install nbformat
+      $PIP install --no-cache-dir ipython-genutils
+      $PIP install --no-cache-dir jupyter-core
+      $PIP install --no-cache-dir nbformat
 
-      $PIP install ipython
-      $PIP install jupyter-client
-      $PIP install ipykernel
+      $PIP install --no-cache-dir ipython
+      $PIP install --no-cache-dir jupyter-client
+      $PIP install --no-cache-dir ipykernel
 
-      $PIP install notebook
+      $PIP install --no-cache-dir notebook
 
-      $PIP install nbconvert
+      $PIP install --no-cache-dir nbconvert
 
-      $PIP install jupyter-console
-      $PIP install jupyter
+      $PIP install --no-cache-dir jupyter-console
+      $PIP install --no-cache-dir jupyter
 
-      $PIP install nbdime
+      $PIP install --no-cache-dir nbdime
 
     #done
     touch /opt/pybase.done
