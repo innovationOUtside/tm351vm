@@ -18,6 +18,7 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       PIP="pip$PYTHONVER"
       #https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
       PIP="python3 -m pip"
+      PIPINC = "python3 -m pip install --no-cache-dir"
 
 
       $PIP install --upgrade pip
@@ -25,71 +26,71 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
       # The TM351 python stack
 
       #http://initd.org/psycopg/articles/2018/02/08/psycopg-274-released/
-      $PIP install psycopg2-binary
+      $PIPINC psycopg2-binary
 
-      $PIP install SQLAlchemy
+      $PIPINC SQLAlchemy
 
-      $PIP install pymongo
+      $PIPINC pymongo
 
-      $PIP install lxml
+      $PIPINC lxml
 
-      $PIP install cython
-      $PIP install openpyxl
-      $PIP install python-dateutil
-      $PIP install xlrd
-      $PIP install pygments
-      $PIP install pytz
-      $PIP install requests
-      $PIP install chardet
-      $PIP install messytables
-      $PIP install beautifulsoup4
-      $PIP install filemagic
-      $PIP install dataset
-      $PIP install six
-      $PIP install csvkit
-      $PIP install numpy
-      $PIP install numexpr
-      $PIP install tables
-      $PIP install pandas
-      $PIP install matplotlib
-      $PIP install nltk
-      $PIP install scipy
-      $PIP install scikit-learn
+      $PIPINC cython
+      $PIPINC openpyxl
+      $PIPINC python-dateutil
+      $PIPINC xlrd
+      $PIPINC pygments
+      $PIPINC pytz
+      $PIPINC requests
+      $PIPINC chardet
+      $PIPINC messytables
+      $PIPINC beautifulsoup4
+      $PIPINC filemagic
+      $PIPINC dataset
+      $PIPINC six
+      $PIPINC csvkit
+      $PIPINC numpy
+      $PIPINC numexpr
+      $PIPINC tables
+      $PIPINC pandas
+      $PIPINC matplotlib
+      $PIPINC nltk
+      $PIPINC scipy
+      $PIPINC scikit-learn
 
-      $PIP install pandasql
+      $PIPINC install pandasql
 
-      #$PIP install git+https://github.com/mccahill/ipython-sql.git
-      #$PIP install ipython-sql
-      $PIP install git+https://github.com/catherinedevlin/ipython-sql.git #https://github.com/undercertainty/tm351/issues/87
-      $PIP install pgspecial
+      #$PIPINC git+https://github.com/mccahill/ipython-sql.git
+      #$PIPINC ipython-sql
+      $PIPINC git+https://github.com/catherinedevlin/ipython-sql.git #https://github.com/undercertainty/tm351/issues/87
+      $PIPINC pgspecial
 
-      $PIP install patsy
-      $PIP install fiona
-      $PIP install geopy
-      $PIP install descartes
-      $PIP install geopandas
-      $PIP install pygeoif
-      $PIP install fastkml
-      $PIP install folium
-      $PIP install shapely
+      $PIPINC patsy
+      $PIPINC fiona
+      $PIPINC geopy
+      $PIPINC descartes
+      $PIPINC geopandas
+      $PIPINC pygeoif
+      $PIPINC fastkml
+      $PIPINC folium
+      $PIPINC shapely
 
-      $PIP install brewer2mpl
-      $PIP install mpld3
-      $PIP install statsmodels
-      #$PIP install git+https://github.com/mwaskom/seaborn.git
-      $PIP install seaborn
-      $PIP install ggplot
+      $PIPINC brewer2mpl
+      $PIPINC mpld3
+      $PIPINC statsmodels
+      #PIPINC git+https://github.com/mwaskom/seaborn.git
+      $PIPINC seaborn
+      $PIPINC ggplot
 
-      $PIP install rdflib
-      $PIP install networkx
-      $PIP install sparqlwrapper
+      $PIPINC rdflib
+      $PIPINC networkx
+      $PIPINC sparqlwrapper
 
-      $PIP install ipythonblocks
+      $PIPINC ipythonblocks
 
-      $PIP install tqdm
+      $PIPINC tqdm
 
-      $PIP install lunr
-      $PIP install pypdf2
+      $PIPINC lunr
+      $PIPINC pypdf2
 
     done
 
