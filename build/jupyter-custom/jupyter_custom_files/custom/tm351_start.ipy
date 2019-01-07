@@ -29,3 +29,7 @@ DEC2FLOAT = pg.extensions.new_type(
     'DEC2FLOAT',
     lambda value, curs: float(value) if value is not None else None)
 pg.extensions.register_type(DEC2FLOAT)
+
+#Suppress Future Warnings - https://github.com/undercertainty/tm351/issues/158
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
