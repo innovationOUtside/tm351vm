@@ -15,12 +15,12 @@ if [ ! -f /opt/postgresql.done ]; then
 
     #If not the Docker build, set up the initial database
     #Handle it in the dockerfile instead
-    #if [[ -z "${DOCKERBUILD}" ]]; then
+    if [[ -z "${DOCKERBUILD}" ]]; then
           #I don't this works in Docker build?
-#        sudo su - postgres <<-EOF
-#            psql -f ${THISDIR}/config/config_tm351.sql
-#EOF
-    #fi
+        sudo su - postgres <<-EOF
+            psql -f ${THISDIR}/config/config_tm351.sql
+EOF
+    fi
 
     #Should maybe move to a model where we run a test
     # If test passes, then set done?
