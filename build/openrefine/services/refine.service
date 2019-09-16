@@ -16,7 +16,8 @@ Environment=REFINE_HOST=0.0.0.0
 ExecStartPre=mkdir -p /vagrant/openrefine_projects
 
 #ExecStart=/opt/openrefine-2.8/refine -p 3334 -d /vagrant/openrefine_projects
-ExecStart=/opt/openrefine-3.0-beta/refine -p 3334 -d /vagrant/openrefine_projects
+#ExecStart=/opt/openrefine-3.0-beta/refine -p 3334 -d /vagrant/openrefine_projects
+ExecStart=/opt/openrefine-3.2/refine -p 3334 -d /vagrant/openrefine_projects
 Restart=always
 RestartSec=10
 

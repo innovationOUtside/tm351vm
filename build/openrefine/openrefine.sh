@@ -13,8 +13,10 @@ apt-get clean -y
 
 #OPENREFINEGZ="openrefine-linux-2.8.tar.gz"
 #OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz"
-OPENREFINEGZ="openrefine-linux-3.0-beta.tar.gz"
-OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.0-beta/openrefine-linux-3.0-beta.tar.gz"
+#OPENREFINEGZ="openrefine-linux-3.0-beta.tar.gz"
+#OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.0-beta/openrefine-linux-3.0-beta.tar.gz"
+OPENREFINEGZ="openrefine-linux-3.2.tar.gz"
+OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.2/openrefine-linux-3.2.tar.gz"
 
 OPENREFINE_DIR=/vagrant/openrefine_projects
 mkdir -p $OPENREFINE_DIR
