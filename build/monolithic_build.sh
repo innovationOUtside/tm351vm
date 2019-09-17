@@ -88,7 +88,7 @@ source $BUILDDIR/mongo/mongo.sh
 if type mongo &> /dev/null; then
     source $BUILDDIR/mongo/simple/mongo_simple.sh
     #May need to run this for shards: fix-permissions /data
-    #source $BUILDDIR/mongo/sharded/mongo_cluster.sh
+    source $BUILDDIR/mongo/sharded/mongo_cluster.sh
 fi
 
 #Jupyter space

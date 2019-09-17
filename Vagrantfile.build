@@ -160,7 +160,8 @@ config.vm.provider :linode do |provider, override|
 # - `id` which is AZURE_SUBSCRIPTION_ID
 #Create AZURE_SUBSCRIPTION_ID env var.
 #Mac: export AZURE_SUBSCRIPTION_ID=???
-
+# The ID can also be found from: https://portal.azure.com/#blade/HubsExtension/MyAccessBlade/resourceId/
+# Select the subscription plan and the ID can be found from the Overview sidebar selection
 
 # Set an environment variable with a temporary password to get into a simple http auth secured VM
 # On a Mac: export VM_NB_TMP_PASS=????
@@ -213,16 +214,14 @@ config.vm.provider :azure do |azure, override|
   	  #	source /vagrant/build/simple_auth.sh
 	#SH
 
-	#Need to set up  security rule:
-	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 80 --priority 130
-	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35100 --priority 140
-	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35101 --priority 150
+	# Need to set up  security rule:
+	# az network nsg rule create -g tm351azuretest --nsg-name tm351azurevmtest-vagrantNSG --priority 130 --direction Inbound --destination-port-ranges 8888 --access Allow --name port_8888
 
-	#Get IP address:
+	# Get IP address:
 	# az vm list-ip-addresses
 
 	# How do we kill and destroy? In normal way?
-	#vagrant destroy
+	# vagrant destroy
 	# Seems to delete everything...
 
   end
