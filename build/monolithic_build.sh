@@ -13,6 +13,9 @@ BUILDDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PIP="python3 -m pip"
 export PIP
 
+PIPNC="python3 -m pip install --no-cache-dir"
+export PIPNC
+
 #Keep track of build datetime
 $BUILDDIR/version.sh
 
