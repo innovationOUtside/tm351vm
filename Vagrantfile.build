@@ -34,11 +34,11 @@ Vagrant.configure("2") do |config|
 
 	#Purely for testing - also requires simple_auth.sh at end
 	#webserver
-	config.vm.network :forwarded_port, guest: 80, host: 35180, auto_correct: true
-		#jupyter secure
-	config.vm.network :forwarded_port, guest: 35180, host: 35181, auto_correct: true
+	#config.vm.network :forwarded_port, guest: 80, host: 35180, auto_correct: true
+	#jupyter secure
+	#config.vm.network :forwarded_port, guest: 35180, host: 35181, auto_correct: true
 	#refine secure
-	config.vm.network :forwarded_port, guest: 35181, host: 35182, auto_correct: true
+	#config.vm.network :forwarded_port, guest: 35181, host: 35182, auto_correct: true
 
 	#---- END PORT FORWARDING ----
 
@@ -152,7 +152,7 @@ config.vm.provider :linode do |provider, override|
 #Mac: export AZURE_SUBSCRIPTION_ID=???
 
 
-# Set an environment variable with a temporary password to get into notebooks
+# Set an environment variable with a temporary password to get into a simple http auth secured VM
 # On a Mac: export VM_NB_TMP_PASS=????
 
 #Create Azure app
@@ -205,8 +205,8 @@ config.vm.provider :azure do |azure, override|
 
 	#Need to set up  security rule:
 	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 80 --priority 130
-	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35180 --priority 140
-	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35181 --priority 150
+	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35100 --priority 140
+	# az vm open-port --resource-group tm351azuretest --name tm351azurevmtest --port 35101 --priority 150
 
 	#Get IP address:
 	# az vm list-ip-addresses
