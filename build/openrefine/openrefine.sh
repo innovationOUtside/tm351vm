@@ -22,7 +22,13 @@ OPENREFINE_DIR=/vagrant/openrefine_projects
 mkdir -p $OPENREFINE_DIR
 chown $OPENREFINE_USER:$OPENREFINE_GID $OPENREFINE_DIR
 
-echo "Setting up OpenRefine: "
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************       Setting up OpenRefine        *************"
+echo "**************************************************************"
+echo ""
+echo ""
 
 #Prep for download
 mkdir -p /opt
@@ -66,3 +72,12 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	#(Re)start service
 	systemctl restart refine.service
 fi
+
+
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************    DONE: setting up OpenRefine     *************"
+echo "**************************************************************"
+echo ""
+echo ""

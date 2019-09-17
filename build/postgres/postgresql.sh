@@ -1,6 +1,12 @@
 #!/bin/bash -e
 
-echo "Installing postgres..."
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************       Setting up PostgreSQL        *************"
+echo "**************************************************************"
+echo ""
+echo ""
 
 if [ ! -f /opt/postgresql.done ]; then
     THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -26,4 +32,11 @@ EOF
     # If test passes, then set done?
     touch /opt/postgresql.done
 fi
-echo "...postgres done"
+
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************    DONE: setting up PostgreSQL     *************"
+echo "**************************************************************"
+echo ""
+echo ""
