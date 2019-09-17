@@ -9,7 +9,7 @@ BUILDDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #Python / pip installer
 # (should really precede this with python package installation?)
-#https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main    
+#https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
 PIP="python3 -m pip"
 export PIP
 
@@ -22,7 +22,7 @@ $BUILDDIR/version.sh
 #Create users
 TM351_USER=oustudent
 TM351_UID=1351
-TM351_GID=100 
+TM351_GID=100
 export TM351_USER TM351_UID TM351_GID
 
 echo "Adding service user: $TM351_USER"
@@ -126,8 +126,3 @@ rm -rf /var/lib/apt/lists/*
 
 # Remove log files
 #find /var/log -type f | while read f; do echo -ne '' > $f; done;
-
-
-
-
-
