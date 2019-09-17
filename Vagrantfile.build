@@ -77,10 +77,20 @@ end
 
 #------------------------- PROVIDER: DIGITAL OCEAN ------------------------------
 
-#https://github.com/devopsgroup-io/vagrant-digitalocean
+# https://github.com/devopsgroup-io/vagrant-digitalocean
+# vagrant plugin install vagrant-digitalocean
 
-#From command line you call vagrant from:
-#export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
+# From command line you call vagrant from:
+# https://cloud.digitalocean.com/account/api/tokens
+# export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
+# If there are old ssh keys in DO they may need deleting
+# eg if provisioning hangs after IP address assigned
+# https://cloud.digitalocean.com/settings/security
+
+# An ssh keypair also needs creating:
+# ssh-keygen -t rsa
+# This should create the keypair in: ~/.ssh/id_rsa
+# This path is then set to the provisioner private_key_path below
 
 config.vm.provider :digital_ocean do |provider, override|
 
@@ -91,14 +101,14 @@ config.vm.provider :digital_ocean do |provider, override|
     override.vm.box = 'digital_ocean'
     override.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
     provider.token = ENV['DIGITAL_OCEAN_TOKEN']
-    provider.image = 'ubuntu-16-04-x64'
+    provider.image = 'ubuntu-18-04-x64'
     provider.region = 'lon1'
     provider.size = '2gb'
 
-	override.vm.provision :shell, :env => {"TMP_PASS" => ENV["VM_NB_TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
+	#override.vm.provision :shell, :env => {"TMP_PASS" => ENV["VM_NB_TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
 
-  		source /vagrant/build/simple_auth.sh
-	SH
+  #		source /vagrant/build/simple_auth.sh
+	#SH
 
   end
 
@@ -121,15 +131,15 @@ config.vm.provider :linode do |provider, override|
     override.vm.box = 'linode/ubuntu1604'
 
     provider.api_key = ENV["LINODE_API_KEY"]
-    provider.distribution = 'Ubuntu 16.04 LTS'
+    provider.distribution = 'Ubuntu 18.04 LTS'
     provider.datacenter = 'london'
     provider.plan = 'Linode 2048'
     provider.size=2048
 
-	override.vm.provision :shell, :env =>  {"TMP_PASS" => ENV["VM_NB_TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
+	#override.vm.provision :shell, :env =>  {"TMP_PASS" => ENV["VM_NB_TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
 
-  		source /vagrant/build/simple_auth.sh
-	SH
+  #		source /vagrant/build/simple_auth.sh
+	#SH
   end
 
 #------------------------- END PROVIDER: LINODE ------------------------------
