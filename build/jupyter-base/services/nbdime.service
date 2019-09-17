@@ -15,7 +15,7 @@ User=oustudent
 Type=simple
 PIDFile=/run/jupyter.pid
 
-ExecStartPre=mkdir -p /vagrant/notebooks
+ExecStartPre=/bin/mkdir -p /vagrant/notebooks
 
 ExecStart=/usr/local/bin/nbdime diff-web --ip=0.0.0.0 --port=8899 -w /vagrant/notebooks
 

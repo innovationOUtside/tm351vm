@@ -13,6 +13,9 @@ BUILDDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PIP="python3 -m pip"
 export PIP
 
+PIPNC="python3 -m pip install --no-cache-dir"
+export PIPNC
+
 #Keep track of build datetime
 $BUILDDIR/version.sh
 
@@ -81,10 +84,12 @@ source $BUILDDIR/base/basepy.sh
 
 #mongo causing lots of problems - so let's try to build it first
 source $BUILDDIR/mongo/mongo.sh
-source $BUILDDIR/mongo/simple/mongo_simple.sh
-#May need to run this for shards: fix-permissions /data
-source $BUILDDIR/mongo/sharded/mongo_cluster.sh
-
+# If we have managed to install it, try to seed the dbs...
+if type mongo &> /dev/null; then
+    source $BUILDDIR/mongo/simple/mongo_simple.sh
+    #May need to run this for shards: fix-permissions /data
+    source $BUILDDIR/mongo/sharded/mongo_cluster.sh
+fi
 
 #Jupyter space
 source $BUILDDIR/jupyter-base/build_jupyter.sh
@@ -109,8 +114,18 @@ source $BUILDDIR/openrefine/openrefine.sh
 source $BUILDDIR/postgres/postgresql.sh
 
 
-#tidy up
-apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*  && updatedb 
+# Tidy up package lists
+apt-get autoremove -y
+apt-get clean -y
+apt-get autoclean -y
+rm -rf /var/lib/apt/lists/*
+
+# Zero out any free space to aid VM compression
+#dd if=/dev/zero of=/EMPTY bs=1M
+#rm -f /EMPTY
+
+# Remove log files
+#find /var/log -type f | while read f; do echo -ne '' > $f; done;
 
 
 

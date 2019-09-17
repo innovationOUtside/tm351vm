@@ -13,14 +13,22 @@ apt-get clean -y
 
 #OPENREFINEGZ="openrefine-linux-2.8.tar.gz"
 #OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz"
-OPENREFINEGZ="openrefine-linux-3.0-beta.tar.gz"
-OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.0-beta/openrefine-linux-3.0-beta.tar.gz"
+#OPENREFINEGZ="openrefine-linux-3.0-beta.tar.gz"
+#OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.0-beta/openrefine-linux-3.0-beta.tar.gz"
+OPENREFINEGZ="openrefine-linux-3.2.tar.gz"
+OPENREFINESRC="https://github.com/OpenRefine/OpenRefine/releases/download/3.2/openrefine-linux-3.2.tar.gz"
 
 OPENREFINE_DIR=/vagrant/openrefine_projects
 mkdir -p $OPENREFINE_DIR
 chown $OPENREFINE_USER:$OPENREFINE_GID $OPENREFINE_DIR
 
-echo "Setting up OpenRefine: "
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************       Setting up OpenRefine        *************"
+echo "**************************************************************"
+echo ""
+echo ""
 
 #Prep for download
 mkdir -p /opt
@@ -64,3 +72,12 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	#(Re)start service
 	systemctl restart refine.service
 fi
+
+
+echo ""
+echo ""
+echo "**************************************************************"
+echo "*************    DONE: setting up OpenRefine     *************"
+echo "**************************************************************"
+echo ""
+echo ""
