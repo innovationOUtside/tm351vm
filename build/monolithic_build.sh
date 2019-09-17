@@ -84,10 +84,12 @@ source $BUILDDIR/base/basepy.sh
 
 #mongo causing lots of problems - so let's try to build it first
 source $BUILDDIR/mongo/mongo.sh
-source $BUILDDIR/mongo/simple/mongo_simple.sh
-#May need to run this for shards: fix-permissions /data
-source $BUILDDIR/mongo/sharded/mongo_cluster.sh
-
+# If we have managed to install it, try to seed the dbs...
+if type mongo &> /dev/null; then
+    source $BUILDDIR/mongo/simple/mongo_simple.sh
+    #May need to run this for shards: fix-permissions /data
+    source $BUILDDIR/mongo/sharded/mongo_cluster.sh
+fi
 
 #Jupyter space
 source $BUILDDIR/jupyter-base/build_jupyter.sh
