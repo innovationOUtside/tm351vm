@@ -67,18 +67,18 @@ Vagrant.configure("2") do |config|
         config.ssh.insert_key=false
     
         #For local testing:
-        config.vm.box = "tm351_18J_testbuild_student"
+        config.vm.box = "TM351_19J_testbuild_student"
         #Rather than vagrant add, we can back src in with one of following styles
-        #config.vm.box_url = "tm351_18j.box"
+        config.vm.box_url = "TM351_19J.box"
         #config.vm.box_url = "../boxes/test.box"
     
         #Path for downloading box from vagrantcloud
-        config.vm.box = "ouseful/TM351_18J"
+        #config.vm.box = "ouseful/TM351_19J"
 
 
-        config.vm.hostname = "tm351-18J-test-student"
+        config.vm.hostname = "tm351-19J-test-student"
 
-        virtualbox.name = "tm351_18J_test_vb-student"
+        virtualbox.name = "tm351_19J_test_vb-student"
         virtualbox.memory = VIRTUALBOX_MEMORY
         virtualbox.cpus = VIRTUALBOX_CORES
         # virtualbox.gui = true
