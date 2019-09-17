@@ -114,8 +114,18 @@ source $BUILDDIR/openrefine/openrefine.sh
 source $BUILDDIR/postgres/postgresql.sh
 
 
-#tidy up
-apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*  && updatedb 
+# Tidy up package lists
+apt-get autoremove -y
+apt-get clean -y
+apt-get autoclean -y
+rm -rf /var/lib/apt/lists/*
+
+# Zero out any free space to aid VM compression
+#dd if=/dev/zero of=/EMPTY bs=1M
+#rm -f /EMPTY
+
+# Remove log files
+#find /var/log -type f | while read f; do echo -ne '' > $f; done;
 
 
 
