@@ -175,6 +175,7 @@ config.vm.provider :linode do |provider, override|
 
 # vagrant up --provider=azure
 
+# See below for how to set up network security rule
 
 config.vm.provider :azure do |azure, override|
 
@@ -214,7 +215,12 @@ config.vm.provider :azure do |azure, override|
   	  #	source /vagrant/build/simple_auth.sh
 	#SH
 
-	# Need to set up  security rule:
+	# Need to set up  security rule
+	# For this we need to know the nsg name. It seems to be conventionally determined (tm351azurevmtest-vagrantNSG)
+	# but we can also look it up:
+	# az network nic list -g tm351azuretest
+	# The response is a JSON list containing a single JSON object
+	# The "name" attribute gives the nsg name to use in the rule: tm351azurevmtest-vagrantNSG
 	# az network nsg rule create -g tm351azuretest --nsg-name tm351azurevmtest-vagrantNSG --priority 130 --direction Inbound --destination-port-ranges 8888 --access Allow --name port_8888
 
 	# Get IP address:
