@@ -12,6 +12,8 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
     
     $PIPNC nbresuse
 
+    $PIPNC nbzip
+
     #Install nbgrader
     $PIPNC install nbgrader
   
@@ -53,6 +55,11 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter serverextension enable --py nbresuse --sys-prefix
         jupyter nbextension install --py nbresuse --sys-prefix
         jupyter nbextension enable --py nbresuse --sys-prefix
+
+        # Download all notebooks
+        jupyter serverextension enable --py nbzip --sys-prefix
+        jupyter nbextension install --py nbzip
+        jupyter nbextension enable --py nbzip
 
         #nbgrader - do not enable by default
         #jupyter nbextension install --sys-prefix --py nbgrader --overwrite
