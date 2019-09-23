@@ -2,21 +2,16 @@
 
 if [ ! -f /opt/jupyter_nbextensions.done ]; then
 
-    for PYTHONVER in 3 ; do
-      PYTHON="python$PYTHONVER"
-      PIP="pip$PYTHONVER"
-      #https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
-      PIP="python3 -m pip"
+
+    #Go for the easy option and src all the jupyter_contrib_nbextensions 
+    $PIPNC jupyter_contrib_nbextensions
+    
+    $PIPNC RISE
+    $PIPNC jupyter-wysiwyg
+
+    #Install nbgrader
+    $PIPNC install nbgrader
   
-      #Go for the easy option and src all the jupyter_contrib_nbextensions 
-      $PIP install jupyter_contrib_nbextensions
-      $PIP install RISE
-      $PIP install jupyter-wysiwyg
-      
-      #Install nbgrader
-      $PIP install nbgrader
-  
-    done
 
     #The service runs under oustudent user but we're root here...
     # So if we install as --user, thats wrong... 
