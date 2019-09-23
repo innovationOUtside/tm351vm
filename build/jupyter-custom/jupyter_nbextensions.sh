@@ -8,6 +8,8 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
     
     $PIPNC RISE
     $PIPNC jupyter-wysiwyg
+    
+    $PIPNC nbresuse
 
     #Install nbgrader
     $PIPNC install nbgrader
@@ -41,6 +43,12 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension install jupyter_wysiwyg  --py --sys-prefix
         jupyter nbextension enable jupyter_wysiwyg --py --sys-prefix
         
+
+        # Resource monitoring
+        jupyter serverextension enable --py nbresuse --sys-prefix
+        jupyter nbextension install --py nbresuse --sys-prefix
+        jupyter nbextension enable --py nbresuse --sys-prefix
+
         #nbgrader - do not enable by default
         #jupyter nbextension install --sys-prefix --py nbgrader --overwrite
         #jupyter nbextension enable --sys-prefix --py nbgrader
