@@ -10,6 +10,7 @@ if [ ! -f /opt/tm351_py_stack.done  ]; then
     apt-get install -y libpq-dev libgeos-dev libgdal-dev && \
     apt-get install -y libxml2-dev libxslt-dev && \
     apt-get install -y fonts-liberation && \
+    apt-get install -y python3-rtree && \
     apt-get clean
 
     $PIP install --upgrade pip
