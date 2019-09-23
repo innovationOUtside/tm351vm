@@ -2,21 +2,21 @@
 
 if [ ! -f /opt/jupyter_nbextensions.done ]; then
 
-    for PYTHONVER in 3 ; do
-      PYTHON="python$PYTHONVER"
-      PIP="pip$PYTHONVER"
-      #https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
-      PIP="python3 -m pip"
+
+    #Go for the easy option and src all the jupyter_contrib_nbextensions 
+    $PIPNC jupyter_contrib_nbextensions
+    
+    $PIPNC RISE
+    $PIPNC jupyter-wysiwyg
+    $PIPNC git+https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
+    
+    $PIPNC nbresuse
+
+    $PIPNC nbzip
+
+    #Install nbgrader
+    $PIPNC install nbgrader
   
-      #Go for the easy option and src all the jupyter_contrib_nbextensions 
-      $PIP install jupyter_contrib_nbextensions
-      $PIP install RISE
-      $PIP install jupyter-wysiwyg
-      
-      #Install nbgrader
-      $PIP install nbgrader
-  
-    done
 
     #The service runs under oustudent user but we're root here...
     # So if we install as --user, thats wrong... 
@@ -37,6 +37,10 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension enable skip-traceback/main --sys-prefix
         jupyter nbextension enable hide_input/main --sys-prefix
         jupyter nbextension enable init_cell/main --sys-prefix
+
+        #Accessibility
+        jupyter nbextension install accessibility_toolbar --sys-prefix
+        jupyter nbextension enable accessibility_toolbar/main
         
         #Slideshow
         jupyter nbextension install rise  --py --sys-prefix
@@ -46,6 +50,17 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension install jupyter_wysiwyg  --py --sys-prefix
         jupyter nbextension enable jupyter_wysiwyg --py --sys-prefix
         
+
+        # Resource monitoring
+        jupyter serverextension enable --py nbresuse --sys-prefix
+        jupyter nbextension install --py nbresuse --sys-prefix
+        jupyter nbextension enable --py nbresuse --sys-prefix
+
+        # Download all notebooks
+        jupyter serverextension enable --py nbzip --sys-prefix
+        jupyter nbextension install --py nbzip
+        jupyter nbextension enable --py nbzip
+
         #nbgrader - do not enable by default
         #jupyter nbextension install --sys-prefix --py nbgrader --overwrite
         #jupyter nbextension enable --sys-prefix --py nbgrader
