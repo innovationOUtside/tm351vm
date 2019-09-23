@@ -8,6 +8,7 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
     
     $PIPNC RISE
     $PIPNC jupyter-wysiwyg
+    $PIPNC git+https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
     
     $PIPNC nbresuse
 
@@ -34,6 +35,10 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension enable skip-traceback/main --sys-prefix
         jupyter nbextension enable hide_input/main --sys-prefix
         jupyter nbextension enable init_cell/main --sys-prefix
+
+        #Accessibility
+        jupyter nbextension install accessibility_toolbar --sys-prefix
+        jupyter nbextension enable accessibility_toolbar/main
         
         #Slideshow
         jupyter nbextension install rise  --py --sys-prefix
