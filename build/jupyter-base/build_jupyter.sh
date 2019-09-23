@@ -4,14 +4,7 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ ! -f /opt/pybase.done ]; then
 
-    #for PYTHONVER in 3 ; do
-    #  PYTHON="python$PYTHONVER"
-      #PIP="pip$PYTHONVER"
-    #  PIP="pip"
-      #https://stackoverflow.com/questions/49836676/python-pip3-cannot-import-name-main
-      #PIP="python3 -m pip"
-
-      $PIP install --upgrade pip
+      $PIPNC install --upgrade pip
 
       #The important thing in the following is to ensure the notebook style works
       #  with the extensions.
@@ -36,7 +29,8 @@ if [ ! -f /opt/pybase.done ]; then
 
       $PIPNC nbdime
 
-    #done
+      $PIPNC jupytext
+
     touch /opt/pybase.done
 fi
 
