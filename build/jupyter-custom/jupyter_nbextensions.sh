@@ -12,7 +12,8 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
     
     $PIPNC nbresuse
 
-    $PIPNC nbzip
+    #$PIPNC nbzip
+    $PIPNC git+https://github.com/ryanlovett/jupyter-tree-download.git
 
     #Install nbgrader
     $PIPNC install nbgrader
