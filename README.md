@@ -1,3 +1,31 @@
+
+# TM351 Build
+
+Build repo for TM351 VM. Originally developed as a VirtualBox virtual machine provisioned under vagrant, the intention is to move to Docker.
+
+## `Docker`
+
+The Docker build currently stages the build over a stack of Docker containers, with build stages corresponding to steps in the original `vagrant` build. I suspect the layers are pretty inefficient...
+
+To build the image (which at the moment *does not* include the sharded mongo environment), run:
+
+`./build/docker_monolothic_build.sh`
+
+The image is named `p/t` and a container is launched from it; services can be found on `localhost` ports 8899 (notebook server) and 8898 (OpenRefine) enabled. OpenRefine can also be accessed on `localhost:8899/proxy/3334/`.
+
+An image has been pushed to Dockerhub as `ousefuldemos/tm351-docker-test`.
+
+Run it as:
+
+`docker run --name tm351test --rm -d -p 8895:8888 -v $PWD/notebooks:/notebooks -v $PWD/openrefine_projects:/openrefine_projects ousefuldemos/tm351-docker-test`
+
+Alternatively, use Kitematic (from the Docker menu), search for `tm351-docker-test` and create a new container from that. You should be able to map local directories onto `$HOME/notebooks` and`$HOME/openrefine_projects` directories inside the container from the container's *Settings / Volumes* tab.
+
+![Kitematic volume map](img/kitematic.png)
+
+
+## `vagrant`
+
 Install a recent version of vagrant and Virtualbox
 
 Speed up repeated builds
@@ -14,7 +42,7 @@ Cloud host provisioners:
 - `vagrant plugin install vagrant-linode`
 - `vagrant plugin install vagrant-openstack-provider`
 
-## Build with vagrant:
+### Build with vagrant:
 
 `vagrant up`
 
