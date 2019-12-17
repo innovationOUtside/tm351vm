@@ -5,14 +5,6 @@ Build repo for TM351 VM. Originally developed as a VirtualBox virtual machine pr
 
 ## `Docker`
 
-The Docker build currently stages the build over a stack of Docker containers, with build stages corresponding to steps in the original `vagrant` build. I suspect the layers are pretty inefficient...
-
-To build the image (which at the moment *does not* include the sharded mongo environment), run:
-
-`./build/docker_monolothic_build.sh`
-
-The image is named `p/t` and a container is launched from it; services can be found on `localhost` ports 8899 (notebook server) and 8898 (OpenRefine) enabled. OpenRefine can also be accessed on `localhost:8899/proxy/3334/`.
-
 An image has been pushed to Dockerhub as `ousefuldemos/tm351-docker-test`.
 
 Run it as:
@@ -22,6 +14,14 @@ Run it as:
 Alternatively, use Kitematic (from the Docker menu), search for `tm351-docker-test` and create a new container from that. You should be able to map local directories onto `$HOME/notebooks` and`$HOME/openrefine_projects` directories inside the container from the container's *Settings / Volumes* tab.
 
 ![Kitematic volume map](img/kitematic.png)
+
+If you want to build an image yourself, you can. The Docker build currently stages the build over a stack of Docker containers, with build stages corresponding to steps in the original `vagrant` build. I suspect the layers are pretty inefficient...
+
+To build the image (which at the moment *does not* include the sharded mongo environment), download and unzip, or clone this repo, `cd` into it from a terminal command line, run:
+
+`./build/docker_monolothic_build.sh`
+
+The image is named `p/t` and a container is launched from it; services can be found on `localhost` ports 8899 (notebook server) and 8898 (OpenRefine) enabled. OpenRefine can also be accessed on `localhost:8899/proxy/3334/`.
 
 
 ## `vagrant`
