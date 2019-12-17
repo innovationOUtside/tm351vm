@@ -13,7 +13,7 @@ FROM ${BASE}
 MAINTAINER tony.hirst@gmail.com
 
 #The docker build doesn't pick this env var up?
-ENV PIP="python3 -m pip"
+ENV PIPNC="python3 -m pip install --no-cache-dir"
 
 ENV DOCKERBUILD 1
 

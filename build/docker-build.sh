@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+PIPNC="python3 -m pip install --no-cache-dir"
+export PIPNC
 
 #Things like this should soon be possible (Q2 2017?) in Dockerfile:
 #ARG IMAGESTUB=psychemedia/ou-tm351-test-
@@ -22,10 +24,10 @@ docker build --rm -t ${IMAGESTUB}base-test base/
 docker build --rm -t ${IMAGESTUB}jupyter-base-test jupyter-base/
 docker build --rm -t ${IMAGESTUB}jupyter-custom-test jupyter-custom/
 docker build --rm -t ${IMAGESTUB}jupyter-custom-pystack-test pystack/
-docker build --rm -t ${IMAGESTUB}jupyter-custom-pystack-mongoshard-test mongo/sharded/
 
 docker build --rm -t ${IMAGESTUB}openrefine-test openrefine/
 
 docker build --rm -t ${IMAGESTUB}postgres-test postgres/
 
 docker build --rm -t  ${IMAGESTUB}mongo-simple-test mongo/simple/
+#docker build --rm -t ${IMAGESTUB}jupyter-custom-pystack-mongoshard-test mongo/sharded/

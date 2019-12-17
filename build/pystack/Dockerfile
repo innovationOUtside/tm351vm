@@ -3,7 +3,7 @@
 
 
 # call by adding --build-arg <varname>=<value>
-ARG BASE=psychemedia/ou-tm351-jupyter-custom-pystack-test
+ARG BASE=psychemedia/ou-tm351-jupyter-custom-test
 FROM ${BASE}
 
 MAINTAINER tony.hirst@gmail.com

@@ -8,6 +8,10 @@ FROM ${BASE}
 
 ENV DOCKERBUILD 1
 
+#Workaround for not setting timezone interactively
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y install tzdata
+
 #Install postgres and any other required packages
 ADD postgresql.sh /tmp/postgres/postgresql.sh
 WORKDIR /tmp/postgres/

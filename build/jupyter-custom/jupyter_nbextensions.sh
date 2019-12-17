@@ -8,15 +8,17 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
     
     $PIPNC RISE
     $PIPNC jupyter-wysiwyg
-    $PIPNC git+https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
-    
+    #$PIPNC git+https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
+    git clone https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
+    jupyter nbextension install accessibility_toolbar 
+
     $PIPNC nbresuse
 
     #$PIPNC nbzip
     $PIPNC git+https://github.com/ryanlovett/jupyter-tree-download.git
 
     #Install nbgrader
-    $PIPNC install nbgrader
+    $PIPNC nbgrader
   
 
     #The service runs under oustudent user but we're root here...
@@ -57,10 +59,13 @@ if [ ! -f /opt/jupyter_nbextensions.done ]; then
         jupyter nbextension install --py nbresuse --sys-prefix
         jupyter nbextension enable --py nbresuse --sys-prefix
 
+        #Accessibility toolbar
+        #jupyter nbextension enable accessibility_toolbar/main
+
         # Download all notebooks
-        jupyter serverextension enable --py nbzip --sys-prefix
-        jupyter nbextension install --py nbzip
-        jupyter nbextension enable --py nbzip
+        #jupyter serverextension enable --py nbzip --sys-prefix
+        #jupyter nbextension install --py nbzip
+        #jupyter nbextension enable --py nbzip
 
         #nbgrader - do not enable by default
         #jupyter nbextension install --sys-prefix --py nbgrader --overwrite

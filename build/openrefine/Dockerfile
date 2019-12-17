@@ -20,7 +20,10 @@ RUN rm -rf /tmp/openrefine
 EXPOSE 3334
 
 RUN mkdir -p /openrefine_projects
-RUN chown oustudent:100 /openrefine_projects
+
+#The following requires that the OU student user is set
+#Fix this in monolithic build
+#RUN chown oustudent:100 /openrefine_projects
 
 VOLUME /openrefine_projects
 

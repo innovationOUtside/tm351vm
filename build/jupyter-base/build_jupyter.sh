@@ -4,7 +4,7 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ ! -f /opt/pybase.done ]; then
 
-      $PIPNC install --upgrade pip
+      $PIPNC pip
 
       #The important thing in the following is to ensure the notebook style works
       #  with the extensions.
@@ -29,6 +29,7 @@ if [ ! -f /opt/pybase.done ]; then
 
       $PIPNC nbdime
 
+      $PIPNC mock
       $PIPNC jupytext
 
     touch /opt/pybase.done
