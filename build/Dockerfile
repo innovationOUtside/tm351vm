@@ -17,4 +17,7 @@ COPY monolithic_container_supervisord.conf /etc/supervisor/conf.d/supervisord.co
 EXPOSE 3334
 EXPOSE 8888
 
+#Check against settings...
+ENV DOCKERBUILD=0
+
 CMD ["/usr/bin/supervisord"]

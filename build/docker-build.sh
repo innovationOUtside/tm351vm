@@ -29,5 +29,6 @@ docker build --rm -t ${IMAGESTUB}openrefine-test openrefine/
 
 docker build --rm -t ${IMAGESTUB}postgres-test postgres/
 
-docker build --rm -t  ${IMAGESTUB}mongo-simple-test mongo/simple/
+#This just does the simple mongo?
+docker build --rm -t  ${IMAGESTUB}mongo-simple-test mongo/
 #docker build --rm -t ${IMAGESTUB}jupyter-custom-pystack-mongoshard-test mongo/sharded/

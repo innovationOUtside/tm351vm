@@ -23,8 +23,8 @@ RUN mkdir -p /openrefine_projects
 
 #The following requires that the OU student user is set
 #Fix this in monolithic build
-#RUN chown oustudent:100 /openrefine_projects
+RUN chown oustudent:100 /openrefine_projects
 
 VOLUME /openrefine_projects
 
-CMD su - oustudent -c "/opt/openrefine-3.0-beta/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects"
+CMD su - oustudent -c "/opt/openrefine-3.2/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects"

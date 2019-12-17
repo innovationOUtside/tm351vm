@@ -53,12 +53,14 @@ docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-test
 #docker build --rm --build-arg BASE=psychemedia/testpieces -t psychemedia/testpieces ./pystack
 
 #Add in mongo-simple
-echo "NOT Starting mongo build..."
-#docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-postgres-mongo-test ./mongo
-#docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test -t  psychemedia/testpieces ./mongo
+echo "Starting simple mongo build..."
+docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test -t ${IMAGESTUB}-jupyter-base-custom-pystack-postgres-mongo-test ./mongo
+#docker build --rm --build-arg BASE=${IMAGESTUB}-jupyter-base-custom-pystack-postgres-test -t  psychemedia/testpieces ./mongo/simple
 
 
-#mongo sharded??
+#mongo sharded
+#Add in mongo-sharded
+echo "NOT Starting sharded mongo build..."
 
 #Add in openrefine
 echo "Starting openrefine build..."

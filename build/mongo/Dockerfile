@@ -7,7 +7,11 @@ FROM ${BASE}
 MAINTAINER tony.hirst@open.ac.uk
 
 ENV DOCKERBUILD 1
-#ENV MODULE_USER oustudent
+ENV MODULE_USER oustudent
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y  wget sudo gnupg
 
 #Install mongo
 ADD mongo.sh /tmp/mongo/mongo.sh
