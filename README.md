@@ -1,6 +1,6 @@
 This repository contains the original build files for the orginal TM351 VirtualBox virtual machine, as used on the OU module TM351 for presentations up to and including the 2019J presentation.
 
-__This virtual machine is now DEPERECATED.__
+__This virtual machine is now DEPRECATED.__
 
 For 2020J+, the software environment will be provided via a Docker image, the repository for whhich can be found here: [innovationOUtside/tm351vm-binder](https://github.com/innovationOUtside/tm351vm-binder).
 
